@@ -1,0 +1,4 @@
+@import "normalize/normalize", "mixins/mixins.scss", "media/media", "variables/variables", "utils/utils",
+  "globals/globals";
+
+@import "./themes/dark.scss", "./themes/light.scss";
