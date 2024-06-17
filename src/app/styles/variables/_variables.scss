@@ -1,0 +1,19 @@
+:root {
+  --font-family-base: "Times New Roman", Times, serif;
+
+  --container-width: 1400px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s;
+
+  @include mobile {
+    --container-padding-x: 10px;
+  }
+
+  --navbar-height: 63px;
+
+  /*mobile*/
+  @include mobile {
+    --navbar-height: 89px;
+  }
+}
