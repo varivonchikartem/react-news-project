@@ -10,10 +10,10 @@
     --container-padding-x: 10px;
   }
 
-  --navbar-height: 63px;
+  --navbar-height: 60px;
 
   /*mobile*/
   @include mobile {
-    --navbar-height: 89px;
+    --navbar-height: 93px;
   }
 }

@@ -1,9 +1,9 @@
 body {
   font-family: var(--font-family-base);
-  @include fluid-text(18, 14.5);
+  @include fluid-text(14, 14.5);
+  color: #fff;
 
-  color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: rgb(39, 39, 39);
 }
 
 h1,
@@ -51,7 +51,7 @@ h6 {
 }
 
 p {
-  @include fluid-text(18, 14.5);
+  @include fluid-text(14, 14.5);
 
   line-height: 1.3;
 }
@@ -75,4 +75,11 @@ a:hover {
 
 figure {
   margin: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

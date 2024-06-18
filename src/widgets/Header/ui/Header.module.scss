@@ -1,0 +1,98 @@
+@import "../../../app/styles/media/media";
+
+.Header {
+  height: var(--navbar-height);
+  background-color: rgb(35, 35, 35);
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: 12px;
+
+  @include mobile {
+    flex-wrap: wrap;
+
+    row-gap: 10px;
+
+    padding-block: 10px;
+  }
+}
+
+.header_form {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 1;
+
+  height: 33px;
+
+  width: 100%;
+  max-width: 455px;
+  min-width: 170px;
+
+  border-radius: 3px;
+
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    max-width: 100%;
+
+    flex-basis: 100%;
+    order: 1;
+  }
+}
+
+.header_form_search {
+  font-size: 14px;
+
+  height: 100%;
+  width: 100%;
+
+  padding-left: 10px;
+
+  color: rgb(185, 185, 185, 1);
+  background-color: rgba(50, 50, 50, 0.93);
+
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: rgba(50, 50, 50, 0.9);
+  }
+  &::placeholder {
+    color: rgb(185, 185, 185, 1);
+  }
+}
+
+.header_form_button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+
+  cursor: pointer;
+
+  width: 25px;
+  height: 25px;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background-color: inherit;
+
+  //   background-image: url("");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+}
+
+.header_form_button:hover {
+  background-color: rgb(89, 89, 89);
+  border-radius: 3px;
+}
