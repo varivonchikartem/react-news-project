@@ -18,5 +18,5 @@ export const Icon: React.FC<IconProps> = (props) => {
     [styles.active]: active,
   });
 
-  return <Svg width={width} height={height} className={iconClasses} {...otherProps} />;
+  return <Svg className={iconClasses} width={width} height={height} {...otherProps} />;
 };
