@@ -1,7 +1,13 @@
 @import "../../../app/styles/media/media";
 
 .Header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   height: var(--navbar-height);
+  
   background-color: var(--background-color-navbar);
 }
 

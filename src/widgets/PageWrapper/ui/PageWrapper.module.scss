@@ -1,0 +1,32 @@
+@import "../../../app/styles/media/media";
+
+.PageWrapper {
+  position: relative;
+
+  height: calc(100vh - var(--navbar-height));
+
+  margin: var(--navbar-height) 0px 0px var(--sidebar-width);
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  @include tablet {
+    margin: var(--navbar-height) 0px 0px 0px;
+  }
+
+  @include mobile {
+    margin: var(--navbar-height) 0px 0px 0px;
+  }
+}

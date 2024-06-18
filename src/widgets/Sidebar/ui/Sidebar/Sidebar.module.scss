@@ -4,7 +4,9 @@
   position: absolute;
   top: var(--navbar-height);
   left: 0;
+
   bottom: 0;
+  z-index: 100;
 
   min-height: 250px;
   width: var(--sidebar-width);
