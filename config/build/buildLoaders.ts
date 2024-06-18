@@ -3,10 +3,24 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders({ isDevelopment }: BuildOptions): webpack.RuleSetRule[] {
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-        isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+      isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
       {
         loader: "css-loader",
         options: {
@@ -26,5 +40,5 @@ export function buildLoaders({ isDevelopment }: BuildOptions): webpack.RuleSetRu
     exclude: /node_modules/,
   };
 
-  return [typescriptLoader, cssLoader];
+  return [fileLoader, svgLoader, typescriptLoader, cssLoader];
 }
