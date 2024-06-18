@@ -1,0 +1,12 @@
+.dark_theme {
+  --color-white: #fff;
+  --color-gray-dark: rgba(32, 32, 32, 1);
+  --color-gray-light: rgba(39, 39, 39, 1);
+  --color-gray-opacity-04: rgba(54, 54, 54, 0.4);
+
+  --background-button-color: var(--color-gray-opacity-04);
+
+  --background-color-navbar: var(--color-gray-dark);
+  --background-color: var(--color-gray-light);
+  --text-color: var(--color-white);
+}

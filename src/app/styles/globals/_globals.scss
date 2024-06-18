@@ -1,9 +1,9 @@
 body {
   font-family: var(--font-family-base);
   @include fluid-text(14, 14.5);
-  color: #fff;
 
-  background-color: rgb(39, 39, 39);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 h1,
@@ -62,6 +62,13 @@ input,
 textarea,
 svg * {
   transition-duration: var(--transition-duration);
+}
+
+button {
+  color: inherit;
+  background-color: var(--background-button-color);
+  border: none;
+  outline: none;
 }
 
 a {

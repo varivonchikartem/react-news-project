@@ -1,6 +1,7 @@
 import React from "react";
 import clx from "classnames";
 import styles from "./Header.module.scss";
+import { ThemeSwitcher } from "../../../features/ThemeSwitcher/ui/ThemeSwitcher";
 
 interface HeaderProps {
   className?: string;
@@ -24,7 +25,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
             <input className={styles.header_form_search} type="search" placeholder="Поиск статей" />
             <button type="submit" className={styles.header_form_button}></button>
           </form>
-          <button type="button">Change theme</button>
+          <ThemeSwitcher />
         </div>
       </div>
     </header>
