@@ -2,7 +2,7 @@ import { ReducersMapObject, configureStore } from "@reduxjs/toolkit";
 import { StateSchema } from "./types/StateSchema/StateSchema";
 import { ThunkExtraArguments } from "./types/ThunkConfigSchema/ThunkConfigSchema";
 import { $api } from "../../../../shared/api/AxiosApi/AxiosApi";
-import { UserReducers } from "../../../../entities/User/model/slice/UserSlice";
+import { UserReducers } from "../../../../entities/User";
 
 const extraArguments: ThunkExtraArguments = {
   api: $api,
@@ -26,3 +26,5 @@ export function createReduxStore() {
 
   return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];
