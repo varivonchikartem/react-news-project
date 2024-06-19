@@ -4,7 +4,7 @@ import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
-  const { paths, isDevelopment } = options;
+  const { paths, isDevelopment, buildApiUrl } = options;
 
   return [
     new HtmlWebpackPlugin({
@@ -17,6 +17,7 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
     }),
     new webpack.DefinePlugin({
       IS_DEVELOPMENT_GLOBAL: JSON.stringify(isDevelopment),
+      BUILD_API_URL: JSON.stringify(buildApiUrl),
     }),
   ];
 }

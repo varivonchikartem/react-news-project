@@ -1,2 +1,2 @@
-export { StateSchema, StateSchemaKey } from "./types/StateSchema/StateSchema";
+export { StateSchema, StateSchemaKey } from "./config/types/StateSchema/StateSchema";
 export { StoreProvider } from "./ui/StoreProvider";

@@ -15,3 +15,4 @@ declare module "*.svg" {
 }
 
 declare const IS_DEVELOPMENT_GLOBAL: boolean;
+declare const BUILD_API_URL: string;
