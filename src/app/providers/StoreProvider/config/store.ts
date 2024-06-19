@@ -2,13 +2,16 @@ import { ReducersMapObject, configureStore } from "@reduxjs/toolkit";
 import { StateSchema } from "./types/StateSchema/StateSchema";
 import { ThunkExtraArguments } from "./types/ThunkConfigSchema/ThunkConfigSchema";
 import { $api } from "../../../../shared/api/AxiosApi/AxiosApi";
+import { UserReducers } from "../../../../entities/User/model/slice/UserSlice";
 
 const extraArguments: ThunkExtraArguments = {
   api: $api,
 };
 
 export function createReduxStore() {
-  const rootReducers: ReducersMapObject<StateSchema> = {};
+  const rootReducers: ReducersMapObject<StateSchema> = {
+    user: UserReducers,
+  };
 
   const store = configureStore({
     reducer: rootReducers,
