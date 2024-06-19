@@ -6,6 +6,14 @@
   padding-inline: var(--container-padding-x);
 }
 
+.wrapper {
+
+  max-width: calc(var(--wrapper-width) + var(--wrapper-padding-x) * 2);
+  margin-inline: auto;
+
+  padding-inline: var(--wrapper-padding-x);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

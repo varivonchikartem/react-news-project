@@ -1,0 +1,53 @@
+@import "../../../app/styles/media/media";
+
+.main_page_title {
+  width: 40%;
+
+  padding-top: 140px;
+
+  @include tablet {
+    width: 100%;
+
+    padding-top: 30px;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    padding-top: 20px;
+  }
+}
+
+.main_page_subtitle {
+  width: 30%;
+
+  padding-top: 27px;
+  padding-bottom: 120px;
+
+  @include tablet {
+    width: 100%;
+
+    padding-bottom: 30px;
+  }
+  @include mobile {
+    width: 100%;
+
+    padding-bottom: 5px;
+  }
+}
+
+.new_releases {
+  padding-block: 46px;
+}
+
+.new_releases_panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.new_releases_panel_link {
+  text-decoration: underline;
+}

@@ -3,7 +3,7 @@
 .PageWrapper {
   position: relative;
 
-  height: calc(100vh - var(--navbar-height));
+  height: calc(100vh - var(--navbar-height) - 70px);
 
   margin: var(--navbar-height) 0px 0px var(--sidebar-width);
 

@@ -4,6 +4,9 @@ import styles from "./App.module.scss";
 import { Header } from "../widgets/Header";
 import { Sidebar } from "../widgets/Sidebar";
 import { PageWrapper } from "../widgets/PageWrapper/index.";
+import { AppRoutes } from "../shared/RouterConfiguration/RouterConfiguration";
+import { AppRouter } from "./providers/AppRouter";
+import { Footer } from "../widgets/Footer";
 
 interface AppProps {
   className?: string;
@@ -20,7 +23,8 @@ export const App: React.FC<AppProps> = (props) => {
     <div className={appClasses}>
       <Header />
       <Sidebar />
-      <PageWrapper >1</PageWrapper>
+      <AppRouter />
+      <Footer />
     </div>
   );
 };

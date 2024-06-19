@@ -5,7 +5,7 @@
   top: var(--navbar-height);
   left: 0;
 
-  bottom: 0;
+  bottom: var(--footer-height);
   z-index: 100;
 
   min-height: 250px;
