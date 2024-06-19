@@ -13,3 +13,5 @@ declare module "*.svg" {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
 }
+
+declare const IS_DEVELOPMENT_GLOBAL: boolean;
