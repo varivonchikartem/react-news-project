@@ -3,5 +3,5 @@ export interface LoginFormSchema {
   password: string;
 
   isLoading: boolean;
-  isError: string;
+  isError?: string;
 }

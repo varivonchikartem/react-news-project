@@ -6,3 +6,5 @@ export {
   RegistrationFormActions,
   RegistrationFormReducers,
 } from "./model/slices/RegistrationFormSlice/RegistrationFormSlice";
+
+export { AuthorizationModal } from "./ui/AuthorizationModal/ui/AuthorizationModal";

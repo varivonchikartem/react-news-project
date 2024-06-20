@@ -3,6 +3,8 @@ import clx from "classnames";
 import styles from "./ArticlesPage.module.scss";
 import { Input, InputTheme } from "../../../shared/ui/Input/Input";
 import { Modal } from "../../../shared/ui/Modal/Modal";
+import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
+import { AuthorizationModal } from "../../../features/Authorization";
 
 interface ArticlesPageProps {
   className?: string;
@@ -27,11 +29,10 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
 
   return (
     <div className={articlespageClasses}>
-      <Input theme={InputTheme.DEFAULT} />
-      <Modal onOpenModal={isAuthModal} onCloseModal={onCloseModal}>
-        1
-      </Modal>
-      <button onClick={onOpenModal}>oPEN</button>
+      <AuthorizationModal onOpenModal={isAuthModal} onCloseModal={onCloseModal} />
+      <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
+        Open
+      </Button>
     </div>
   );
 };

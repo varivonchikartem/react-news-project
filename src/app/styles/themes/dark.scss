@@ -1,20 +1,9 @@
 .dark_theme {
-  --color-white: #fff;
-  --color-gray-dark: rgba(32, 32, 32, 0.7);
-  --color-gray-light: rgba(39, 39, 39, 1);
-  --color-gray-lightest: rgb(155, 155, 155);
-  --color-gray-opacity-04: rgba(54, 54, 54, 0.4);
-  --color-blue: rgb(118, 185, 237);
-  --color-gray: rgba(157, 157, 157, 0.5);
+  --background-color: rgb(14, 14, 16);
+  --background-color-navbar: rgb(24, 24, 27);
+  --background-color-sidebar: rgb(24, 24, 27);
+  --text-color: rgb(255, 255, 255);
 
-  --background-button-color: var(--color-gray-opacity-04);
-
-  --background-color-navbar: var(--color-gray-dark);
-  --background-color-sidebar: var(--color-gray-dark);
-  --background-color-footer: var(--color-gray-dark);
-  --background-color-icon-default: var(--color-gray-lightest);
-  --background-color-icon-active: var(--color-blue);
-
-  --background-color: var(--color-gray-light);
-  --text-color: var(--color-white);
+  --background-color-icon-default: #fff;
+  --background-color-icon-active: #9147ff;
 }

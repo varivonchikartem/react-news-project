@@ -1,0 +1,21 @@
+.MainForm {
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 400px;
+}
+
+.header_title {
+  margin-bottom: 10px;
+}
+
+.header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: auto;
+}

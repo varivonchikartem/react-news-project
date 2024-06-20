@@ -3,5 +3,5 @@ export interface RegistrationFormSchema {
   password: string;
 
   isLoading: boolean;
-  isError: string;
+  isError?: string;
 }
