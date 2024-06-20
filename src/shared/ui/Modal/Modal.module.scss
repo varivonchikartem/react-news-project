@@ -1,9 +1,99 @@
-.Modal_content {
-  background-color: rgb(24, 24, 27);
-  outline: none;
-  border: none;
+@import "../../../app/styles/mixins/mixins";
 
-  border-radius: 4px;
+.Modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
 }
 
+.Modal_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.Modal_content {
+  border: none;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: rgb(24, 24, 27);
+  color: var(--text-color);
+  min-width: 400px;
+}
+
+.Modal_opened {
+  pointer-events: auto;
+  opacity: 1;
+  z-index: 10;
+}
+
+.cross_button {
+  position: relative;
+  border-radius: 4px;
+  @include reset-button;
+  @include square(48px);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 12px;
+    width: 48%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+}
+
+@media (max-width: 768px) {
+  .Modal_overlay {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    justify-content: space-between;
+  }
+
+  .Modal_content {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    min-width: none;
+    min-height: 100vh;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 10px;
+    min-width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import clx from "classnames";
 import styles from "./Modal.module.scss";
+import { Portal } from "../Portal/Portal";
+import Button, { ButtonTheme } from "../Button/Button";
 
 interface ModalProps {
   className?: string;
@@ -26,12 +28,19 @@ export function Modal(props: ModalProps) {
   };
 
   return (
-    <div className={modalClasses} role="dialog">
-      <div className={styles.Modal_overlay} onClick={onCloseModal} role="button">
-        <dialog className={styles.Modal_content} onClick={onContentClick} open>
-          <main className={styles.Modal_main}>{children}</main>
-        </dialog>
+    <Portal>
+      <div className={modalClasses} role="dialog">
+        <div className={styles.Modal_overlay} onClick={onCloseModal} role="button">
+          <dialog className={styles.Modal_content} onClick={onContentClick} open>
+            <header className={styles.header}>
+              <Button className={styles.cross_button} theme={ButtonTheme.DEFAULT} onClick={onCloseModal}>
+                <span className="vissualy-hidden"></span>
+              </Button>
+            </header>
+            <main className={styles.Modal_main}>{children}</main>
+          </dialog>
+        </div>
       </div>
-    </div>
+    </Portal>
   );
 }
