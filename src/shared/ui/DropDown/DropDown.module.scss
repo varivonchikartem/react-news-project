@@ -1,0 +1,48 @@
+.DropDown {
+  position: relative;
+  display: inline-block;
+}
+
+.DropDown_menu {
+  position: absolute;
+
+  background: var(--dropdown-background);
+  box-shadow: var(--dropdown-box-shadow);
+
+  border: 1px solid #111111;
+  border-radius: var(--border-radius);
+}
+
+.DropDown_item {
+  border-bottom: 1px solid var(--dropdown-border-color);
+  padding: 6px;
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+.DropDown_menu button {
+  display: block;
+
+  width: 100%;
+
+  padding: 5px 7px 5px 7px;
+
+  text-align: left;
+
+  box-shadow: none;
+}
+
+.DropDown_button {
+  cursor: default;
+
+  font-weight: 500;
+
+  background: inherit;
+  color: var(--text-color);
+
+  &:hover {
+    scale: 0.95;
+  }
+}

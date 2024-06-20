@@ -17,24 +17,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
     [className!]: className,
   });
 
-  const [isAuthModal, setIsAuthModal] = React.useState(false);
-
-  const onOpenModal = React.useCallback(() => {
-    setIsAuthModal(true);
-  }, []);
-
-  const onCloseModal = React.useCallback(() => {
-    setIsAuthModal(false);
-  }, []);
-
-  return (
-    <div className={articlespageClasses}>
-      <AuthorizationModal onOpenModal={isAuthModal} onCloseModal={onCloseModal} />
-      <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
-        Open
-      </Button>
-    </div>
-  );
+  return <div className={articlespageClasses}>1</div>;
 };
 
 export default ArticlesPage;
