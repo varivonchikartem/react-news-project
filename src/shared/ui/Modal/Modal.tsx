@@ -20,7 +20,7 @@ export function Modal(props: ModalProps) {
 
   const modalClasses = clx(styles.Modal, {
     [className!]: className,
-    [styles.Modal_opened]: onOpenModal,
+    [styles.modal_opened]: onOpenModal,
   });
 
   const onContentClick = (event: React.MouseEvent) => {
@@ -30,14 +30,18 @@ export function Modal(props: ModalProps) {
   return (
     <Portal>
       <div className={modalClasses} role="dialog">
-        <div className={styles.Modal_overlay} onClick={onCloseModal} role="button">
-          <dialog className={styles.Modal_content} onClick={onContentClick} open>
-            <header className={styles.header}>
-              <Button className={styles.cross_button} theme={ButtonTheme.DEFAULT} onClick={onCloseModal}>
+        <div className={styles.overlay} onClick={onCloseModal} role="button">
+          <dialog className={styles.dialog} onClick={onContentClick} open>
+            <header className={styles.dialog_header}>
+              <Button
+                className={styles.dialog_header_cross_button}
+                theme={ButtonTheme.DEFAULT}
+                onClick={onCloseModal}
+              >
                 <span className="vissualy-hidden"></span>
               </Button>
             </header>
-            <main className={styles.Modal_main}>{children}</main>
+            <main className={styles.dialog_body}>{children}</main>
           </dialog>
         </div>
       </div>

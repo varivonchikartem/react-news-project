@@ -1,8 +1,11 @@
+@import "../../../../../app/styles/media/media";
+
 .MainForm {
-  min-height: 400px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -17,4 +20,8 @@
 
 footer {
   margin-top: auto;
+
+  button {
+    margin-left: 10px;
+  }
 }

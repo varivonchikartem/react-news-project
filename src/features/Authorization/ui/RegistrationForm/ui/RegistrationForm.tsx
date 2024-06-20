@@ -3,6 +3,12 @@ import clx from "classnames";
 import styles from "./RegistrationForm.module.scss";
 import { Input, InputTheme } from "../../../../../shared/ui/Input/Input";
 import Button, { ButtonTheme } from "../../../../../shared/ui/Button/Button";
+import { useAppDispatch } from "../../../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { useSelector } from "react-redux";
+import { getRegistrationFormUserName } from "../../../model/selectors/RegistrationFormSelectors/getRegistrationFormUserName/getRegistrationFormUserName";
+import { getRegistrationFormPassword } from "../../../model/selectors/RegistrationFormSelectors/getRegistrationFormPassword/getRegistrationFormPassword";
+import { RegistrationFormActions } from "../../../model/slices/RegistrationFormSlice/RegistrationFormSlice";
+import { RegistrationFormService } from "../../../model/services/RegistrationForm/RegistrationFormService";
 
 interface RegistrationFormProps {
   className?: string;
@@ -15,12 +21,50 @@ const RegistrationForm: React.FC<RegistrationFormProps> = (props) => {
     [className!]: className,
   });
 
+  const dispatch = useAppDispatch();
+  const username = useSelector(getRegistrationFormUserName);
+  const password = useSelector(getRegistrationFormPassword);
+
+  const onChangeUserName = React.useCallback(
+    (value: string) => {
+      dispatch(RegistrationFormActions.setUsername(value));
+    },
+    [dispatch]
+  );
+
+  const onChangePassword = React.useCallback(
+    (value: string) => {
+      dispatch(RegistrationFormActions.setPassword(value));
+    },
+    [dispatch]
+  );
+
+  const onRegistrationClick = React.useCallback(() => {
+    dispatch(RegistrationFormService({ username, password }));
+  }, [dispatch, username, password]);
+
   return (
     <div className={registrationformClasses}>
-      <Input className={styles.input} type="text" theme={InputTheme.DEFAULT} placeholderValue="Name" />
-      <Input theme={InputTheme.DEFAULT} type="password" placeholderValue="Password" />
-      <Button className={styles.button} theme={ButtonTheme.DEFAULT} type="button">
-       Sign Up
+      <Input
+        className={styles.input}
+        type="text"
+        theme={InputTheme.DEFAULT}
+        placeholderValue="Name"
+        onChange={onChangeUserName}
+      />
+      <Input
+        theme={InputTheme.DEFAULT}
+        type="password"
+        placeholderValue="Password"
+        onChange={onChangePassword}
+      />
+      <Button
+        className={styles.button}
+        theme={ButtonTheme.DEFAULT}
+        type="button"
+        onClick={onRegistrationClick}
+      >
+        Sign Up
       </Button>
     </div>
   );

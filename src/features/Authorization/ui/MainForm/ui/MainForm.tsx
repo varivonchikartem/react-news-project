@@ -36,22 +36,13 @@ export const MainForm: React.FC<MainFormProps> = (props) => {
           {formType === "registration" && <RegistrationFormAsync />}
         </React.Suspense>
       </main>
-      <footer>
-        {formType === "login" ? (
-          <p>
-            Don't have an account?{" "}
-            <Button theme={ButtonTheme.DEFAULT} onClick={onFormTypeChange}>
-              Sign up here.
-            </Button>
-          </p>
-        ) : (
-          <p>
-            Already have an account?{" "}
-            <Button theme={ButtonTheme.DEFAULT} onClick={onFormTypeChange}>
-              Log in here.
-            </Button>
-          </p>
-        )}
+      <footer className="footer">
+        <p>
+          {formType === "login" ? "Don't have an account?  " : " Already have an account?"}
+          <Button theme={ButtonTheme.DEFAULT} onClick={onFormTypeChange}>
+            {formType === "login" ? "   Sign up here.  " : "   Log in here."}
+          </Button>
+        </p>
       </footer>
     </div>
   );

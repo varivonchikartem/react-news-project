@@ -1,16 +1,9 @@
+@import "../../../app/styles/mixins/mixins";
 
 .Button {
-
-
   border-radius: 5px;
   height: 30px;
-
   color: var(--text-color);
   font-weight: 600;
-}
-
-.default_theme {
   background-color: #9147ff;
 }
-
-//    --color-twitch-purple-9: #9147ff;

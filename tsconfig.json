@@ -7,21 +7,13 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "strict": true,
-
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true
+    "strict": true
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+  }
 }
