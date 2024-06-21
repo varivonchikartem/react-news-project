@@ -105,6 +105,8 @@
 
 
 .header_panel {
+  display: flex;
+  align-items: center;
   button {
     margin-left: 5px;
   }

@@ -1,12 +1,14 @@
 .DropDown {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .DropDown_menu {
   position: absolute;
 
-  background: var(--dropdown-background);
+  z-index: 100;
+
+  background: #fff;
   box-shadow: var(--dropdown-box-shadow);
 
   border: 1px solid #111111;
@@ -41,6 +43,8 @@
 
   background: inherit;
   color: var(--text-color);
+
+  box-shadow: var(--button-box-shadow);
 
   &:hover {
     scale: 0.95;
