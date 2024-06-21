@@ -1,7 +1,7 @@
 import React from "react";
 import clx from "classnames";
 import styles from "./SidebarItem.module.scss";
-import { Icon } from "../../../../shared/ui/Icon/Icon";
+import { Icon, IconTheme } from "../../../../shared/ui/Icon/Icon";
 import { useLocation } from "react-router-dom";
 import { SidebarItemType } from "../../model/types/SidebarItemsSchema";
 import { Link } from "react-router-dom";
@@ -22,7 +22,10 @@ export function SidebarItem(props: SidebarItemProps) {
   return (
     <Link to={item.path}>
       <div className={sidebaritemClasses}>
-        <Icon Svg={item.Icon} active={location.pathname === item.path} />
+        <Icon
+          theme={location.pathname === item.path ? IconTheme.ACTIVE : IconTheme.DEFAULT}
+          Svg={item.Icon}
+        />
       </div>
     </Link>
   );

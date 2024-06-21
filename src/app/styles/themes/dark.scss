@@ -1,9 +1,32 @@
 .dark_theme {
-  --background-color: rgb(14, 14, 16);
+  --background-color: rgb(16, 14, 16);
   --background-color-navbar: rgb(24, 24, 27);
-  --background-color-sidebar: rgb(24, 24, 27);
+  --background-color-sidebar: rgba(24, 24, 27, 1);
+
+  @include tablet {
+    --background-color-sidebar: rgba(24, 24, 27, 0.5);
+  }
+
   --text-color: rgb(255, 255, 255);
 
   --background-color-icon-default: #fff;
   --background-color-icon-active: #9147ff;
+
+  --background-color-modal: rgb(24, 24, 27);
+
+  --background-shadow-color-input-default: #fff;
+  --background-shadow-color-input-hover: rgb(103, 103, 107);
+  --background-shadow-color-input-focus: #9147ff;
+
+  --background-color-sidebar-item-hover: rgb(45, 45, 45, 0.4);
+
+  --background-color-dropdown-menu: rgba(37, 37, 37, 0.95);
+
+  --background-shadow-color-dropdown: rgba(255, 255, 255, 0.3);
+
+  --border: 1px solid rgba(255, 255, 255, 0.1);
+
+  --background-button-default: #9147ff;
+
+  --box-shadow-image: 0 0 0.133rem rgb(255, 255, 255);
 }

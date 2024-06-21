@@ -12,11 +12,7 @@
   border-radius: var(--border-radius);
 
   &:hover {
-    background: rgba(45, 45, 45, 1);
-  }
-
-  &:focus {
-    background: rgba(69, 69, 69, 1);
+    background: var(--background-color-sidebar-item-hover);
   }
 }
 
@@ -24,6 +20,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
- 
+
   transform: translate(-50%, -50%);
 }

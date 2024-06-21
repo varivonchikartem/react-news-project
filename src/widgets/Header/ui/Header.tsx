@@ -10,6 +10,7 @@ import DropDown from "../../../shared/ui/DropDown/DropDown";
 import { Avatar } from "../../../shared/ui/Avatar/Avatar";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { UserActions } from "../../../entities/User";
+import { Input, InputTheme } from "../../../shared/ui/Input/Input";
 
 interface HeaderProps {
   className?: string;
@@ -46,9 +47,13 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <a href="#" className={styles.header_link}>
             Timesphere
           </a>
-          <form className={styles.header_form} action="/">
-            <input className={styles.header_form_search} type="search" placeholder="Поиск статей" />
-            <button type="submit" className={styles.header_form_button}></button>
+          <form className={styles.header_form}>
+            <Input
+              theme={InputTheme.DEFAULT}
+              className={styles.header_form_search}
+              type="search"
+              placeholder="Поиск статей"
+            />
           </form>
           <div className={styles.header_panel}>
             <ThemeSwitcher />
@@ -69,9 +74,25 @@ export const Header: React.FC<HeaderProps> = (props) => {
                       content: "Выйти",
                       onClick: onLogout,
                     },
+                    {
+                      content: "Выйти",
+                      onClick: onLogout,
+                    },
+                    {
+                      content: "Выйти",
+                      onClick: onLogout,
+                    },
+                    {
+                      content: "Выйти",
+                      onClick: onLogout,
+                    },
+                    {
+                      content: "Выйти",
+                      onClick: onLogout,
+                    },
                   ]}
-                  menuPosition="33px 0 auto auto"
-                  minWidth="300px"
+                  menuPosition="40px 0 auto auto"
+                  minWidth="250px"
                 />
               </>
             )}

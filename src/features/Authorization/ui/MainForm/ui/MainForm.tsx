@@ -16,7 +16,7 @@ export const MainForm: React.FC<MainFormProps> = (props) => {
     [className!]: className,
   });
 
-  const [formType, setFormType] = React.useState<"login" | "registration">("registration");
+  const [formType, setFormType] = React.useState<"login" | "registration">("login");
 
   const onFormTypeChange = () => {
     setFormType((prevFormType) => (prevFormType === "login" ? "registration" : "login"));

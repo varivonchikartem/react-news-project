@@ -1,3 +1,32 @@
 .light_theme {
-  
+  --background-color: rgba(255, 255, 255, 1);
+  --background-color-navbar: #ececec;
+  --background-color-sidebar: #ececec;
+
+  @include tablet {
+    --background-color-sidebar: rgba(255, 255, 255, 0.5);
+  }
+
+  --background-color-icon-default: rgba(0, 0, 0, 0.5);
+  --background-color-icon-active: rgba(0, 0, 0, 1);
+
+  --background-color-modal: rgb(255, 255, 255);
+
+  --background-shadow-color-input-default: rgb(103, 103, 107);
+  --background-shadow-color-input-hover: rgb(91, 91, 94);
+  --background-shadow-color-input-focus: rgba(0, 0, 0, 1);
+
+  --background-color-sidebar-item-hover: rgb(45, 45, 45, 0.4);
+
+  --background-color-dropdown-menu: #ececec;
+
+  --background-shadow-color-dropdown: rgba(0, 0, 0, 0.3);
+
+  --border: 1px solid rgba(0, 0, 0, 0.3);
+
+  --text-color: rgb(0, 0, 0);
+
+  --background-button-default: rgb(255, 214, 80);
+
+  --box-shadow-image: 0 0 0.133rem rgb(0, 0, 0);
 }

@@ -1,6 +1,11 @@
-.Icon {
+.default_theme {
   fill: var(--background-color-icon-default);
 }
-.active {
+
+.transparent_theme {
+  fill: none;
+}
+
+.active_theme {
   fill: var(--background-color-icon-active);
 }
