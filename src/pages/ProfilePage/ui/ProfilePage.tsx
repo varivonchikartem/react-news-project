@@ -85,7 +85,7 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
         onChangeUserName={onChangeUsername}
         onChangeAge={onChangeAge}
         onChangeCountry={onChangeCountry}
-        omChangeCity={onChangeCity}
+        onChangeCity={onChangeCity}
         onChangeAvatar={onChangeAvatar}
         readOnly={profileReadOnly}
       />

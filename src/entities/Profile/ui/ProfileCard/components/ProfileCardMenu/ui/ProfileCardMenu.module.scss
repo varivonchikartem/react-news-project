@@ -1,0 +1,16 @@
+@import "../../../../../../../app/styles/media/media";
+
+.ProfileCardMenu {
+  margin-top: 32px;
+  margin-bottom: 15px;
+}
+
+.profile_menu_list {
+  display: flex;
+
+  @include mobile {
+    overflow-x: auto;
+  }
+
+  column-gap: 23px;
+}

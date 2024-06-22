@@ -1,6 +1,6 @@
 import React from "react";
 import clx from "classnames";
-import styles from "./ProfilePageHeader.module.scss";
+import styles from "./ProfilePageEditPanel.module.scss";
 import { useSelector } from "react-redux";
 import { getProfileReadOnly } from "../../../../../entities/Profile/model/selectors/getProfileReadOnly/getProfileReadOnly";
 import Button, { ButtonTheme } from "../../../../../shared/ui/Button/Button";
@@ -8,11 +8,11 @@ import { useAppDispatch } from "../../../../../shared/lib/hooks/useAppDispatch/u
 import { ProfileActions } from "../../../../../entities/Profile";
 import { UpdateProfileService } from "../../../../../entities/Profile/model/services/UpdateProfileService/UpdateProfileService";
 
-interface ProfilePageHeaderProps {
+interface ProfilePageEditPanelProps {
   className?: string;
 }
 
-export const ProfilePageHeader: React.FC<ProfilePageHeaderProps> = (props) => {
+export const ProfilePageEditPanel: React.FC<ProfilePageEditPanelProps> = (props) => {
   const { className } = props;
 
   const profilepageheaderClasses = clx(styles.ProfilePageHeader, {

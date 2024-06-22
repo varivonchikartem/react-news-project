@@ -11,6 +11,8 @@ export interface Profile {
   avatar?: string;
 }
 
+export type ProfileKey = keyof Profile;
+
 export interface ProfileSchema {
   profileData?: Profile;
   profileEditedData?: Profile;

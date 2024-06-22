@@ -16,27 +16,8 @@
   padding-inline: 10px;
 }
 
-.profile_header {
-  display: flex;
-  align-items: center;
 
-  column-gap: 17px;
-}
 
-.profile_menu {
-  margin-top: 32px;
-  margin-bottom: 15px;
-}
-
-.profile_menu_list {
-  display: flex;
-
-  @include mobile {
-    overflow-x: auto;
-  }
-
-  column-gap: 23px;
-}
 
 .profile_general_title {
   margin-bottom: 15px;
