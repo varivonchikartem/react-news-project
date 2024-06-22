@@ -2,6 +2,11 @@ import React from "react";
 import clx from "classnames";
 import styles from "./Avatar.module.scss";
 
+export enum AvatarTheme {
+  DEFAULT = "default_theme",
+  BORDERED = "bordered_theme",
+}
+
 interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   className?: string;
 
@@ -9,15 +14,19 @@ interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   width?: string;
   borderRadius: string;
 
+  theme: AvatarTheme;
+
   fallback?: React.ReactElement;
   errorFallback?: React.ReactElement;
 }
 
 export function Avatar(props: AvatarProps) {
-  const { className, src, alt, height, width, borderRadius, fallback, errorFallback, ...otherProps } = props;
+  const { className, src, alt, height, width, borderRadius, fallback, errorFallback, theme, ...otherProps } =
+    props;
 
   const avatarClasses = clx(styles.Avatar, {
     [className!]: className,
+    [styles[theme]]: theme,
   });
 
   const avatarSizesStyles = React.useMemo<React.CSSProperties>(() => {

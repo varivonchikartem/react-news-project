@@ -1,5 +1,5 @@
 .light_theme {
-  --background-color: rgba(255, 255, 255, 1);
+  --background-color: rgb(228, 228, 228);
   --background-color-navbar: #ececec;
   --background-color-sidebar: #ececec;
 
@@ -22,9 +22,13 @@
 
   --background-shadow-color-dropdown: rgba(0, 0, 0, 0.3);
 
-  --border: 1px solid rgba(0, 0, 0, 0.3);
+  --border-color-avatar: 0 0 0.133rem rgb(0, 0, 0);
 
-  --text-color: rgb(51, 51, 51);
+  --border-color: rgba(0, 0, 0, 0.3);
+
+  --border: 1px solid var(--border-color);
+
+  --text-color: rgb(0, 0, 0);
 
   --background-button-default: rgb(255, 214, 80);
 

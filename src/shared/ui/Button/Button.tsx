@@ -4,6 +4,7 @@ import styles from "./Button.module.scss";
 
 export enum ButtonTheme {
   DEFAULT = "default_theme",
+  REJECT = "reject_theme",
   DISABLED = "disabled_theme",
 }
 

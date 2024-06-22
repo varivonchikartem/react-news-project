@@ -1,14 +1,15 @@
+@import "../../../../app/styles/media/media";
+
 .ProfileCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  height: 100%;
   width: 100%;
 }
 
 .profile_inner {
   width: 100%;
+  max-width: 880px;
 
   margin: 0 auto;
 
@@ -29,6 +30,10 @@
 
 .profile_menu_list {
   display: flex;
+
+  @include mobile {
+    overflow-x: auto;
+  }
 
   column-gap: 23px;
 }

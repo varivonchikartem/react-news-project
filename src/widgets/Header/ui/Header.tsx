@@ -7,7 +7,7 @@ import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
 import { useSelector } from "react-redux";
 import { getUserAuthenticationData } from "../../../entities/User/model/selectors/getUserAuthenticationData/getUserAuthenticationData";
 import DropDown from "../../../shared/ui/DropDown/DropDown";
-import { Avatar } from "../../../shared/ui/Avatar/Avatar";
+import { Avatar, AvatarTheme } from "../../../shared/ui/Avatar/Avatar";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { UserActions } from "../../../entities/User";
 import { Input, InputTheme } from "../../../shared/ui/Input/Input";
@@ -62,6 +62,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 <DropDown
                   trigger={
                     <Avatar
+                      theme={AvatarTheme.DEFAULT}
                       src="https://images.pexels.com/photos/19101653/pexels-photo-19101653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                       alt="image"
                       width="31px"

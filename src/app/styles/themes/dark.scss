@@ -21,10 +21,13 @@
   --background-color-sidebar-item-hover: rgb(45, 45, 45, 0.4);
 
   --background-color-dropdown-menu: rgba(37, 37, 37, 0.95);
+  --border-color-avatar: 0 0 0.133rem rgb(255, 255, 255);
 
   --background-shadow-color-dropdown: rgba(255, 255, 255, 0.3);
 
-  --border: 1px solid rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.3);
+
+  --border: 1px solid var(--border-color);
 
   --background-button-default: #9147ff;
 

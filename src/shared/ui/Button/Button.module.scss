@@ -10,6 +10,10 @@
     background-color: var(--background-button-default);
   }
 
+  &.reject_theme {
+    background-color: #cc3333;
+  }
+
   &.disabled_theme {
     background-color: var(--background-button-default);
     opacity: 0.5;
