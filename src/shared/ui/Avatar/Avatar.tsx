@@ -7,7 +7,7 @@ interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
   height?: string;
   width?: string;
-  borderRadius: number;
+  borderRadius: string;
 
   fallback?: React.ReactElement;
   errorFallback?: React.ReactElement;

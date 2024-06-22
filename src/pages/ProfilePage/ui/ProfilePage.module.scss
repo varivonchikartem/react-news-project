@@ -1,0 +1,38 @@
+.ProfilePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.profile_inner {
+  width: 100%;
+
+  margin: 0 auto;
+
+  padding-inline: 10px;
+}
+
+.profile_header {
+  display: flex;
+  align-items: center;
+
+  column-gap: 17px;
+}
+
+.profile_menu {
+  margin-top: 32px;
+  margin-bottom: 15px;
+}
+
+.profile_menu_list {
+  display: flex;
+
+  column-gap: 23px;
+}
+
+.profile_general_title {
+  margin-bottom: 15px;
+}

@@ -9,5 +9,9 @@
   &.default_theme {
     background-color: var(--background-button-default);
   }
-}
 
+  &.disabled_theme {
+    background-color: var(--background-button-default);
+    opacity: 0.5;
+  }
+}

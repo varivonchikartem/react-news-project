@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                       alt="image"
                       width="31px"
                       height="31px"
-                      borderRadius={30}
+                      borderRadius="30px"
                     />
                   }
                   items={[
