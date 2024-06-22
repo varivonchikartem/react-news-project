@@ -5,5 +5,17 @@
       "username": "admin",
       "password": "123"
     }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Artem",
+      "secondname": "Varivonchik",
+      "username": "admin",
+      "age": 22,
+      "country": "Belarus",
+      "city": "Minsk",
+      "avatar": ""
+    }
   ]
 }
