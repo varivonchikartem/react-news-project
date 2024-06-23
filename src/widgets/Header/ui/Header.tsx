@@ -11,6 +11,8 @@ import { Avatar, AvatarTheme } from "../../../shared/ui/Avatar/Avatar";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { UserActions } from "../../../entities/User";
 import { Input, InputTheme } from "../../../shared/ui/Input/Input";
+import { getArticlesPageSearch } from "../../../pages/ArticlesPage/model/selectors/getArticlesPageSearch/getArticlesPageSearch";
+import { ArticlesPageActions } from "../../../pages/ArticlesPage";
 
 interface HeaderProps {
   className?: string;
@@ -25,6 +27,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   const dispatch = useAppDispatch();
   const userAuthenticationData = useSelector(getUserAuthenticationData);
+  const search = useSelector(getArticlesPageSearch);
 
   const [isAuthModal, setIsAuthModal] = React.useState(false);
 
@@ -40,6 +43,13 @@ export const Header: React.FC<HeaderProps> = (props) => {
     dispatch(UserActions.logout());
   }, []);
 
+  const onChangeSearch = React.useCallback(
+    (search: string) => {
+      dispatch(ArticlesPageActions.setArticleSearch(search));
+    },
+    [dispatch]
+  );
+
   return (
     <header className={headerClasses}>
       <div className="container">
@@ -53,6 +63,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               className={styles.header_form_search}
               type="search"
               placeholder="Поиск статей"
+              onChange={onChangeSearch}
             />
           </form>
           <div className={styles.header_panel}>
