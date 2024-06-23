@@ -54,9 +54,8 @@ export enum ArticleType {
 export interface Article {
   id: string;
   title: string;
-  user: User;
-  subtitle: string;
-  img: string;
+  //   user: User;
+  image: string;
   createdAt: string;
   type: ArticleType[];
   blocks: ArticleBlock[];
