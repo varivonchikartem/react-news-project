@@ -1,13 +1,13 @@
 import React from "react";
 import clx from "classnames";
 import styles from "./ArticleListItem.module.scss";
-import { Article } from "../../../../modal/types/ArticleSchema";
+import { Article, ArticleView } from "../../../../modal/types/ArticleSchema";
 import Button, { ButtonTheme } from "../../../../../../shared/ui/Button/Button";
 
 interface ArticleListItemProps {
   className?: string;
-
   article: Article;
+  articleView?: ArticleView;
 }
 
 export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
@@ -31,13 +31,15 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
           />
         </div>
         <figcaption>
-          {article.type.map((type, index) => (
-            <Button key={index} className={styles.button_type} theme={ButtonTheme.DEFAULT}>
-              {type}
-            </Button>
-          ))}
+          {article.type &&
+            article.type.map((type, index) => (
+              <Button key={index} className={styles.button_type} theme={ButtonTheme.DEFAULT}>
+                {type}
+              </Button>
+            ))}
 
-          <h3 className="projects-title">{article?.title}</h3>
+          <h3 className={styles.title}>{article?.title}</h3>
+          <p>{article.subtitle}</p>
         </figcaption>
       </figure>
     </li>

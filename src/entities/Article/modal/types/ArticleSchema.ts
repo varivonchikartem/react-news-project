@@ -1,3 +1,4 @@
+import { EntityState } from "@reduxjs/toolkit";
 import { User } from "../../../User";
 
 export enum ArticleBlockType {
@@ -54,6 +55,7 @@ export enum ArticleType {
 export interface Article {
   id: string;
   title: string;
+  subtitle: string;
   //   user: User;
   image: string;
   createdAt: string;
@@ -61,9 +63,12 @@ export interface Article {
   blocks: ArticleBlock[];
 }
 
-export interface ArticleSchema {
-  articleData?: Article;
+export enum ArticleView {
+  LARGE_CARD = "LARGE_CARD",
+  SMALL_CARD = "SMALL_CARD",
+}
 
+export interface ArticleSchema extends EntityState<Article, string> {
   isLoading: boolean;
   isError?: string;
 }

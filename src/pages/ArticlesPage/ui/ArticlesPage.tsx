@@ -7,6 +7,15 @@ import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
 import { AuthorizationModal } from "../../../features/Authorization";
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
 import { Article, ArticleType } from "../../../entities/Article/modal/types/ArticleSchema";
+import {
+  DynamicModuleLoader,
+  ReducersList,
+} from "../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
+import { ArticleReducers } from "../../../entities/Article";
+import { useSelector } from "react-redux";
+import { getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
+import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 
 interface ArticlesPageProps {
   className?: string;
@@ -14,11 +23,11 @@ interface ArticlesPageProps {
 
 const article = {
   id: "1",
-  title:
-    "“We are profoundly disappointed”: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
+  title: "We are profoundly disappointed...",
+  subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
   image: "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
   createdAt: "2024-03-25T12:00:00Z",
-  type: [ArticleType.EDUCATION, ArticleType.BUSINESS],
+  type: [ArticleType.EDUCATION, ArticleType.BUSINESS, ArticleType.SCIENCE_FICTION],
   blocks: [
     {
       id: "block1",
@@ -80,6 +89,12 @@ const article = {
   ],
 } as Article;
 
+console.log(article);
+
+const reducers: ReducersList = {
+  article: ArticleReducers,
+};
+
 const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
   const { className } = props;
 
@@ -87,12 +102,19 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
     [className!]: className,
   });
 
+  const dispatch = useAppDispatch();
+  const articles = useSelector(getArticles.selectAll);
+
+  React.useEffect(() => {
+    dispatch(ArticleService());
+  }, [dispatch]);
+
   return (
-    <div className={articlespageClasses}>
-      <ArticleList
-        articles={new Array(16).fill(0).map((item, index) => ({ ...article, id: String(index) }))}
-      />
-    </div>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
+      <div className={articlespageClasses}>
+        <ArticleList articles={articles} />
+      </div>
+    </DynamicModuleLoader>
   );
 };
 
