@@ -4,11 +4,11 @@ import { LoginFormSchema, RegistrationFormSchema } from "../../../../../../featu
 
 export interface StateSchema {
   user: UserSchema;
-  profile: ProfileSchema;
+  profile?: ProfileSchema;
 
   // async feature
-  loginForm: LoginFormSchema;
-  registrationForm: RegistrationFormSchema;
+  loginForm?: LoginFormSchema;
+  registrationForm?: RegistrationFormSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

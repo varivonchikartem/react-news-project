@@ -7,12 +7,23 @@ import { useAppDispatch } from "../../../../../shared/lib/hooks/useAppDispatch/u
 import { useSelector } from "react-redux";
 import { getRegistrationFormUserName } from "../../../model/selectors/RegistrationFormSelectors/getRegistrationFormUserName/getRegistrationFormUserName";
 import { getRegistrationFormPassword } from "../../../model/selectors/RegistrationFormSelectors/getRegistrationFormPassword/getRegistrationFormPassword";
-import { RegistrationFormActions } from "../../../model/slices/RegistrationFormSlice/RegistrationFormSlice";
+import {
+  RegistrationFormActions,
+  RegistrationFormReducers,
+} from "../../../model/slices/RegistrationFormSlice/RegistrationFormSlice";
 import { RegistrationFormService } from "../../../model/services/RegistrationForm/RegistrationFormService";
+import {
+  DynamicModuleLoader,
+  ReducersList,
+} from "../../../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
 
 interface RegistrationFormProps {
   className?: string;
 }
+
+const reducers: ReducersList = {
+  registrationForm: RegistrationFormReducers,
+};
 
 const RegistrationForm: React.FC<RegistrationFormProps> = (props) => {
   const { className } = props;
@@ -44,29 +55,31 @@ const RegistrationForm: React.FC<RegistrationFormProps> = (props) => {
   }, [dispatch, username, password]);
 
   return (
-    <div className={registrationformClasses}>
-      <Input
-        className={styles.input}
-        type="text"
-        theme={InputTheme.DEFAULT}
-        placeholderValue="Name"
-        onChange={onChangeUserName}
-      />
-      <Input
-        theme={InputTheme.DEFAULT}
-        type="password"
-        placeholderValue="Password"
-        onChange={onChangePassword}
-      />
-      <Button
-        className={styles.button}
-        theme={ButtonTheme.DEFAULT}
-        type="button"
-        onClick={onRegistrationClick}
-      >
-        Sign Up
-      </Button>
-    </div>
+    <DynamicModuleLoader reducers={reducers}>
+      <div className={registrationformClasses}>
+        <Input
+          className={styles.input}
+          type="text"
+          theme={InputTheme.DEFAULT}
+          placeholderValue="Name"
+          onChange={onChangeUserName}
+        />
+        <Input
+          theme={InputTheme.DEFAULT}
+          type="password"
+          placeholderValue="Password"
+          onChange={onChangePassword}
+        />
+        <Button
+          className={styles.button}
+          theme={ButtonTheme.DEFAULT}
+          type="button"
+          onClick={onRegistrationClick}
+        >
+          Sign Up
+        </Button>
+      </div>
+    </DynamicModuleLoader>
   );
 };
 
