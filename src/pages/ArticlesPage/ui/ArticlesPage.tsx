@@ -23,6 +23,7 @@ import { getArticlesPageSearch } from "../model/selectors/getArticlesPageSearch/
 import { getArticlesPageOrder } from "../model/selectors/getArticlesPageOrder/getArticlesPageOrder";
 import { getArticlesPageSort } from "../model/selectors/getArticlesPageSort/getArticlesPageSort";
 import { getArticlesPageType } from "../model/selectors/getArticlesPageType/getArticlesPageType";
+import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
 
 interface ArticlesPageProps {
   className?: string;
@@ -50,7 +51,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
   const articleSort = useSelector(getArticlesPageSort);
   const articleType = useSelector(getArticlesPageType);
 
-  React.useEffect(() => {
+  const debouncedFetchData = useDebounce(() => {
     dispatch(
       ArticleService({
         articlesSearch: articleSearch,
@@ -59,7 +60,11 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
         articlesType: articleType,
       })
     );
-  }, [dispatch, articleSearch, articleOrder, articleSort, articleType]);
+  }, 500);
+
+  React.useEffect(() => {
+    debouncedFetchData();
+  }, [articleSearch, articleOrder, articleSort, articleType]);
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
