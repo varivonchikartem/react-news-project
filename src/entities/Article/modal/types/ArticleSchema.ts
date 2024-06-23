@@ -65,6 +65,7 @@ export interface Article {
 
 export enum ArticleView {
   LARGE_CARD = "LARGE_CARD",
+  MEDIUM_CARD = "MEDIUM_CARD",
   SMALL_CARD = "SMALL_CARD",
 }
 

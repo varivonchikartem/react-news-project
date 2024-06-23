@@ -16,6 +16,9 @@ import { useSelector } from "react-redux";
 import { getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
+import { ArticlesPageReducers } from "../model/slices/ArticlesPageSlice";
+import { ArticlePageFilters } from "./components/ArticlePageFilters/ArticlePageFilters";
+import { getArticlesPageView } from "../model/selectors/getArticlesPageView/getArticlesPageView";
 
 interface ArticlesPageProps {
   className?: string;
@@ -93,6 +96,7 @@ console.log(article);
 
 const reducers: ReducersList = {
   article: ArticleReducers,
+  articlesPage: ArticlesPageReducers,
 };
 
 const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
@@ -104,6 +108,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
 
   const dispatch = useAppDispatch();
   const articles = useSelector(getArticles.selectAll);
+  const articleView = useSelector(getArticlesPageView);
 
   React.useEffect(() => {
     dispatch(ArticleService());
@@ -112,7 +117,8 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <div className={articlespageClasses}>
-        <ArticleList articles={articles} />
+        <ArticlePageFilters />
+        <ArticleList articles={articles} articleView={articleView} />
       </div>
     </DynamicModuleLoader>
   );
