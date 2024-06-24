@@ -7,6 +7,7 @@ import {
   ArticlesSortField,
   ArticlesSortOrder,
 } from "../../../ui/ArticleFilters/model/types/ArticleFiltersSchema";
+import { addQueryParams } from "../../../../../shared/lib/url/addQueryParams/addQueryParams";
 
 interface ArticleServiceProps {
   articlesSort: ArticlesSortField;
@@ -23,6 +24,13 @@ export const ArticleService = createAsyncThunk<Article[], ArticleServiceProps, T
     const { articlesSort, articlesOrder, articlesSearch, articlesType } = props;
 
     try {
+      addQueryParams({
+        articlesSort,
+        articlesOrder,
+        articlesSearch,
+        articlesType,
+      });
+
       const response = await extra.api.get<Article[]>("/articles", {
         params: {
           _sort: articlesSort,
