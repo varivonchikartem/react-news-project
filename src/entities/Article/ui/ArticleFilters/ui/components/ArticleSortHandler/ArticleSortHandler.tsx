@@ -38,16 +38,12 @@ export const ArticleSortHandler: React.FC<ArticleSortHandlerProps> = (props) => 
   const sortFieldOptions = React.useMemo<SelectOption<ArticlesSortField>[]>(
     () => [
       {
-        value: ArticlesSortField.CREATED_AT,
-        content: "по дате создания",
-      },
-      {
         value: ArticlesSortField.TITLE,
         content: "по названию",
       },
       {
-        value: ArticlesSortField.VIEWS,
-        content: "по количеству просмотров",
+        value: ArticlesSortField.CREATED_AT,
+        content: "по дате создания",
       },
     ],
     []

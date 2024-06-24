@@ -1,17 +1,19 @@
 import React from "react";
 import clx from "classnames";
 import styles from "./ArticlePageFilters.module.scss";
-import { ArticleView } from "../../../../../entities/Article/modal/types/ArticleSchema";
+import { ArticleType, ArticleView } from "../../../../../entities/Article/modal/types/ArticleSchema";
 import { ArticlesPageActions } from "../../../model/slices/ArticlesPageSlice";
 import { useAppDispatch } from "../../../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
 import { getArticlesPageView } from "../../../model/selectors/getArticlesPageView/getArticlesPageView";
 import { ArticleViewHandler } from "../../../../../entities/Article/ui/ArticleFilters/ui/components/ArticleViewHandler/ArticleViewHandler";
 import { ArticleSortHandler } from "../../../../../entities/Article/ui/ArticleFilters/ui/components/ArticleSortHandler/ArticleSortHandler";
-import { ArticleActions, ArticlesSortField, ArticlesSortOrder } from "../../../../../entities/Article";
+import { ArticlesSortField, ArticlesSortOrder } from "../../../../../entities/Article";
 import { getArticlesPageOrder } from "../../../model/selectors/getArticlesPageOrder/getArticlesPageOrder";
 import { getArticlesPageSort } from "../../../model/selectors/getArticlesPageSort/getArticlesPageSort";
-import { ArticleService } from "../../../../../entities/Article/modal/service/Article/ArticleService";
+import { TabItem } from "../../../../../shared/ui/Tabs/Tabs";
+import { ArticleTypeTabsHandler } from "../../../../../entities/Article/ui/ArticleFilters/ui/components/ArticleTypeTabsHandler/ArticleTypeTabsHandler";
+import { getArticlesPageType } from "../../../model/selectors/getArticlesPageType/getArticlesPageType";
 
 interface ArticlePageFiltersProps {
   className?: string;
@@ -28,8 +30,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   const articleView = useSelector(getArticlesPageView);
   const order = useSelector(getArticlesPageOrder);
   const sort = useSelector(getArticlesPageSort);
-
-
+  const articleType = useSelector(getArticlesPageType);
 
   const onViewClick = React.useCallback(
     (articleView: ArticleView) => {
@@ -39,28 +40,47 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   );
 
   const onChangeOrder = React.useCallback(
-    (articleView: ArticlesSortOrder) => {
-      dispatch(ArticlesPageActions.setArticleOrder(articleView));
+    (order: ArticlesSortOrder) => {
+      dispatch(ArticlesPageActions.setArticleOrder(order));
     },
     [dispatch]
   );
 
   const onChangeSort = React.useCallback(
-    (articleView: ArticlesSortField) => {
-      dispatch(ArticlesPageActions.setArticleSort(articleView));
+    (sort: ArticlesSortField) => {
+      dispatch(ArticlesPageActions.setArticleSort(sort));
+    },
+    [dispatch]
+  );
+
+  const tabs = React.useMemo<TabItem<ArticleType>[]>(
+    () =>
+      Object.values(ArticleType).map((type) => ({
+        value: type,
+        content: type,
+      })),
+    []
+  );
+
+  const onChangeType = React.useCallback(
+    (type: ArticleType) => {
+      dispatch(ArticlesPageActions.setArticleType(type));
     },
     [dispatch]
   );
 
   return (
     <div className={articlepagefiltersClasses}>
-      <ArticleSortHandler
-        order={order}
-        sort={sort}
-        onChangeOrder={onChangeOrder}
-        onChangeSort={onChangeSort}
-      />
-      <ArticleViewHandler articleView={articleView} onViewClick={onViewClick} />
+      <div className={styles.panel}>
+        <ArticleSortHandler
+          order={order}
+          sort={sort}
+          onChangeOrder={onChangeOrder}
+          onChangeSort={onChangeSort}
+        />
+        <ArticleViewHandler articleView={articleView} onViewClick={onViewClick} />
+      </div>
+      <ArticleTypeTabsHandler articleType={articleType} tabs={tabs} onChangeType={onChangeType} />
     </div>
   );
 };

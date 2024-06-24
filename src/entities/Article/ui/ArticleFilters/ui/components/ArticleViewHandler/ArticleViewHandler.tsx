@@ -4,6 +4,10 @@ import styles from "./ArticleViewHandler.module.scss";
 import { ArticleView } from "../../../../../modal/types/ArticleSchema";
 import Button, { ButtonTheme } from "../../../../../../../shared/ui/Button/Button";
 
+import TiledIcon from "../../../../../../../shared/assets/icons/tiled.svg";
+import ListIcon from "../../../../../../../shared/assets/icons/list.svg";
+import { Icon, IconTheme } from "../../../../../../../shared/ui/Icon/Icon";
+
 interface ArticleViewHandlerProps {
   className?: string;
 
@@ -14,14 +18,11 @@ interface ArticleViewHandlerProps {
 const viewTypes = [
   {
     articleView: ArticleView.SMALL_CARD,
-    // icon: ListIcon,
-  },
-  {
-    articleView: ArticleView.MEDIUM_CARD,
+    icon: ListIcon,
   },
   {
     articleView: ArticleView.LARGE_CARD,
-    // icon: TiledIcon,
+    icon: TiledIcon,
   },
 ];
 
@@ -43,13 +44,10 @@ export const ArticleViewHandler: React.FC<ArticleViewHandlerProps> = (props) => 
       {viewTypes.map((viewType) => (
         <Button
           key={viewType.articleView}
-          theme={ButtonTheme.DEFAULT}
+          theme={viewType.articleView === articleView ? ButtonTheme.DEFAULT : ButtonTheme.DISABLED}
           onClick={onClick(viewType.articleView)}
-          className={clx(styles.IconButton, {
-            [styles.selected]: viewType.articleView === articleView,
-          })}
         >
-          1 {/* <Icon Svg={viewType.icon} /> */}
+          <Icon theme={IconTheme.DEFAULT} Svg={viewType.icon} />
         </Button>
       ))}
     </div>

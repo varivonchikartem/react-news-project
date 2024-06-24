@@ -23,7 +23,7 @@
       "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
       "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
       "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
+      "type": ["POLITICS", "CULTURE"],
       "blocks": [
         {
           "id": "block1",
@@ -84,64 +84,56 @@
     },
     {
       "id": "2",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
+      "title": "Global Food Crisis: Urgent Need for International Response",
+      "subtitle": "Millions of people face acute food shortages due to conflict and climate change.",
+      "image": "https://images.pexels.com/photos/2852737/pexels-photo-2852737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "createdAt": "2024-06-01T10:00:00Z",
+      "type": ["POLITICS", "SOCIAL-ISSUES"],
       "blocks": [
         {
           "id": "block1",
           "type": "TEXT",
           "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
+            "The global food crisis has reached unprecedented levels, with millions of people around the world facing acute food shortages. This crisis is driven by a combination of factors, including ongoing conflicts, climate change, and economic instability. The United Nations has called for urgent international action to address the growing needs and prevent further deterioration of the situation.",
+            "In regions such as the Horn of Africa and the Sahel, prolonged droughts and conflict have severely impacted food production, leading to widespread hunger and malnutrition. Humanitarian organizations are struggling to meet the increasing demands for food aid and are calling for more support from the international community."
           ],
           "title": "Introduction"
         },
         {
           "id": "block2",
           "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
+          "imageUrl": "https://images.pexels.com/photos/19489716/pexels-photo-19489716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": "I see humans but no humanity"
         },
         {
           "id": "block3",
           "type": "TEXT",
           "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
+            "In Yemen, one of the world's worst humanitarian crises, nearly 17 million people are experiencing food insecurity. The ongoing conflict has disrupted supply chains and left many families without access to basic necessities. Similarly, in Afghanistan, the economic collapse following the Taliban's takeover has led to severe food shortages, with children being the most affected.",
+            "Climate change continues to exacerbate the situation, with extreme weather events such as floods and droughts becoming more frequent and severe. These events destroy crops, reduce food production, and increase the vulnerability of already struggling communities."
           ],
-          "title": "Crisis in Eastern DRC"
+          "title": "Regions Affected"
         },
         {
           "id": "block4",
           "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
+          "imageUrl": "https://images.pexels.com/photos/9751016/pexels-photo-9751016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": ""
         },
         {
           "id": "block5",
           "type": "TEXT",
           "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
+            "International organizations, including the World Food Programme (WFP) and Food and Agriculture Organization (FAO), are working tirelessly to address the crisis. However, they face significant funding shortfalls and logistical challenges. The WFP has warned that without immediate financial support, millions of people will face starvation.",
+            "Governments and donors are urged to increase their contributions to humanitarian aid and to implement long-term solutions to address the root causes of food insecurity. This includes investing in sustainable agriculture, supporting conflict resolution efforts, and taking action to mitigate climate change."
           ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
+          "title": "Call to Action"
         },
         {
           "id": "block7",
           "type": "TEXT",
           "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
+            "The global food crisis is a complex and multifaceted issue that requires a coordinated and comprehensive response. As the situation continues to worsen, the international community must act swiftly and decisively to prevent further suffering and to build a more resilient and food-secure world for the future."
           ],
           "title": "Conclusion"
         }
@@ -149,653 +141,202 @@
     },
     {
       "id": "3",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
+      "title": "The Rise of Renewable Energy: A Global Shift Towards Sustainability",
+      "subtitle": "Renewable energy sources are becoming more viable and essential in combating climate change.",
+      "image": "https://images.pexels.com/photos/532192/pexels-photo-532192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "createdAt": "2024-06-15T09:00:00Z",
+      "type": ["SCIENCE", "TECHNOLOGY"],
       "blocks": [
         {
           "id": "block1",
           "type": "TEXT",
           "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
+            "The transition to renewable energy is gaining momentum worldwide as countries recognize the urgent need to reduce greenhouse gas emissions and combat climate change. Renewable energy sources, such as solar, wind, and hydropower, are becoming increasingly viable and cost-effective, offering a sustainable alternative to fossil fuels.",
+            "Governments and private sectors are investing heavily in renewable energy infrastructure and technology. This shift is not only beneficial for the environment but also creates economic opportunities and jobs in the renewable energy sector."
           ],
           "title": "Introduction"
         },
         {
           "id": "block2",
           "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
+          "imageUrl": "https://images.pexels.com/photos/210018/pexels-photo-210018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": "Green rectangular wire machine"
         },
         {
           "id": "block3",
           "type": "TEXT",
           "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
+            "In Europe, the European Union has set ambitious targets to achieve climate neutrality by 2050, with renewable energy playing a crucial role in this transition. Countries like Germany and Denmark are leading the way, with significant investments in wind and solar power. Similarly, in Asia, China is rapidly expanding its renewable energy capacity, becoming the world's largest producer of solar panels and wind turbines.",
+            "The United States is also making strides in renewable energy adoption, with states like California and Texas at the forefront. The Biden administration has pledged to achieve a 100% clean energy economy and net-zero emissions by 2050, driving further growth and innovation in the sector."
           ],
-          "title": "Crisis in Eastern DRC"
+          "title": "Global Efforts"
         },
         {
           "id": "block4",
           "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
+          "imageUrl": "https://images.pexels.com/photos/208733/pexels-photo-208733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": "Amsterdam, NH, Netherlands"
         },
         {
           "id": "block5",
           "type": "TEXT",
           "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
+            "Technological advancements are key to the success of renewable energy. Innovations in battery storage, grid integration, and energy efficiency are making renewable energy more reliable and accessible. For instance, advancements in battery technology are addressing the intermittent nature of solar and wind power, ensuring a stable energy supply.",
+            "Moreover, decentralized energy systems, such as rooftop solar panels and small-scale wind turbines, are empowering communities to generate their own electricity and reduce their dependence on centralized power grids."
           ],
-          "title": "Canada's Response"
+          "title": "Technological Advancements"
         },
         {
           "id": "block6",
           "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
+          "imageUrl": "https://images.pexels.com/photos/1108814/pexels-photo-1108814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": "Vigan City, Ilocos Region, Philippines"
         },
         {
           "id": "block7",
           "type": "TEXT",
           "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
+            "Despite the progress, challenges remain in the transition to renewable energy. Policy support, financial investment, and international cooperation are essential to overcoming these barriers. Governments must implement supportive policies, such as subsidies and tax incentives, to encourage renewable energy development.",
+            "In addition, global cooperation is crucial to sharing knowledge, technology, and resources. International agreements, such as the Paris Agreement, play a vital role in coordinating efforts and setting global targets for renewable energy adoption."
           ],
-          "title": "Conclusion"
+          "title": "Challenges and Solutions"
         }
       ]
     },
     {
       "id": "4",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
+      "title": "The Israeli-Palestinian Conflict: A Humanitarian Perspective",
+      "subtitle": "Civilians continue to bear the brunt of the ongoing violence.",
+      "image": "https://images.pexels.com/photos/4033852/pexels-photo-4033852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "createdAt": "2024-06-24T12:00:00Z",
+      "type": ["POLITICS", "SOCIAL_ISSUES"],
       "blocks": [
         {
           "id": "block1",
           "type": "TEXT",
           "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
+            "The Israeli-Palestinian conflict remains one of the most enduring and contentious issues in the Middle East. While political negotiations and peace efforts have ebbed and flowed over the decades, the humanitarian situation on the ground has deteriorated significantly.",
+            "This article sheds light on the impact of the conflict on civilians, particularly in Gaza and the West Bank, and highlights the urgent need for humanitarian assistance and protection for those affected."
           ],
           "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
         },
         {
           "id": "block3",
           "type": "TEXT",
           "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
+            "In Gaza, the blockade imposed by Israel, coupled with recurring military operations, has created a dire humanitarian crisis. Access to basic services such as healthcare, clean water, and electricity is severely limited, and unemployment rates are among the highest in the world. The psychological toll of living under constant threat of violence cannot be overstated.",
+            "In the West Bank, restrictions on movement and access to resources have hindered economic development and exacerbated poverty. Settler violence and home demolitions further compound the hardships faced by Palestinian communities."
           ],
-          "title": "Crisis in Eastern DRC"
+          "title": "Humanitarian Impact"
         },
         {
           "id": "block4",
           "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
+          "imageUrl": "https://images.pexels.com/photos/10010406/pexels-photo-10010406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": "Jakarta, Jakarta, Indonesia"
         },
         {
           "id": "block5",
           "type": "TEXT",
           "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
+            "Humanitarian organizations operating in the region face significant challenges in delivering aid. Political and security constraints often impede access to those in need, while funding shortfalls limit the scope of assistance provided. Despite these obstacles, NGOs continue to offer critical support, from emergency medical care to psychosocial services.",
+            "Addressing the humanitarian crisis requires sustained international attention and action. It is essential to ensure that humanitarian principles are upheld, and that aid reaches all those in need, regardless of political considerations."
           ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
+          "title": "Challenges and Efforts"
         }
       ]
     },
     {
       "id": "5",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
+      "title": "Homelessness in America: A Growing Social Crisis",
+      "subtitle": "Exploring the causes and potential solutions to the homelessness epidemic.",
+      "image": "https://images.pexels.com/photos/9532305/pexels-photo-9532305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "createdAt": "2024-06-24T12:00:00Z",
+      "type": ["SOCIAL_ISSUES", "POLITICS"],
       "blocks": [
         {
           "id": "block1",
           "type": "TEXT",
           "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
+            "Homelessness in the United States has reached alarming levels, with an increasing number of individuals and families finding themselves without stable housing. The COVID-19 pandemic has exacerbated the crisis, pushing many who were already on the brink into homelessness.",
+            "This article examines the root causes of homelessness in America, its impact on society, and the efforts being made to address this urgent issue."
           ],
           "title": "Introduction"
         },
         {
           "id": "block2",
           "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
+          "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nytimes.com%2F2016%2F05%2F31%2Fus%2Famericas-aging-homeless-old-and-on-the-street.html&psig=AOvVaw25PGeflPcMGSOKsawxVi0E&ust=1719296910833000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCICTyKTO84YDFQAAAAAdAAAAABAE",
+          "caption": "Old and on the Street: The Graying of America's Homeless - The New York Times"
         },
         {
           "id": "block3",
           "type": "TEXT",
           "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
+            "Economic inequality, lack of affordable housing, and insufficient social safety nets are among the primary drivers of homelessness in the United States. Rising rental costs and stagnant wages have made it increasingly difficult for low-income families to secure and maintain housing. Additionally, mental health issues and substance abuse often intersect with homelessness, creating complex challenges for individuals and service providers.",
+            "The pandemic has led to widespread job losses and evictions, further straining already limited resources for the homeless. Shelters and support services are overwhelmed, struggling to meet the growing demand for assistance."
           ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
+          "title": "Causes of Homelessness"
         },
         {
           "id": "block5",
           "type": "TEXT",
           "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
+            "Efforts to combat homelessness require a multifaceted approach. This includes increasing funding for affordable housing, expanding mental health and addiction services, and implementing comprehensive social policies that address the root causes of poverty and inequality. Local governments and communities play a crucial role in developing and supporting initiatives that provide immediate relief and long-term solutions.",
+            "Innovative programs, such as 'Housing First' initiatives, which prioritize providing permanent housing before addressing other issues, have shown promising results. Collaboration between government agencies, non-profits, and private sectors is essential to create sustainable solutions and reduce homelessness nationwide."
           ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
+          "title": "Solutions and Innovations"
         }
       ]
     },
     {
       "id": "6",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
+      "title": "Environmental Degradation in Africa: Impact on Communities and Ecosystems",
+      "subtitle": "Examining the environmental challenges faced by African nations and their repercussions.",
+      "image": "https://images.pexels.com/photos/3100960/pexels-photo-3100960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "createdAt": "2024-06-24T12:00:00Z",
+      "type": ["SOCIAL_ISSUES", "ENVIRONMENT"],
       "blocks": [
         {
           "id": "block1",
           "type": "TEXT",
           "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
+            "Environmental degradation poses a significant threat to Africa's communities and ecosystems, with profound social and economic consequences. Rapid urbanization, deforestation, and pollution are among the key drivers of environmental decline across the continent.",
+            "This article explores the impacts of environmental degradation on vulnerable populations, wildlife habitats, and the urgent need for sustainable development practices."
           ],
           "title": "Introduction"
         },
         {
           "id": "block2",
           "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
+          "imageUrl": "https://images.pexels.com/photos/11079971/pexels-photo-11079971.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          "caption": "Kampala, Central Region, Uganda"
         },
         {
           "id": "block3",
           "type": "TEXT",
           "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
+            "In many African countries, communities rely heavily on natural resources for their livelihoods, including agriculture, fishing, and forestry. However, unsustainable practices such as overexploitation and land degradation have depleted these resources, leading to food insecurity and economic instability.",
+            "Climate change exacerbates these challenges, causing extreme weather events such as droughts and floods that disrupt agricultural production and threaten water supplies. Coastal communities are particularly vulnerable to rising sea levels and ocean acidification, which endanger marine ecosystems and livelihoods dependent on fisheries."
           ],
-          "title": "Crisis in Eastern DRC"
+          "title": "Impacts on Communities and Ecosystems"
         },
         {
           "id": "block4",
           "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
+          "imageUrl": "https://images.pexels.com/photos/12166465/pexels-photo-12166465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "caption": "Philippines"
         },
         {
           "id": "block5",
           "type": "TEXT",
           "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
+            "Addressing environmental degradation requires coordinated efforts at local, national, and international levels. Governments must prioritize sustainable development policies that promote conservation and restoration of natural habitats, while investing in renewable energy and clean technologies.",
+            "Community-based initiatives and partnerships with civil society organizations play a crucial role in fostering environmental stewardship and resilience. Education and awareness-raising campaigns are also essential to empower communities to take action and advocate for environmental justice."
           ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
-      "blocks": [
-        {
-          "id": "block1",
-          "type": "TEXT",
-          "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
-          ],
-          "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
-        },
-        {
-          "id": "block3",
-          "type": "TEXT",
-          "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
-          ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
-        },
-        {
-          "id": "block5",
-          "type": "TEXT",
-          "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
-          ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
-      "blocks": [
-        {
-          "id": "block1",
-          "type": "TEXT",
-          "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
-          ],
-          "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
-        },
-        {
-          "id": "block3",
-          "type": "TEXT",
-          "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
-          ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
-        },
-        {
-          "id": "block5",
-          "type": "TEXT",
-          "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
-          ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
-      "blocks": [
-        {
-          "id": "block1",
-          "type": "TEXT",
-          "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
-          ],
-          "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
-        },
-        {
-          "id": "block3",
-          "type": "TEXT",
-          "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
-          ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
-        },
-        {
-          "id": "block5",
-          "type": "TEXT",
-          "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
-          ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
-      "blocks": [
-        {
-          "id": "block1",
-          "type": "TEXT",
-          "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
-          ],
-          "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
-        },
-        {
-          "id": "block3",
-          "type": "TEXT",
-          "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
-          ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
-        },
-        {
-          "id": "block5",
-          "type": "TEXT",
-          "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
-          ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
-      "blocks": [
-        {
-          "id": "block1",
-          "type": "TEXT",
-          "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
-          ],
-          "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
-        },
-        {
-          "id": "block3",
-          "type": "TEXT",
-          "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
-          ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
-        },
-        {
-          "id": "block5",
-          "type": "TEXT",
-          "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
-          ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
-        }
-      ]
-    },{
-      "id": "12",
-      "title": "We are profoundly disappointed: MSF statement on Canada`s response to our petition to step up humanitarian assistance in eastern DRC",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
-      "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
-      "createdAt": "2024-03-25T12:00:00Z",
-      "type": ["SCIENCE-FICTION", "EDUCATION"],
-      "blocks": [
-        {
-          "id": "block1",
-          "type": "TEXT",
-          "paragraphs": [
-            "The Government of Canada recently issued a formal response to a petition supported by international medical organization Doctors Without Borders/Médecins Sans Frontières (MSF) calling on Canada to increase its humanitarian assistance for Democratic Republic of Congo (DRC), where millions of people are in desperate need as a result of a violent armed conflict and the failure of the international humanitarian system to adequately respond.",
-            "MSF is profoundly disappointed that Canada’s response indicates it will not increase its support to millions of women, girls and displaced people who are currently exposed to unfathomable levels of suffering in eastern DRC. In its response to the petition, Canada does not announce any new or additional funding for this crisis. Given the outsized impact of this emergency on women and girls – including through shocking levels of sexual and gender-based violence (SGBV) – it is all the more disappointing for such a response to come from a government with a Feminist International Assistance Policy and a stated commitment to addressing the needs of the most vulnerable in conflict."
-          ],
-          "title": "Introduction"
-        },
-        {
-          "id": "block2",
-          "type": "IMAGE",
-          "imageUrl": "https://s.france24.com/media/display/c528b65c-a164-11ed-bd93-005056bfb2b6/w:980/p:16x9/congo-1.webp",
-          "caption": "File photo of residents flee fighting between rebels and Congolese forces near Goma, Democratic Republic of Congo, taken on October 29, 2022."
-        },
-        {
-          "id": "block3",
-          "type": "TEXT",
-          "paragraphs": [
-            "For more than a year now, MSF has been raising the alarm about the massive humanitarian crisis unfolding in the eastern DRC provinces of North Kivu, South Kivu and Ituri, where fighting between state and non-state armed groups has driven millions of people from their homes and left them in urgent need of safety, shelter, food, water and other assistance.",
-            "As an almost entirely independently financed organization, MSF has been able to scale up its own pre-existing humanitarian medical activities in the region, and since 2022 we have significantly increased our response for people affected by this crisis, including increasing our capacity to provide comprehensive care to survivors of sexual violence.",
-            "But we cannot do it all on our own. Without additional humanitarian assistance funding for other organizations, people displaced by violence in eastern DRC will continue to face harrowing and life-threatening situations."
-          ],
-          "title": "Crisis in Eastern DRC"
-        },
-        {
-          "id": "block4",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/00eb0000-0aff-0242-6df2-08dac8026bde_w1023_r1_s.jpg",
-          "caption": "MSF providing medical assistance in North Kivu."
-        },
-        {
-          "id": "block5",
-          "type": "TEXT",
-          "paragraphs": [
-            "That is why MSF began calling on the Government of Canada last year to allocate new and additional emergency funding for the humanitarian response in eastern DRC, so that other organizations can also scale up. When that did not materialize, we supported the launch of a Parliamentary petition in January 2024 calling on Canada to: 1) commit to increasing its humanitarian assistance budget for DRC in 2024 over the amount spent in 2023, so that additional funds can be directed to this crisis without reallocating from other acute needs in DRC, and 2) to use all Canada’s available diplomatic and political tools to help alleviate the suffering of those affected by this crisis.",
-            "Canada has now issued its response to these calls. Although it highlights much of Canada’s previous support for DRC, including many development commitments, it fails to address the petition’s specific call for more lifesaving humanitarian assistance right now. This matters, because humanitarian assistance is fundamentally different from development support, in that it is directed towards meeting the immediate survival needs – food, water, shelter, safety, medical care – of people in acute crisis situations, such as the one currently putting lives at risk in eastern DRC."
-          ],
-          "title": "Canada's Response"
-        },
-        {
-          "id": "block6",
-          "type": "IMAGE",
-          "imageUrl": "https://gdb.voanews.com/01000000-0aff-0242-53c0-08dc4e646232_w1023_r1_s.jpg",
-          "caption": "Children in a refugee camp in Ituri."
-        },
-        {
-          "id": "block7",
-          "type": "TEXT",
-          "paragraphs": [
-            "While the government’s response does refer to Canada’s increased commitment to global humanitarian assistance overall, which was announced in April as part of the 2024 federal budget (an announcement that MSF has publicly welcomed), it gives no indication that this will result in additional support for DRC specifically. Of the funding for DRC announced by International Development Minister Ahmed Hussen in April, which is referenced in the government’s response, only a small portion can be described as being for humanitarian assistance needs, and that portion appears to be less than the total of Canada’s international humanitarian assistance spending on DRC in 2023.",
-            "Beyond funding, Canada’s response also highlights some of the other diplomatic and political tools Canada has used to help address the emergency in North Kivu, South Kivu and Ituri, and across the DRC as a whole. As a front-line humanitarian responder bearing witness to the appalling consequences of this crisis on the people of eastern DRC, MSF appreciates the efforts Canada has undertaken to alleviate some of the immense human suffering that continues to affect so many. However, we encourage Canada to focus less on its past engagements and to play an active role in finding new solutions that can better meet people’s urgent humanitarian needs right now."
-          ],
-          "title": "Conclusion"
+          "title": "Strategies for Sustainable Development"
         }
       ]
     }
-
   ]
 }

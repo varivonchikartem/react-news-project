@@ -17,7 +17,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export function Icon(props: IconProps) {
-  const { className, Svg, height = 20, width = 20, theme, ...otherProps } = props;
+  const { className, Svg, height = 25, width = 25, theme, ...otherProps } = props;
 
   const iconClasses = clx(styles.Icon, {
     [className!]: className,

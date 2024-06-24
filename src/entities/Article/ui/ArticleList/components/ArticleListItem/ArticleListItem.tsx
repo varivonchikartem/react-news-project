@@ -3,6 +3,7 @@ import clx from "classnames";
 import styles from "./ArticleListItem.module.scss";
 import { Article, ArticleView } from "../../../../modal/types/ArticleSchema";
 import Button, { ButtonTheme } from "../../../../../../shared/ui/Button/Button";
+import { useTruncateText } from "../../../../../../shared/lib/hooks/useTruncateText/useTruncateText";
 
 interface ArticleListItemProps {
   className?: string;
@@ -16,6 +17,9 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
   const articlelistitemClasses = clx(styles.ArticleListItem, {
     [className!]: className,
   });
+
+  const truncatedTitle = useTruncateText(article?.title, 35);
+  const truncatedSubtitle = useTruncateText(article?.subtitle, 60);
 
   return (
     <li className={articlelistitemClasses}>
@@ -38,8 +42,8 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
               </Button>
             ))}
 
-          <h3 className={styles.title}>{article?.title}</h3>
-          <p>{article.subtitle}</p>
+          <h3 className={styles.title}>{truncatedTitle}</h3>
+          <p>{truncatedSubtitle}</p>
         </figcaption>
       </figure>
     </li>
