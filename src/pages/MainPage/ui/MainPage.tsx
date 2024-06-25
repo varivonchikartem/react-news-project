@@ -41,16 +41,14 @@ const MainPage: React.FC<MainPageProps> = (props) => {
     <DynamicModuleLoader reducers={reducers}>
       <div className={mainpageClasses}>
         <section className={styles.intro}>
-          <div className="wrapper">
-            <div className={styles.main_page_inner}>
-              <h1 className={styles.main_page_title}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?
-              </h1>
-              <p className={styles.main_page_subtitle}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium mollitia itaque
-                laudantium deleniti porro!
-              </p>
-            </div>
+          <div className={styles.main_page_inner}>
+            <h1 className={styles.main_page_title}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?
+            </h1>
+            <p className={styles.main_page_subtitle}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium mollitia itaque laudantium
+              deleniti porro!
+            </p>
           </div>
         </section>
         <section className={styles.new_releases}>
