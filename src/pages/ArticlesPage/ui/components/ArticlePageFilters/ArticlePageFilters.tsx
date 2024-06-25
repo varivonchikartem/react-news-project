@@ -78,7 +78,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
           onChangeOrder={onChangeOrder}
           onChangeSort={onChangeSort}
         />
-        <ArticleViewHandler articleView={articleView} onViewClick={onViewClick} />
+        <ArticleViewHandler  articleView={articleView} onViewClick={onViewClick} />
       </div>
       <ArticleTypeTabsHandler articleType={articleType} tabs={tabs} onChangeType={onChangeType} />
     </div>

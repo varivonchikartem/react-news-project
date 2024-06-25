@@ -9,6 +9,8 @@ export interface ArticlesPageSchema extends EntityState<Article, string> {
   articlesType: ArticleType;
   articlesSearch: string;
 
+  _inited: boolean;
+
   isLoading: boolean;
   isError?: string;
 }

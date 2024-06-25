@@ -13,6 +13,8 @@ import { UserActions } from "../../../entities/User";
 import { Input, InputTheme } from "../../../shared/ui/Input/Input";
 import { getArticlesPageSearch } from "../../../pages/ArticlesPage/model/selectors/getArticlesPageSearch/getArticlesPageSearch";
 import { ArticlesPageActions } from "../../../pages/ArticlesPage";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
 
 interface HeaderProps {
   className?: string;
@@ -24,6 +26,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
   const headerClasses = clx(styles.Header, {
     [className!]: className,
   });
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
   const userAuthenticationData = useSelector(getUserAuthenticationData);
@@ -50,6 +55,17 @@ export const Header: React.FC<HeaderProps> = (props) => {
     [dispatch]
   );
 
+  const onClickSearch = React.useCallback(
+    (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      if (location.pathname === RoutePath.articles_page) {
+        event.preventDefault();
+      } else {
+        navigate(RoutePath.articles_page);
+      }
+    },
+    [location.pathname, navigate]
+  );
+
   return (
     <header className={headerClasses}>
       <div className="container">
@@ -57,7 +73,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <a href="#" className={styles.header_link}>
             Timesphere
           </a>
-          <form className={styles.header_form}>
+          <Link to={RoutePath.articles_page} className={styles.header_form} onClick={onClickSearch}>
             <Input
               theme={InputTheme.DEFAULT}
               className={styles.header_form_search}
@@ -65,7 +81,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               placeholder="Поиск статей"
               onChange={onChangeSearch}
             />
-          </form>
+          </Link>
           <div className={styles.header_panel}>
             <ThemeSwitcher />
             {userAuthenticationData && (

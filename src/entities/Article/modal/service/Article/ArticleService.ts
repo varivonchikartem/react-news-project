@@ -10,10 +10,12 @@ import {
 import { addQueryParams } from "../../../../../shared/lib/url/addQueryParams/addQueryParams";
 
 interface ArticleServiceProps {
-  articlesSort: ArticlesSortField;
-  articlesOrder: ArticlesSortOrder;
-  articlesSearch: string;
-  articlesType: ArticleType;
+  articlesSort?: ArticlesSortField;
+  articlesOrder?: ArticlesSortOrder;
+  articlesSearch?: string;
+  articlesType?: ArticleType;
+
+  articlesLimit?: number;
 }
 
 export const ArticleService = createAsyncThunk<Article[], ArticleServiceProps, ThunkConfig<string>>(
@@ -21,7 +23,7 @@ export const ArticleService = createAsyncThunk<Article[], ArticleServiceProps, T
   async (props, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
 
-    const { articlesSort, articlesOrder, articlesSearch, articlesType } = props;
+    const { articlesSort, articlesOrder, articlesSearch, articlesType, articlesLimit } = props;
 
     try {
       addQueryParams({
@@ -37,13 +39,12 @@ export const ArticleService = createAsyncThunk<Article[], ArticleServiceProps, T
           _order: articlesOrder,
           q: articlesSearch,
           type: articlesType === ArticleType.ALL ? undefined : [articlesType],
+          _limit: articlesLimit,
         },
       });
       if (!response.data) {
         throw new Error();
       }
-
-      console.log(response.data);
 
       return response.data;
     } catch (e) {

@@ -36,7 +36,7 @@ export enum ArticleType {
   TECHNOLOGY = "TECHNOLOGY",
   CULTURE = "CULTURE",
   POLITICS = "POLITICS",
-  SOCIAL_ISSUES = "SOCIAL-ISSUES",
+  SOCIAL_ISSUES = "SOCIAL_ISSUES",
 }
 
 export interface Article {
@@ -46,6 +46,7 @@ export interface Article {
   //   user: User;
   image: string;
   createdAt: string;
+
   type: ArticleType[];
   blocks: ArticleBlock[];
 }

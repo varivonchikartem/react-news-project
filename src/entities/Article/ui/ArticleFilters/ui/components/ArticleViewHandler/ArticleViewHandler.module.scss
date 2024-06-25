@@ -1,4 +1,10 @@
+@import "../../../../../../../app/styles/media/media";
+
 .ArticleViewHandler {
-    display: flex;
-    column-gap: 7px;
+  display: flex;
+  column-gap: 7px;
+
+  @include tablet {
+    display: none;
+  }
 }

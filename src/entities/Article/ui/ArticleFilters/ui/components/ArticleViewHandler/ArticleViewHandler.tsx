@@ -29,7 +29,7 @@ const viewTypes = [
 export const ArticleViewHandler: React.FC<ArticleViewHandlerProps> = (props) => {
   const { articleView, onViewClick, className } = props;
 
-  const articleviewhandlerClasses = clx(styles.ArticleViewHandler, {
+  const articleviewhandlerClasses = clx(styles.ArticleViewHandler, "hidden-mobile", {
     [className!]: className,
   });
 

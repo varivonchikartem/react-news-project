@@ -14,6 +14,8 @@ const initialState: ArticlesPageSchema = {
   articlesOrder: "asc",
   articlesType: ArticleType.ALL,
 
+  _inited: false,
+
   isLoading: false,
   isError: "",
 };
@@ -24,6 +26,7 @@ const ArticlesPageSlice = createSlice({
   reducers: {
     setArticleView: (state, action: PayloadAction<ArticleView>) => {
       state.articleView = action.payload;
+      state._inited = true;
     },
     setArticleOrder: (state, action: PayloadAction<ArticlesSortOrder>) => {
       state.articlesOrder = action.payload;

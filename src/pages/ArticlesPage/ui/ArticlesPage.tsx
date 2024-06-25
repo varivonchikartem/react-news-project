@@ -13,7 +13,7 @@ import {
 } from "../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
 import { ArticleReducers } from "../../../entities/Article";
 import { useSelector } from "react-redux";
-import { getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
+import { ArticleActions, getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 import { ArticlesPageReducers } from "../model/slices/ArticlesPageSlice";

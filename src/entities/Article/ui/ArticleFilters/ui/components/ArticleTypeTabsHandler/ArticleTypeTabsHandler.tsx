@@ -6,7 +6,6 @@ import { TabItem, Tabs } from "../../../../../../../shared/ui/Tabs/Tabs";
 
 interface ArticleTypeTabsHandlerProps {
   className?: string;
-
   articleType: ArticleType;
   tabs: TabItem<ArticleType>[];
   onChangeType: (type: ArticleType) => void;
@@ -21,7 +20,7 @@ export const ArticleTypeTabsHandler: React.FC<ArticleTypeTabsHandlerProps> = (pr
 
   const onTabClick = React.useCallback(
     (tab: TabItem<ArticleType>) => {
-      onChangeType(tab.value as ArticleType);
+      onChangeType(tab.value);
     },
     [onChangeType]
   );

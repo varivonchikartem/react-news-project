@@ -1,5 +1,6 @@
 .ArticleTypeTabsHandler {
-    display: flex;
-    column-gap: 7px;
-    margin-top: 40px;
+  display: flex;
+  overflow-x: auto;
+  column-gap: 7px;
+  margin-top: 40px;
 }

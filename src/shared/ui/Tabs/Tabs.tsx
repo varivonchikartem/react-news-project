@@ -20,6 +20,8 @@ export const Tabs = <T extends string>({ className, tabs, value, onTabClick }: T
     [className!]: className,
   });
 
+  console.log(value);
+
   return (
     <div className={tabsClasses}>
       {tabs.map((tab) => (
