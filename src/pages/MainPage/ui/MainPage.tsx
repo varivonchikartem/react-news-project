@@ -35,7 +35,7 @@ const MainPage: React.FC<MainPageProps> = (props) => {
 
   React.useEffect(() => {
     dispatch(ArticleService({ articlesLimit: 6 }));
-  }, []);
+  }, [dispatch]);
 
   return (
     <DynamicModuleLoader reducers={reducers}>
