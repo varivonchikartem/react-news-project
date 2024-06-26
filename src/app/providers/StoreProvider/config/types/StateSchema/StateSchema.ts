@@ -3,6 +3,7 @@ import { ProfileSchema } from "../../../../../../entities/Profile";
 import { UserSchema } from "../../../../../../entities/User";
 import { CommentSchema } from "../../../../../../entities/Сomment";
 import { LoginFormSchema, RegistrationFormSchema } from "../../../../../../features/Authorization";
+import { ArticleDetailsPageSchema } from "../../../../../../pages/ArticlesDetailsPage/model/types/ArticleDetailsPageSchema";
 import { ArticlesPageSchema } from "../../../../../../pages/ArticlesPage";
 
 export interface StateSchema {
@@ -11,6 +12,8 @@ export interface StateSchema {
   //async pages
 
   articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
+
   // async entity
 
   profile?: ProfileSchema;

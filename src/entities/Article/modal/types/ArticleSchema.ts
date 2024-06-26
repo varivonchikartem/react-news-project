@@ -56,7 +56,9 @@ export enum ArticleView {
   LARGE_CARD = "LARGE_CARD",
 }
 
-export interface ArticleSchema extends EntityState<Article, string> {
+export interface ArticleSchema {
+  articles: Article[];
+
   isLoading: boolean;
   isError?: string;
 }

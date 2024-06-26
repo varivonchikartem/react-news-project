@@ -4,22 +4,15 @@ import { StateSchema } from "../../../../app/providers/StoreProvider";
 import { ArticleService } from "../service/Article/ArticleService";
 import { ArticleFetchByIdService } from "../service/ArticleFetchByIdService/ArticleFetchByIdService";
 
-const ArticleAdapter = createEntityAdapter<Article>();
-
-export const getArticles = ArticleAdapter.getSelectors<StateSchema>(
-  (state) => state.article || ArticleAdapter.getInitialState()
-);
-
 const initialState: ArticleSchema = {
-  ids: [],
-  entities: {},
+  articles: [],
   isLoading: false,
   isError: "",
 };
 
 const ArticleSlice = createSlice({
   name: "Article",
-  initialState: ArticleAdapter.getInitialState(initialState),
+  initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
@@ -29,7 +22,7 @@ const ArticleSlice = createSlice({
       })
       .addCase(ArticleService.fulfilled, (state, action: PayloadAction<Article[]>) => {
         state.isLoading = false;
-        ArticleAdapter.setAll(state, action.payload);
+        state.articles = action.payload;
       })
       .addCase(ArticleService.rejected, (state, action) => {
         state.isLoading = false;
@@ -41,7 +34,6 @@ const ArticleSlice = createSlice({
       })
       .addCase(ArticleFetchByIdService.fulfilled, (state, action: PayloadAction<Article>) => {
         state.isLoading = false;
-        ArticleAdapter.setOne(state, action.payload);
       })
       .addCase(ArticleFetchByIdService.rejected, (state, action) => {
         state.isLoading = false;

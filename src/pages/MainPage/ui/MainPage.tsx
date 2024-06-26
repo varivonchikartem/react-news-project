@@ -10,10 +10,10 @@ import {
 import { ArticleReducers } from "../../../entities/Article";
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
 import { useSelector } from "react-redux";
-import { getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
+import { getArticlesData } from "../../../entities/Article/modal/selectors/getArticlesData/getArticlesData";
 
 interface MainPageProps {
   className?: string;
@@ -31,7 +31,7 @@ const MainPage: React.FC<MainPageProps> = (props) => {
   });
 
   const dispatch = useAppDispatch();
-  const articles = useSelector(getArticles.selectAll);
+  const articles = useSelector(getArticlesData);
 
   React.useEffect(() => {
     dispatch(ArticleService({ articlesLimit: 6 }));

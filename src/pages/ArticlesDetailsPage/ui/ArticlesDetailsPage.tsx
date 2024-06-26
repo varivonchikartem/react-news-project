@@ -4,7 +4,7 @@ import styles from "./ArticlesDetailsPage.module.scss";
 import { AppImage } from "../../../shared/ui/AppImage/AppImage";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleFetchByIdService } from "../../../entities/Article/modal/service/ArticleFetchByIdService/ArticleFetchByIdService";
-import { ArticleReducers, getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
+import { ArticleReducers } from "../../../entities/Article/modal/slices/ArticleSlice";
 import {
   Article,
   ArticleBlock,
@@ -25,6 +25,8 @@ import Select from "../../../shared/ui/Select/Select";
 import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
 import { CommentModal } from "../../../features/Comment/CommentModal/ui/CommentModal";
 import { DefaultCommentForm } from "../../../features/Comment/CommentModal/commentForms/DefaultCommentForm/ui/DefaultCommentForm";
+import { getArticleDetailsData } from "../selectors/getArticleDetailsData";
+import { ArticleDetalisPageReducers } from "../model/slices/ArticleDetalisPageSlice";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -32,6 +34,7 @@ interface ArticlesDetailsPageProps {
 
 const reducers: ReducersList = {
   article: ArticleReducers,
+  articleDetailsPage: ArticleDetalisPageReducers,
   comment: CommentReducers,
 };
 
@@ -45,7 +48,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
-  const article = useSelector((state: StateSchema) => getArticles.selectById(state, id || ""));
+  const article = useSelector(getArticleDetailsData);
 
   React.useEffect(() => {
     dispatch(ArticleFetchByIdService(id || ""));

@@ -13,7 +13,7 @@ import {
 } from "../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
 import { ArticleReducers } from "../../../entities/Article";
 import { useSelector } from "react-redux";
-import { ArticleActions, getArticles } from "../../../entities/Article/modal/slices/ArticleSlice";
+import { ArticleActions } from "../../../entities/Article/modal/slices/ArticleSlice";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 import { ArticlesPageReducers } from "../model/slices/ArticlesPageSlice";
@@ -24,6 +24,7 @@ import { getArticlesPageOrder } from "../model/selectors/getArticlesPageOrder/ge
 import { getArticlesPageSort } from "../model/selectors/getArticlesPageSort/getArticlesPageSort";
 import { getArticlesPageType } from "../model/selectors/getArticlesPageType/getArticlesPageType";
 import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
+import { getArticlesData } from "../../../entities/Article/modal/selectors/getArticlesData/getArticlesData";
 
 interface ArticlesPageProps {
   className?: string;
@@ -43,7 +44,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props) => {
 
   const dispatch = useAppDispatch();
 
-  const articles = useSelector(getArticles.selectAll);
+  const articles = useSelector(getArticlesData);
 
   const articleView = useSelector(getArticlesPageView);
   const articleSearch = useSelector(getArticlesPageSearch);
