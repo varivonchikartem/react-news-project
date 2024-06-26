@@ -35,7 +35,7 @@ const LoginForm: React.FC<LoginFormProps> = (props) => {
 
   const onChangeUserName = React.useCallback(
     (value: string) => {
-      dispatch(LoginForctions.setUsername(value));
+      dispatch(LoginFormActions.setUsername(value));
     },
     [dispatch]
   );

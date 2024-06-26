@@ -23,6 +23,8 @@ import { ArticleDetailsImageBlockComponent } from "../../../entities/Article/ui/
 import { CommentList, CommentReducers } from "../../../entities/Сomment";
 import Select from "../../../shared/ui/Select/Select";
 import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
+import { CommentModal } from "../../../features/Comment/CommentModal/ui/CommentModal";
+import { DefaultCommentForm } from "../../../features/Comment/CommentModal/commentForms/DefaultCommentForm/ui/DefaultCommentForm";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -62,6 +64,16 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
     }
   }, []);
 
+  const [isAuthModal, setIsAuthModal] = React.useState(false);
+
+  const onOpenModal = React.useCallback(() => {
+    setIsAuthModal(true);
+  }, []);
+
+  const onCloseModal = React.useCallback(() => {
+    setIsAuthModal(false);
+  }, []);
+
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={articlesdetailspageClasses}>
@@ -78,8 +90,12 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
         <div>
           <h2>Отзывы</h2>
           <Select />
-          <Button theme={ButtonTheme.DEFAULT}>Напишите отзыв</Button>
-          <CommentModal />
+          <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
+            Напишите отзыв
+          </Button>
+          <CommentModal onOpenModal={isAuthModal} onCloseModal={onCloseModal}>
+            <DefaultCommentForm />
+          </CommentModal>
           <CommentList />
         </div>
       </div>
