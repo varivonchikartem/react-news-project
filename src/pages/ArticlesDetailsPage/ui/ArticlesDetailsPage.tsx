@@ -20,6 +20,9 @@ import {
 import { useParams } from "react-router-dom";
 import { ArticleDetailsTextBlockComponent } from "../../../entities/Article/ui/ArticleBlocks/ui/ArticleDetailsTextBlockComponent/ArticleDetailsTextBlockComponent";
 import { ArticleDetailsImageBlockComponent } from "../../../entities/Article/ui/ArticleBlocks/ui/ArticleDetailsImageBlockComponent/ArticleDetailsImageBlockComponent";
+import { CommentList, CommentReducers } from "../../../entities/Сomment";
+import Select from "../../../shared/ui/Select/Select";
+import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -27,6 +30,7 @@ interface ArticlesDetailsPageProps {
 
 const reducers: ReducersList = {
   article: ArticleReducers,
+  comment: CommentReducers,
 };
 
 const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
@@ -69,6 +73,14 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
             <p className="sub">{article?.subtitle}</p>
           </div>
           <div className="div2">{article?.blocks.map(renderBlock)}</div>
+        </div>
+
+        <div>
+          <h2>Отзывы</h2>
+          <Select />
+          <Button theme={ButtonTheme.DEFAULT}>Напишите отзыв</Button>
+          <CommentModal />
+          <CommentList />
         </div>
       </div>
     </DynamicModuleLoader>
