@@ -4,6 +4,8 @@ import styles from "./ArticleListItem.module.scss";
 import { Article, ArticleView } from "../../../../modal/types/ArticleSchema";
 import Button, { ButtonTheme } from "../../../../../../shared/ui/Button/Button";
 import { useTruncateText } from "../../../../../../shared/lib/hooks/useTruncateText/useTruncateText";
+import { Link } from "react-router-dom";
+import { RoutePath } from "../../../../../../shared/RouterConfiguration/RouterConfiguration";
 
 interface ArticleListItemProps {
   className?: string;
@@ -23,29 +25,31 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
 
   return (
     <li className={articlelistitemClasses}>
-      <figure>
-        <div className="projects-image-block">
-          <img
-            className="projects-image"
-            src={article?.image}
-            alt=""
-            width="2495"
-            height="1625"
-            loading="lazy"
-          />
-        </div>
-        <figcaption>
-          {article.type &&
-            article.type.map((type, index) => (
-              <Button key={index} className={styles.button_type} theme={ButtonTheme.DEFAULT}>
-                {type}
-              </Button>
-            ))}
+      <Link to={`${RoutePath.article_details_page}${article?.id}`}>
+        <figure>
+          <div className="projects-image-block">
+            <img
+              className="projects-image"
+              src={article?.image}
+              alt=""
+              width="2495"
+              height="1625"
+              loading="lazy"
+            />
+          </div>
+          <figcaption>
+            {article.type &&
+              article.type.map((type, index) => (
+                <Button key={index} className={styles.button_type} theme={ButtonTheme.DEFAULT}>
+                  {type}
+                </Button>
+              ))}
 
-          <h3 className={styles.title}>{truncatedTitle}</h3>
-          <p>{truncatedSubtitle}</p>
-        </figcaption>
-      </figure>
+            <h3 className={styles.title}>{truncatedTitle}</h3>
+            <p>{truncatedSubtitle}</p>
+          </figcaption>
+        </figure>
+      </Link>
     </li>
   );
 };

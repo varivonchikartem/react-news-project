@@ -2,6 +2,7 @@ import { createEntityAdapter, createSlice, configureStore, PayloadAction } from 
 import { Article, ArticleSchema } from "../types/ArticleSchema";
 import { StateSchema } from "../../../../app/providers/StoreProvider";
 import { ArticleService } from "../service/Article/ArticleService";
+import { ArticleFetchByIdService } from "../service/ArticleFetchByIdService/ArticleFetchByIdService";
 
 const ArticleAdapter = createEntityAdapter<Article>();
 
@@ -31,6 +32,18 @@ const ArticleSlice = createSlice({
         ArticleAdapter.setAll(state, action.payload);
       })
       .addCase(ArticleService.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = action.payload;
+      })
+      .addCase(ArticleFetchByIdService.pending, (state) => {
+        state.isError = undefined;
+        state.isLoading = true;
+      })
+      .addCase(ArticleFetchByIdService.fulfilled, (state, action: PayloadAction<Article>) => {
+        state.isLoading = false;
+        ArticleAdapter.setOne(state, action.payload);
+      })
+      .addCase(ArticleFetchByIdService.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = action.payload;
       });
