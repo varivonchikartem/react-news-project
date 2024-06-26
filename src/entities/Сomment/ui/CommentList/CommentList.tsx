@@ -2,7 +2,7 @@ import React from "react";
 import clx from "classnames";
 import styles from "./CommentList.module.scss";
 import { Comment } from "../../model/types/CommentSchema";
-import { CommentCard } from "../CommentCard/CommentCard";
+import { CommentItem } from "../CommentItem/CommentItem";
 
 interface CommentListProps {
   className?: string;
@@ -19,7 +19,7 @@ export const CommentList: React.FC<CommentListProps> = (props) => {
 
   return (
     <div className={commentlistClasses}>
-      {comments?.length ? comments.map((comment) => <CommentCard comment={comment} />) : <p>Нет комментариев</p>}
+      <CommentItem />
     </div>
   );
 };
