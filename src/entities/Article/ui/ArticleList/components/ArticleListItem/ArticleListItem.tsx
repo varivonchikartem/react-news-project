@@ -6,6 +6,7 @@ import Button, { ButtonTheme } from "../../../../../../shared/ui/Button/Button";
 import { useTruncateText } from "../../../../../../shared/lib/hooks/useTruncateText/useTruncateText";
 import { Link } from "react-router-dom";
 import { RoutePath } from "../../../../../../shared/RouterConfiguration/RouterConfiguration";
+import { AppImage } from "../../../../../../shared/ui/AppImage/AppImage";
 
 interface ArticleListItemProps {
   className?: string;
@@ -27,16 +28,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
     <li className={articlelistitemClasses}>
       <Link to={`${RoutePath.article_details_page}${article?.id}`}>
         <figure>
-          <div className="projects-image-block">
-            <img
-              className="projects-image"
-              src={article?.image}
-              alt=""
-              width="2495"
-              height="1625"
-              loading="lazy"
-            />
-          </div>
+          <AppImage src={article?.image} minHeight="50vh" />
           <figcaption>
             {article.type &&
               article.type.map((type, index) => (

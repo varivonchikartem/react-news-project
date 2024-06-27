@@ -14,6 +14,7 @@ import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppD
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
 import { getArticlesData } from "../../../entities/Article/modal/selectors/getArticlesData/getArticlesData";
+import { ArticleView } from "../../../entities/Article/modal/types/ArticleSchema";
 
 interface MainPageProps {
   className?: string;

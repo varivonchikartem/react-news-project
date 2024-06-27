@@ -1,5 +1,35 @@
 @import "../../../../../app/styles/media/media";
 
+.DEFAULT_CARD {
+  display: flex;
+
+  width: 100%;
+  overflow-x: auto;
+  column-gap: 15px;
+
+  white-space: nowrap;
+  scrollbar-width: none;
+  scrollbar-color: inherit;
+
+  &::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: inherit;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: inherit;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: inherit;
+  }
+}
+
 .SMALL_CARD {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

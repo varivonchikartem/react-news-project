@@ -10,6 +10,7 @@ import {
   ArticleBlock,
   ArticleBlockType,
   ArticleSchema,
+  ArticleView,
 } from "../../../entities/Article/modal/types/ArticleSchema";
 import { useSelector } from "react-redux";
 import { StateSchema } from "../../../app/providers/StoreProvider";
@@ -32,6 +33,9 @@ import { FetchCommentsByArticleIdService } from "../model/service/FetchCommentsB
 import { ArticleDetailsPageCommentsReducers } from "../model/slices/ArticleDetailsPageCommentsSlice";
 import { getArticleDetailsPageCommentsData } from "../model/selectors/comments/getArticleDetailsPageCommentsData";
 import { ArticleDetailsReducers } from "../../../entities/Article/modal/slices/ArticleDetailsSlice";
+import { getArticlesData } from "../../../entities/Article/modal/selectors/getArticlesData/getArticlesData";
+import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
+import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -39,10 +43,8 @@ interface ArticlesDetailsPageProps {
 
 const reducers: ReducersList = {
   article: ArticleReducers,
-  comment: CommentReducers,
-  commentForm: CommentFormReducers,
-  articleDetailsPageComments: ArticleDetailsPageCommentsReducers,
   articleDetails: ArticleDetailsReducers,
+  articleDetailsPageComments: ArticleDetailsPageCommentsReducers,
 };
 
 const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
@@ -55,13 +57,19 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
+  const articleRecommendations = useSelector(getArticlesData);
   const article = useSelector(getArticleDetailsData);
   const comments = useSelector(getArticleDetailsPageCommentsData);
 
   React.useEffect(() => {
     dispatch(ArticleFetchByIdService(id || ""));
     dispatch(FetchCommentsByArticleIdService({ articleId: id || "" }));
+    dispatch(ArticleService({}));
   }, [dispatch]);
+
+  const articles = useSelector(getArticlesData);
+
+  React.useEffect(() => {}, [dispatch]);
 
   const renderBlock = React.useCallback((block: ArticleBlock) => {
     switch (block.type) {
@@ -119,6 +127,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
             <DefaultCommentFormAsync onSendComment={onSendComment} />
           </CommentFormModal>
           <CommentList comments={comments} />
+          <ArticleList articles={articleRecommendations} articleView={ArticleView.DEFAULT_CARD} />
         </div>
       </div>
     </DynamicModuleLoader>
