@@ -14,7 +14,9 @@ const initialState: ArticleDetailsPageSchema = {
 const ArticleDetalisPageSlice = createSlice({
   name: "ArticleDetalisPage",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    
+  },
   extraReducers: (builder) => {
     builder
       .addCase(ArticleFetchByIdService.pending, (state) => {

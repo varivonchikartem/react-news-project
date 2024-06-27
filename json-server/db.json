@@ -350,5 +350,35 @@
         }
       ]
     }
+  ],
+  "comments": [
+    {
+      "articleId": "1",
+      "userId": "1",
+      "commentTitle": "132",
+      "commentFormText": "123",
+      "id": 1
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "commentTitle": "123",
+      "commentFormText": "123",
+      "id": 2
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "commentTitle": "123",
+      "commentFormText": "123",
+      "id": 3
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "commentTitle": "123",
+      "commentFormText": "123",
+      "id": 4
+    }
   ]
 }

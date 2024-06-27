@@ -2,22 +2,15 @@ import { createEntityAdapter, createSlice, configureStore, PayloadAction } from 
 import { StateSchema } from "../../../../app/providers/StoreProvider";
 import { Comment, CommentSchema } from "../types/CommentSchema";
 
-const CommentAdapter = createEntityAdapter<Comment>();
-
-export const getComments = CommentAdapter.getSelectors<StateSchema>(
-  (state) => state.comment || CommentAdapter.getInitialState()
-);
-
 const initialState: CommentSchema = {
-  ids: [],
-  entities: {},
+  comment: undefined,
   isLoading: false,
   isError: "",
 };
 
 const CommentSlice = createSlice({
   name: "Comment",
-  initialState: CommentAdapter.getInitialState(initialState),
+  initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder;

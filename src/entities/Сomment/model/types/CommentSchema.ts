@@ -9,7 +9,8 @@ export interface Comment {
   commentCreatedAt?: string;
 }
 
-export interface CommentSchema extends EntityState<Comment, string> {
+export interface CommentSchema {
+  comment?: Comment[];
   isLoading: boolean;
   isError?: string;
 }

@@ -23,10 +23,12 @@ import { ArticleDetailsImageBlockComponent } from "../../../entities/Article/ui/
 import { CommentList, CommentReducers } from "../../../entities/Сomment";
 import Select from "../../../shared/ui/Select/Select";
 import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
-import { CommentModal } from "../../../features/Comment/CommentModal/ui/CommentModal";
-import { DefaultCommentForm } from "../../../features/Comment/CommentModal/commentForms/DefaultCommentForm/ui/DefaultCommentForm";
-import { getArticleDetailsData } from "../selectors/getArticleDetailsData";
+import { getArticleDetailsData } from "../model/selectors/getArticleDetailsData";
 import { ArticleDetalisPageReducers } from "../model/slices/ArticleDetalisPageSlice";
+import { CommentFormModal } from "../../../features/CommentForm/ui/CommentFormModal/ui/CommentFormModal";
+import { DefaultCommentFormAsync } from "../../../features/CommentForm/ui/CommentFormModal/ui/commentForms/DefaultCommentForm/ui/DefaultCommentForm.async";
+import { AddCommentForArticleService } from "../model/service/AddCommentForArticleService/AddCommentForArticleService";
+import { CommentFormReducers } from "../../../features/CommentForm/model/slices/CommentFormSlice";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -36,6 +38,7 @@ const reducers: ReducersList = {
   article: ArticleReducers,
   articleDetailsPage: ArticleDetalisPageReducers,
   comment: CommentReducers,
+  commentForm: CommentFormReducers,
 };
 
 const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
@@ -77,6 +80,13 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
     setIsAuthModal(false);
   }, []);
 
+  const onSendComment = React.useCallback(
+    (commentFormTitle: string, commentFormText: string) => {
+      dispatch(AddCommentForArticleService({ commentFormTitle: commentFormTitle, commentFormText: commentFormText }));
+    },
+    [dispatch]
+  );
+
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={articlesdetailspageClasses}>
@@ -96,9 +106,9 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
           <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
             Напишите отзыв
           </Button>
-          <CommentModal onOpenModal={isAuthModal} onCloseModal={onCloseModal}>
-            <DefaultCommentForm />
-          </CommentModal>
+          <CommentFormModal onOpenModal={isAuthModal} onCloseModal={onCloseModal}>
+            <DefaultCommentFormAsync onSendComment={onSendComment} />
+          </CommentFormModal>
           <CommentList />
         </div>
       </div>
