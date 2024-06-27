@@ -27,17 +27,6 @@ const ArticleSlice = createSlice({
       .addCase(ArticleService.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = action.payload;
-      })
-      .addCase(ArticleFetchByIdService.pending, (state) => {
-        state.isError = undefined;
-        state.isLoading = true;
-      })
-      .addCase(ArticleFetchByIdService.fulfilled, (state, action: PayloadAction<Article>) => {
-        state.isLoading = false;
-      })
-      .addCase(ArticleFetchByIdService.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isError = action.payload;
       });
   },
 });

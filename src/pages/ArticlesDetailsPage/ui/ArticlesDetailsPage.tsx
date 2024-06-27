@@ -23,12 +23,15 @@ import { ArticleDetailsImageBlockComponent } from "../../../entities/Article/ui/
 import { CommentList, CommentReducers } from "../../../entities/Сomment";
 import Select from "../../../shared/ui/Select/Select";
 import Button, { ButtonTheme } from "../../../shared/ui/Button/Button";
-import { getArticleDetailsData } from "../model/selectors/getArticleDetailsData";
-import { ArticleDetalisPageReducers } from "../model/slices/ArticleDetalisPageSlice";
 import { CommentFormModal } from "../../../features/CommentForm/ui/CommentFormModal/ui/CommentFormModal";
 import { DefaultCommentFormAsync } from "../../../features/CommentForm/ui/CommentFormModal/ui/commentForms/DefaultCommentForm/ui/DefaultCommentForm.async";
 import { AddCommentForArticleService } from "../model/service/AddCommentForArticleService/AddCommentForArticleService";
 import { CommentFormReducers } from "../../../features/CommentForm/model/slices/CommentFormSlice";
+import { getArticleDetailsData } from "../../../entities/Article/modal/selectors/ArticleDetailsSelectors/getArticleDetailsData/getArticleDetailsData";
+import { FetchCommentsByArticleIdService } from "../model/service/FetchCommentsByArticleIdService/FetchCommentsByArticleIdService";
+import { ArticleDetailsPageCommentsReducers } from "../model/slices/ArticleDetailsPageCommentsSlice";
+import { getArticleDetailsPageCommentsData } from "../model/selectors/comments/getArticleDetailsPageCommentsData";
+import { ArticleDetailsReducers } from "../../../entities/Article/modal/slices/ArticleDetailsSlice";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -36,9 +39,10 @@ interface ArticlesDetailsPageProps {
 
 const reducers: ReducersList = {
   article: ArticleReducers,
-  articleDetailsPage: ArticleDetalisPageReducers,
   comment: CommentReducers,
   commentForm: CommentFormReducers,
+  articleDetailsPageComments: ArticleDetailsPageCommentsReducers,
+  articleDetails: ArticleDetailsReducers,
 };
 
 const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
@@ -52,9 +56,11 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
 
   const dispatch = useAppDispatch();
   const article = useSelector(getArticleDetailsData);
+  const comments = useSelector(getArticleDetailsPageCommentsData);
 
   React.useEffect(() => {
     dispatch(ArticleFetchByIdService(id || ""));
+    dispatch(FetchCommentsByArticleIdService({ articleId: id || "" }));
   }, [dispatch]);
 
   const renderBlock = React.useCallback((block: ArticleBlock) => {
@@ -82,7 +88,9 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
 
   const onSendComment = React.useCallback(
     (commentFormTitle: string, commentFormText: string) => {
-      dispatch(AddCommentForArticleService({ commentFormTitle: commentFormTitle, commentFormText: commentFormText }));
+      dispatch(
+        AddCommentForArticleService({ commentFormTitle: commentFormTitle, commentFormText: commentFormText })
+      );
     },
     [dispatch]
   );
@@ -102,6 +110,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
 
         <div>
           <h2>Отзывы</h2>
+          <p></p>
           <Select />
           <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
             Напишите отзыв
@@ -109,7 +118,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
           <CommentFormModal onOpenModal={isAuthModal} onCloseModal={onCloseModal}>
             <DefaultCommentFormAsync onSendComment={onSendComment} />
           </CommentFormModal>
-          <CommentList />
+          <CommentList comments={comments} />
         </div>
       </div>
     </DynamicModuleLoader>

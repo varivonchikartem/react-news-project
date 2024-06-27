@@ -19,7 +19,11 @@ export const CommentList: React.FC<CommentListProps> = (props) => {
 
   return (
     <div className={commentlistClasses}>
-      <CommentItem />
+      {comments?.length ? (
+        comments.map((comment) => <CommentItem comment={comment} />)
+      ) : (
+        <p>Комментарии отсутствуют</p>
+      )}
     </div>
   );
 };

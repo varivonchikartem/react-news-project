@@ -1,22 +1,20 @@
 import { createEntityAdapter, createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
 import { StateSchema } from "../../../../app/providers/StoreProvider";
-import { ArticleDetailsPageSchema } from "../types/ArticleDetailsPageSchema";
 import { ArticleFetchByIdService } from "../../../../entities/Article/modal/service/ArticleFetchByIdService/ArticleFetchByIdService";
 import { Article } from "../../../../entities/Article/modal/types/ArticleSchema";
+import { ArticleDetailsSchema } from "../types/ArticleDetailsSchema";
 
-const initialState: ArticleDetailsPageSchema = {
+const initialState: ArticleDetailsSchema = {
   article: undefined,
 
   isLoading: false,
   isError: "",
 };
 
-const ArticleDetalisPageSlice = createSlice({
-  name: "ArticleDetalisPage",
+const ArticleDetailsSlice = createSlice({
+  name: "ArticleDetails",
   initialState: initialState,
-  reducers: {
-    
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(ArticleFetchByIdService.pending, (state) => {
@@ -34,5 +32,4 @@ const ArticleDetalisPageSlice = createSlice({
   },
 });
 
-export const { actions: ArticleDetalisPageActions, reducer: ArticleDetalisPageReducers } =
-  ArticleDetalisPageSlice;
+export const { actions: ArticleDetailsActions, reducer: ArticleDetailsReducers } = ArticleDetailsSlice;

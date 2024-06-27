@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ThunkConfig } from "../../../../../app/providers/StoreProvider/config/types/ThunkConfigSchema/ThunkConfigSchema";
 import { getUserAuthenticationData } from "../../../../../entities/User/model/selectors/getUserAuthenticationData/getUserAuthenticationData";
-import { getArticleDetailsData } from "../../selectors/getArticleDetailsData";
+import { getArticleDetailsData } from "../../../../../entities/Article/modal/selectors/ArticleDetailsSelectors/getArticleDetailsData/getArticleDetailsData";
 
 interface AddCommentForArticleServiceProps {
   commentFormTitle: string;
@@ -12,7 +12,7 @@ export const AddCommentForArticleService = createAsyncThunk<
   Comment,
   AddCommentForArticleServiceProps,
   ThunkConfig<string>
->("articleDetails/addCommentForArticle", async (props, thunkApi) => {
+>("AddCommentForArticle/AddCommentForArticleService", async (props, thunkApi) => {
   const { extra, dispatch, rejectWithValue, getState } = thunkApi;
 
   const { commentFormTitle, commentFormText } = props;
@@ -29,14 +29,12 @@ export const AddCommentForArticleService = createAsyncThunk<
       articleId: article.id,
       userId: userData.id,
       commentTitle: commentFormTitle,
-      commentFormText: commentFormText,
+      commentText: commentFormText,
     });
 
     if (!response.data) {
       throw new Error();
     }
-
-
 
     return response.data;
   } catch (e) {
