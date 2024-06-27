@@ -36,6 +36,7 @@ import { ArticleDetailsReducers } from "../../../entities/Article/modal/slices/A
 import { getArticlesData } from "../../../entities/Article/modal/selectors/getArticlesData/getArticlesData";
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
+import { StarRating } from "../../../shared/ui/StarRating/StarRating";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -112,6 +113,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
           <div className="div1">
             <h2>{article?.title}</h2>
             <p className="sub">{article?.subtitle}</p>
+            <StarRating />
           </div>
           <div className="div2">{article?.blocks.map(renderBlock)}</div>
         </div>
