@@ -1,6 +1,7 @@
 import React from "react";
 import HomeIcon from "../../../../shared/assets/icons/home-icon.svg";
 import NewsIcon from "../../../../shared/assets/icons/news-icon.svg";
+import ProfileIcon from "../../../../shared/assets/icons/avatar-icon.svg";
 import { RoutePath } from "../../../../shared/RouterConfiguration/RouterConfiguration";
 
 export interface SidebarItemType {
@@ -22,13 +23,8 @@ export const SidebarItemsList: SidebarItemType[] = [
     text: "Новости",
   },
   {
-    path: `${RoutePath.article_details_page}1`,
-    Icon: NewsIcon,
-    text: "Новости",
-  },
-  {
     path: RoutePath.profile_page,
-    Icon: NewsIcon,
+    Icon: ProfileIcon,
     text: "Профиль",
   },
 ];

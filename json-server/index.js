@@ -61,11 +61,13 @@ server.post("/login", (req, res) => {
   }
 });
 
+// Middleware to check authorization for specific routes
 server.use((req, res, next) => {
-  if (!req.headers.authorization) {
-    return res.status(403).json({ message: "AUTH ERROR" });
+  if (req.method === "POST" || req.method === "PUT" || req.method === "PATCH" || req.method === "DELETE") {
+    if (!req.headers.authorization) {
+      return res.status(403).json({ message: "AUTH ERROR" });
+    }
   }
-
   next();
 });
 

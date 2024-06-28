@@ -16,6 +16,9 @@ import { ArticlesPageActions } from "../../../pages/ArticlesPage";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
 import { SidebarModal } from "../../Sidebar/ui/SidebarModal/SidebarModal";
+import { Icon, IconTheme } from "../../../shared/ui/Icon/Icon";
+
+import TiltedIcon from "../../../shared/assets/icons/list.svg";
 
 interface HeaderProps {
   className?: string;
@@ -145,7 +148,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   theme={ButtonTheme.DEFAULT}
                   onClick={onOpenSidebarModal}
                 >
-                  1
+                  <Icon theme={IconTheme.DEFAULT} Svg={TiltedIcon} />
                 </Button>
                 <SidebarModal onOpenModal={isAuthSidebarModal} onCloseModal={onCloseSidebarModal} />
 
