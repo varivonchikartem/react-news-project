@@ -10,7 +10,7 @@ interface ModalProps {
   children: React.ReactNode;
 
   onOpenModal: boolean;
-  onCloseModal: () => void;
+  onCloseModal?: () => void;
 
   width?: string;
 }
