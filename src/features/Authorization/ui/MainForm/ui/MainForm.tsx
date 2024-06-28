@@ -30,7 +30,7 @@ export const MainForm: React.FC<MainFormProps> = (props) => {
         </h2>
         <p>Welcome!</p>
       </header>
-      <main>
+      <main className={styles.main}>
         <React.Suspense fallback="Loading">
           {formType === "login" && <LoginFormAsync />}
           {formType === "registration" && <RegistrationFormAsync />}

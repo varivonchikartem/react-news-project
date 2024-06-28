@@ -19,29 +19,10 @@
 
   background-color: var(--background-color-sidebar);
 
-  border-right:  var(--border);
+  border-right: var(--border);
 
   @include tablet {
-    top: 50%;
-    bottom: auto;
-    left: auto;
-
-    justify-content: center;
-
-    transform: none;
-
-    transform: translateY(-50%);
-  }
-
-  @include mobile {
-    top: 50%;
-    left: auto;
-
-    justify-content: center;
-
-    transform: none;
-
-    transform: translateY(-50%);
+    display: none;
   }
 
   ul {

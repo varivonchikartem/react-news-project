@@ -15,6 +15,7 @@ import { getArticlesPageSearch } from "../../../pages/ArticlesPage/model/selecto
 import { ArticlesPageActions } from "../../../pages/ArticlesPage";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
+import { SidebarModal } from "../../Sidebar/ui/SidebarModal/SidebarModal";
 
 interface HeaderProps {
   className?: string;
@@ -42,6 +43,16 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   const onCloseModal = React.useCallback(() => {
     setIsAuthModal(false);
+  }, []);
+
+  const [isAuthSidebarModal, setIsAuthSidebarModal] = React.useState(false);
+
+  const onOpenSidebarModal = React.useCallback(() => {
+    setIsAuthSidebarModal(true);
+  }, []);
+
+  const onCloseSidebarModal = React.useCallback(() => {
+    setIsAuthSidebarModal(false);
   }, []);
 
   const onLogout = React.useCallback(() => {
@@ -129,6 +140,15 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
                   Log in
                 </Button>
+                <Button
+                  className={styles.sidebar_button}
+                  theme={ButtonTheme.DEFAULT}
+                  onClick={onOpenSidebarModal}
+                >
+                  1
+                </Button>
+                <SidebarModal onOpenModal={isAuthSidebarModal} onCloseModal={onCloseSidebarModal} />
+
                 {isAuthModal && <AuthorizationModal onOpenModal={isAuthModal} onCloseModal={onCloseModal} />}
               </>
             )}

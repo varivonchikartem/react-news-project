@@ -1,0 +1,21 @@
+.SidebarModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  min-height: 80vh;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  min-height: 80vh;
+}
+
+.button {
+  min-width: 205px;
+}
