@@ -12,6 +12,7 @@ import {
   ReducersList,
 } from "../../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
 import { ArticleRatingReducers } from "../../model/slices/ArticleRatingSlice";
+import { RateArticleService } from "../../model/services/RateArticleService/RateArticleService";
 
 interface ArticleRatingProps {
   className?: string;
@@ -39,7 +40,34 @@ export const ArticleRating: React.FC<ArticleRatingProps> = (props) => {
     dispatch(GetArticleRatingService({ articleId: articleId, userId: userAuthenticationData?.id || "" }));
   }, [dispatch]);
 
-  const rating = data?.[0];
+  const onHandleRateArticle = React.useCallback(
+    (starsCount: number, feedback?: string) => {
+      dispatch(
+        RateArticleService({
+          articleId: articleId,
+          userId: userAuthenticationData?.id || "",
+          rate: starsCount,
+          feedback: feedback,
+        })
+      );
+    },
+    [dispatch, articleId, userAuthenticationData]
+  );
+
+  const onAccept = React.useCallback(
+    (starsCount: number, feedback?: string) => {
+      onHandleRateArticle(starsCount, feedback);
+    },
+    [onHandleRateArticle]
+  );
+
+  const onCancel = React.useCallback(
+    (starsCount: number) => {
+      onHandleRateArticle(starsCount);
+    },
+    [onHandleRateArticle]
+  );
+  const rating = data?.[data.length - 1];
 
   return (
     <DynamicModuleLoader reducers={reducers}>
@@ -49,6 +77,8 @@ export const ArticleRating: React.FC<ArticleRatingProps> = (props) => {
         title="Оцените статью"
         feedbackTitle="Оставьте свой отзыв о статье"
         hasFeedback={true}
+        onAccept={onAccept}
+        onCancel={onCancel}
       />
     </DynamicModuleLoader>
   );

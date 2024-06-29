@@ -18,12 +18,10 @@ export const RateArticleService = createAsyncThunk<void, RateArticleArg, ThunkCo
 
     try {
       const response = await extra.api.post("/article-ratings", {
-        params: {
-          userId: userId,
-          articleId: articleId,
-          rate: rate,
-          feedback: feedback,
-        },
+        userId: userId,
+        articleId: articleId,
+        rate: rate,
+        feedback: feedback,
       });
 
       if (!response.data) {
