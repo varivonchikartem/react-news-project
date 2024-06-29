@@ -38,6 +38,7 @@ import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/Article
 import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 import { StarRating } from "../../../shared/ui/StarRating/StarRating";
 import { RatingCard } from "../../../entities/Rating";
+import { ArticleRating } from "../../../features/ArticleRating/ui/ArticleRating/ArticleRating";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -114,7 +115,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
           <div className="div1">
             <h2>{article?.title}</h2>
             <p className="sub">{article?.subtitle}</p>
-            <RatingCard title="Как вам статья?" feedbackTitle="Оставьте отзыв статье" hasFeedback={true} />
+            <ArticleRating articleId={id || ""} />
           </div>
           <div className="div2">{article?.blocks.map(renderBlock)}</div>
         </div>

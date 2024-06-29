@@ -9,6 +9,8 @@ import Button, { ButtonTheme } from "../../../../shared/ui/Button/Button";
 interface RatingCardProps {
   className?: string;
 
+  rate?: number;
+
   title?: string;
 
   feedbackTitle?: string;
@@ -19,13 +21,13 @@ interface RatingCardProps {
 }
 
 export const RatingCard: React.FC<RatingCardProps> = (props) => {
-  const { className, title, feedbackTitle, hasFeedback, onCancel, onAccept } = props;
+  const { className, title, feedbackTitle, hasFeedback, rate, onCancel, onAccept } = props;
 
   const ratingcardClasses = clx(styles.RatingCard, {
     [className!]: className,
   });
 
-  const [starsCount, setStarsCount] = React.useState<number>(0);
+  const [starsCount, setStarsCount] = React.useState<number>(rate || 0);
   const [feedback, setFeedback] = React.useState<string>("");
 
   const [isModalOpen, setIsModalOpen] = React.useState(false);
