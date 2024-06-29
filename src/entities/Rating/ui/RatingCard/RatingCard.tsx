@@ -17,7 +17,7 @@ interface RatingCardProps {
   hasFeedback?: boolean;
 
   onCancel?: (starsCount: number) => void;
-  onAccept?: (starsCount: number, feedback?: string) => void;
+  onAccept?: (starsCount: number) => void;
 }
 
 export const RatingCard: React.FC<RatingCardProps> = (props) => {
@@ -43,13 +43,12 @@ export const RatingCard: React.FC<RatingCardProps> = (props) => {
 
   const onAcceptHandler = React.useCallback(() => {
     setIsModalOpen(false);
-    onAccept?.(starsCount, feedback);
+    onAccept?.(starsCount);
   }, [feedback, onAccept, starsCount]);
 
   const onCancelHandler = React.useCallback(() => {
     setIsModalOpen(false);
-    onCancel?.(starsCount);
-  }, [onCancel, starsCount]);
+  }, [onCancel]);
 
   return (
     <div className={ratingcardClasses}>
@@ -58,8 +57,7 @@ export const RatingCard: React.FC<RatingCardProps> = (props) => {
       <StarRating selectedStars={rate} onSelect={onSelectStars} />
 
       <Modal onOpenModal={isModalOpen} onCloseModal={onCancelHandler}>
-        <h2>{feedbackTitle}</h2>
-        <Input theme={InputTheme.DEFAULT} placeholder="Ваш отзыв" placeholderValue="Feedback" />
+        <h2>Do you really want to confirm this rating?</h2>
         <div>
           <Button theme={ButtonTheme.DEFAULT} onClick={onCancelHandler}>
             Закрыть

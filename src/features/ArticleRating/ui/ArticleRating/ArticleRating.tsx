@@ -41,13 +41,12 @@ export const ArticleRating: React.FC<ArticleRatingProps> = (props) => {
   }, [dispatch]);
 
   const onHandleRateArticle = React.useCallback(
-    (starsCount: number, feedback?: string) => {
+    (starsCount: number) => {
       dispatch(
         RateArticleService({
           articleId: articleId,
           userId: userAuthenticationData?.id || "",
           rate: starsCount,
-          feedback: feedback,
         })
       );
     },
@@ -55,8 +54,8 @@ export const ArticleRating: React.FC<ArticleRatingProps> = (props) => {
   );
 
   const onAccept = React.useCallback(
-    (starsCount: number, feedback?: string) => {
-      onHandleRateArticle(starsCount, feedback);
+    (starsCount: number) => {
+      onHandleRateArticle(starsCount);
     },
     [onHandleRateArticle]
   );

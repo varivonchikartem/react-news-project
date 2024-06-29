@@ -6,7 +6,6 @@ interface RateArticleArg {
   userId: string;
   articleId: string;
   rate: number;
-  feedback?: string;
 }
 
 export const RateArticleService = createAsyncThunk<void, RateArticleArg, ThunkConfig<string>>(
@@ -14,14 +13,13 @@ export const RateArticleService = createAsyncThunk<void, RateArticleArg, ThunkCo
   async (props, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
 
-    const { userId, articleId, rate, feedback } = props;
+    const { userId, articleId, rate } = props;
 
     try {
       const response = await extra.api.post("/article-ratings", {
         userId: userId,
         articleId: articleId,
         rate: rate,
-        feedback: feedback,
       });
 
       if (!response.data) {

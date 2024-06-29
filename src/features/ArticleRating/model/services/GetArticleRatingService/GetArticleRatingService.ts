@@ -11,7 +11,6 @@ interface RateArticleArg {
   userId: string;
   articleId: string;
   rate: number;
-  feedback?: string;
 }
 
 export const GetArticleRatingService = createAsyncThunk<Rating[], GetArticleRatingArg, ThunkConfig<string>>(
