@@ -33,9 +33,7 @@ import { FetchCommentsByArticleIdService } from "../model/service/FetchCommentsB
 import { ArticleDetailsPageCommentsReducers } from "../model/slices/ArticleDetailsPageCommentsSlice";
 import { getArticleDetailsPageCommentsData } from "../model/selectors/comments/getArticleDetailsPageCommentsData";
 import { ArticleDetailsReducers } from "../../../entities/Article/modal/slices/ArticleDetailsSlice";
-import { getArticlesData } from "../../../entities/Article/modal/selectors/getArticlesData/getArticlesData";
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
-import { ArticleService } from "../../../entities/Article/modal/service/Article/ArticleService";
 import { StarRating } from "../../../shared/ui/StarRating/StarRating";
 import { RatingCard } from "../../../entities/Rating";
 import { ArticleRating } from "../../../features/ArticleRating/ui/ArticleRating/ArticleRating";
@@ -45,7 +43,6 @@ interface ArticlesDetailsPageProps {
 }
 
 const reducers: ReducersList = {
-  article: ArticleReducers,
   articleDetails: ArticleDetailsReducers,
   articleDetailsPageComments: ArticleDetailsPageCommentsReducers,
 };
@@ -60,17 +57,14 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
-  const articleRecommendations = useSelector(getArticlesData);
   const article = useSelector(getArticleDetailsData);
   const comments = useSelector(getArticleDetailsPageCommentsData);
 
   React.useEffect(() => {
     dispatch(ArticleFetchByIdService(id || ""));
     dispatch(FetchCommentsByArticleIdService({ articleId: id || "" }));
-    dispatch(ArticleService({}));
   }, [dispatch]);
 
-  const articles = useSelector(getArticlesData);
 
   React.useEffect(() => {}, [dispatch]);
 
@@ -131,7 +125,6 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
             <DefaultCommentFormAsync onSendComment={onSendComment} />
           </CommentFormModal>
           <CommentList comments={comments} />
-          <ArticleList articles={articleRecommendations} articleView={ArticleView.DEFAULT_CARD} />
         </div>
       </div>
     </DynamicModuleLoader>

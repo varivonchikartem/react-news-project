@@ -19,6 +19,8 @@ import { SidebarModal } from "../../Sidebar/ui/SidebarModal/SidebarModal";
 import { Icon, IconTheme } from "../../../shared/ui/Icon/Icon";
 
 import TiltedIcon from "../../../shared/assets/icons/list.svg";
+import { FetchArticleListService } from "../../../pages/ArticlesPage/model/services/FetchArticleListService/FetchArticleListService";
+import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
 
 interface HeaderProps {
   className?: string;
@@ -62,11 +64,18 @@ export const Header: React.FC<HeaderProps> = (props) => {
     dispatch(UserActions.logout());
   }, []);
 
+  const fetchData = React.useCallback(() => {
+    dispatch(FetchArticleListService());
+  }, []);
+
+  const debouncedFetchData = useDebounce(fetchData, 500);
+
   const onChangeSearch = React.useCallback(
     (search: string) => {
       dispatch(ArticlesPageActions.setArticleSearch(search));
+      debouncedFetchData();
     },
-    [dispatch]
+    [dispatch, debouncedFetchData]
   );
 
   const onClickSearch = React.useCallback(

@@ -14,6 +14,7 @@ import { getArticlesPageSort } from "../../../model/selectors/getArticlesPageSor
 import { TabItem } from "../../../../../shared/ui/Tabs/Tabs";
 import { ArticleTypeTabsHandler } from "../../../../../entities/Article/ui/ArticleFilters/ui/components/ArticleTypeTabsHandler/ArticleTypeTabsHandler";
 import { getArticlesPageType } from "../../../model/selectors/getArticlesPageType/getArticlesPageType";
+import { FetchArticleListService } from "../../../model/services/FetchArticleListService/FetchArticleListService";
 
 interface ArticlePageFiltersProps {
   className?: string;
@@ -32,9 +33,14 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   const sort = useSelector(getArticlesPageSort);
   const articleType = useSelector(getArticlesPageType);
 
+  const fetchData = React.useCallback(() => {
+    dispatch(FetchArticleListService());
+  }, []);
+
   const onViewClick = React.useCallback(
     (articleView: ArticleView) => {
       dispatch(ArticlesPageActions.setArticleView(articleView));
+      fetchData();
     },
     [dispatch]
   );
@@ -42,6 +48,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   const onChangeOrder = React.useCallback(
     (order: ArticlesSortOrder) => {
       dispatch(ArticlesPageActions.setArticleOrder(order));
+      fetchData();
     },
     [dispatch]
   );
@@ -49,6 +56,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   const onChangeSort = React.useCallback(
     (sort: ArticlesSortField) => {
       dispatch(ArticlesPageActions.setArticleSort(sort));
+      fetchData();
     },
     [dispatch]
   );
@@ -65,6 +73,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   const onChangeType = React.useCallback(
     (type: ArticleType) => {
       dispatch(ArticlesPageActions.setArticleType(type));
+      fetchData();
     },
     [dispatch]
   );
@@ -78,7 +87,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
           onChangeOrder={onChangeOrder}
           onChangeSort={onChangeSort}
         />
-        <ArticleViewHandler  articleView={articleView} onViewClick={onViewClick} />
+        <ArticleViewHandler articleView={articleView} onViewClick={onViewClick} />
       </div>
       <ArticleTypeTabsHandler articleType={articleType} tabs={tabs} onChangeType={onChangeType} />
     </div>

@@ -2,7 +2,9 @@ import { EntityAdapter, EntityState } from "@reduxjs/toolkit";
 import { Article, ArticleType, ArticleView } from "../../../../entities/Article/modal/types/ArticleSchema";
 import { ArticlesSortField, ArticlesSortOrder } from "../../../../entities/Article";
 
-export interface ArticlesPageSchema extends EntityState<Article, string> {
+export interface ArticlesPageSchema {
+  articles: Article[];
+
   articleView: ArticleView;
   articlesSort: ArticlesSortField;
   articlesOrder: ArticlesSortOrder;

@@ -20,7 +20,6 @@ export interface StateSchema {
   // async entity
 
   profile?: ProfileSchema;
-  article?: ArticleSchema;
   articleDetails?: ArticleDetailsSchema;
   comment?: CommentSchema;
 
