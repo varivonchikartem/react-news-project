@@ -55,7 +55,7 @@ export const RatingCard: React.FC<RatingCardProps> = (props) => {
     <div className={ratingcardClasses}>
       <h2>{title}</h2>
 
-      <StarRating onSelect={onSelectStars} />
+      <StarRating selectedStars={rate} onSelect={onSelectStars} />
 
       <Modal onOpenModal={isModalOpen} onCloseModal={onCancelHandler}>
         <h2>{feedbackTitle}</h2>

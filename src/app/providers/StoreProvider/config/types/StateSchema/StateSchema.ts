@@ -3,6 +3,7 @@ import { ArticleSchema } from "../../../../../../entities/Article/modal/types/Ar
 import { ProfileSchema } from "../../../../../../entities/Profile";
 import { UserSchema } from "../../../../../../entities/User";
 import { CommentSchema } from "../../../../../../entities/Сomment";
+import { RatingState } from "../../../../../../features/ArticleRating/model/slices/ArticleRatingSlice";
 import { LoginFormSchema, RegistrationFormSchema } from "../../../../../../features/Authorization";
 import { CommentFormSchema } from "../../../../../../features/CommentForm/model/types/CommentFormSchema";
 import { ArticleDetailsPageCommentsSchema } from "../../../../../../pages/ArticlesDetailsPage/model/types/ArticleDetailsPageCommentsSchema";
@@ -27,6 +28,7 @@ export interface StateSchema {
   loginForm?: LoginFormSchema;
   registrationForm?: RegistrationFormSchema;
   commentForm?: CommentFormSchema;
+  ArticleRatingFeature?: RatingState;
 }
 
 export type StateSchemaKey = keyof StateSchema;
