@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { routerConfiguration } from "../../../../shared/RouterConfiguration/RouterConfiguration";
+import { routerConfiguration } from "../config/RouterConfiguration/RouterConfiguration";
 import { PageWrapper } from "../../../../widgets/PageWrapper/index.";
 import { Header } from "../../../../widgets/Header";
 import { Sidebar } from "../../../../widgets/Sidebar";

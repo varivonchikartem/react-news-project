@@ -14,13 +14,13 @@ import { Input, InputTheme } from "../../../shared/ui/Input/Input";
 import { getArticlesPageSearch } from "../../../pages/ArticlesPage/model/selectors/getArticlesPageSearch/getArticlesPageSearch";
 import { ArticlesPageActions } from "../../../pages/ArticlesPage";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
 import { SidebarModal } from "../../Sidebar/ui/SidebarModal/SidebarModal";
 import { Icon, IconTheme } from "../../../shared/ui/Icon/Icon";
 
 import TiltedIcon from "../../../shared/assets/icons/list.svg";
 import { FetchArticlesPageListService } from "../../../pages/ArticlesPage/model/services/FetchArticlesPageListService/FetchArticlesPageListService";
 import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
+import { getRouteArticles } from "../../../shared/const/PageRoutes/PageRoutes";
 
 interface HeaderProps {
   className?: string;
@@ -80,10 +80,10 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   const onClickSearch = React.useCallback(
     (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-      if (location.pathname === RoutePath.articles_page) {
+      if (location.pathname === getRouteArticles()) {
         event.preventDefault();
       } else {
-        navigate(RoutePath.articles_page);
+        navigate(getRouteArticles());
       }
     },
     [location.pathname, navigate]
@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
           <a href="#" className={styles.header_link}>
             Timesphere
           </a>
-          <Link to={RoutePath.articles_page} className={styles.header_form} onClick={onClickSearch}>
+          <Link to={getRouteArticles()} className={styles.header_form} onClick={onClickSearch}>
             <Input
               theme={InputTheme.DEFAULT}
               className={styles.header_form_search}

@@ -10,8 +10,8 @@ import {
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { RoutePath } from "../../../shared/RouterConfiguration/RouterConfiguration";
 import { ArticleView } from "../../../entities/Article/modal/types/ArticleSchema";
+import { getRouteArticles } from "../../../shared/const/PageRoutes/PageRoutes";
 
 interface MainPageProps {
   className?: string;
@@ -43,7 +43,7 @@ const MainPage: React.FC<MainPageProps> = (props) => {
         <div className="wrapper">
           <header className={styles.new_releases_panel}>
             <h2 className={styles.new_releases_panel_title}>New Releases</h2>
-            <Link className={styles.new_releases_panel_link} to={RoutePath.articles_page}>
+            <Link className={styles.new_releases_panel_link} to={getRouteArticles()}>
               View All Stories
             </Link>
           </header>

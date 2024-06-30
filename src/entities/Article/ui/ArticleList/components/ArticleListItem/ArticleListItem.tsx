@@ -5,8 +5,8 @@ import { Article, ArticleView } from "../../../../modal/types/ArticleSchema";
 import Button, { ButtonTheme } from "../../../../../../shared/ui/Button/Button";
 import { useTruncateText } from "../../../../../../shared/lib/hooks/useTruncateText/useTruncateText";
 import { Link } from "react-router-dom";
-import { RoutePath } from "../../../../../../shared/RouterConfiguration/RouterConfiguration";
 import { AppImage } from "../../../../../../shared/ui/AppImage/AppImage";
+import { getRouteArticlesDetails } from "../../../../../../shared/const/PageRoutes/PageRoutes";
 
 interface ArticleListItemProps {
   className?: string;
@@ -26,7 +26,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
 
   return (
     <li className={articlelistitemClasses}>
-      <Link to={`${RoutePath.article_details_page}${article?.id}`}>
+      <Link to={getRouteArticlesDetails(article?.id)}>
         <figure>
           <AppImage src={article?.image} minHeight="50vh" />
           <figcaption>

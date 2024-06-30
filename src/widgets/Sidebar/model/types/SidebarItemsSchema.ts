@@ -2,7 +2,11 @@ import React from "react";
 import HomeIcon from "../../../../shared/assets/icons/home-icon.svg";
 import NewsIcon from "../../../../shared/assets/icons/news-icon.svg";
 import ProfileIcon from "../../../../shared/assets/icons/avatar-icon.svg";
-import { RoutePath } from "../../../../shared/RouterConfiguration/RouterConfiguration";
+import {
+  getRouteArticles,
+  getRouteMain,
+  getRouteProfile,
+} from "../../../../shared/const/PageRoutes/PageRoutes";
 
 export interface SidebarItemType {
   path: string;
@@ -13,17 +17,17 @@ export interface SidebarItemType {
 
 export const SidebarItemsList: SidebarItemType[] = [
   {
-    path: RoutePath.main_page,
+    path: getRouteMain(),
     Icon: HomeIcon,
     text: "Домашняя страница",
   },
   {
-    path: RoutePath.articles_page,
+    path: getRouteArticles(),
     Icon: NewsIcon,
     text: "Новости",
   },
   {
-    path: RoutePath.profile_page,
+    path: getRouteProfile(),
     Icon: ProfileIcon,
     text: "Профиль",
   },
