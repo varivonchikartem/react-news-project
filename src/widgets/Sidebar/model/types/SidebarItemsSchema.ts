@@ -27,7 +27,7 @@ export const SidebarItemsList: SidebarItemType[] = [
     text: "Новости",
   },
   {
-    path: getRouteProfile(),
+    path: getRouteProfile(":id"),
     Icon: ProfileIcon,
     text: "Профиль",
   },

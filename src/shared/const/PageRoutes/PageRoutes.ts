@@ -1,7 +1,7 @@
 export const getRouteMain = () => "/";
 export const getRouteArticles = () => "/articles";
 export const getRouteArticlesDetails = (id: string) => `/articles/${id}`;
-export const getRouteProfile = () => "/profile";
+export const getRouteProfile = (id: string) => `/profile/${id}`;
 
 export enum AppRoutes {
   MAIN_PAGE = "main_page",

@@ -13,6 +13,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from "../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
+import { useParams } from "react-router-dom";
 
 interface ProfilePageProps {
   className?: string;
@@ -31,8 +32,10 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
   const profileEditedData = useSelector(getProfileEditedData);
   const profileReadOnly = useSelector(getProfileReadOnly);
 
+  const { id } = useParams<{ id: string }>();
+
   React.useEffect(() => {
-    dispatch(FetchProfileService());
+    dispatch(FetchProfileService(id || ""));
   }, [dispatch]);
 
   const onChangeFirstName = React.useCallback(

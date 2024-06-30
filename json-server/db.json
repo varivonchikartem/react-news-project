@@ -6,16 +6,18 @@
       "password": "123"
     }
   ],
-  "profile": {
-    "id": "1",
-    "firstname": "Artem11111111",
-    "secondname": "Varivonchik",
-    "username": "admin",
-    "age": 22,
-    "country": "Canada",
-    "city": "Minsk",
-    "avatar": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Artem11111111",
+      "secondname": "Varivonchik",
+      "username": "admin",
+      "age": 22,
+      "country": "Canada",
+      "city": "Minsk",
+      "avatar": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png"
+    }
+  ],
   "articles": [
     {
       "id": "1",
@@ -428,6 +430,13 @@
       "commentTitle": "КЕДЫ ADIDAS BRAVADA 2.0 PLATFORM 235610",
       "commentText": "Толстая подошва на платформе придаст вашему образу выразительности и остроты, но не в ущерб комфорту. Cloudfoam обеспечивает амортизацию в течение всего дня для удобства ношения, а резиновая подошва обеспечивает надежное сцепление и дополняет непринужденный стильный профиль",
       "id": 11
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "commentTitle": "123",
+      "commentText": "123",
+      "id": 12
     }
   ],
   "article-ratings": [

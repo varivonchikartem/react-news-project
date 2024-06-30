@@ -27,7 +27,7 @@ export const routerConfiguration: Record<AppRoutes, RouteProps> = {
     element: <ArticleDetailsPage />,
   },
   [AppRoutes.PROFILE_PAGE]: {
-    path: getRouteProfile(),
+    path: getRouteProfile(":id"),
     element: <ProfilePage />,
   },
   [AppRoutes.NOT_FOUND_PAGE]: {
