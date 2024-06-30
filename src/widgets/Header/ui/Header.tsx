@@ -19,7 +19,7 @@ import { SidebarModal } from "../../Sidebar/ui/SidebarModal/SidebarModal";
 import { Icon, IconTheme } from "../../../shared/ui/Icon/Icon";
 
 import TiltedIcon from "../../../shared/assets/icons/list.svg";
-import { FetchArticleListService } from "../../../pages/ArticlesPage/model/services/FetchArticleListService/FetchArticleListService";
+import { FetchArticlesPageListService } from "../../../pages/ArticlesPage/model/services/FetchArticlesPageListService/FetchArticlesPageListService";
 import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
 
 interface HeaderProps {
@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
   }, []);
 
   const fetchData = React.useCallback(() => {
-    dispatch(FetchArticleListService());
+    dispatch(FetchArticlesPageListService());
   }, []);
 
   const debouncedFetchData = useDebounce(fetchData, 500);

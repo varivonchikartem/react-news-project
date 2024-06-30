@@ -7,7 +7,6 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from "../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
-import { ArticleReducers } from "../../../entities/Article";
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";

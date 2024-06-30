@@ -1,5 +1,5 @@
 import { ArticleDetailsSchema } from "../../../../../../entities/Article/modal/types/ArticleDetailsSchema";
-import { ArticleSchema } from "../../../../../../entities/Article/modal/types/ArticleSchema";
+import { ArticleListSchema } from "../../../../../../entities/Article/modal/types/ArticleSchema";
 import { ProfileSchema } from "../../../../../../entities/Profile";
 import { UserSchema } from "../../../../../../entities/User";
 import { CommentSchema } from "../../../../../../entities/Сomment";
@@ -20,6 +20,7 @@ export interface StateSchema {
   // async entity
 
   profile?: ProfileSchema;
+  articleList?: ArticleListSchema;
   articleDetails?: ArticleDetailsSchema;
   comment?: CommentSchema;
 

@@ -4,7 +4,7 @@ import { ArticlesPageActions } from "../../slices/ArticlesPageSlice";
 import { ArticlesSortField, ArticlesSortOrder } from "../../../../../entities/Article";
 import { ArticleType } from "../../../../../entities/Article/modal/types/ArticleSchema";
 import { getArticlesPageInited } from "../../selectors/getArticlesPageInited/getArticlesPageInited";
-import { FetchArticleListService } from "../FetchArticleListService/FetchArticleListService";
+import { FetchArticlesPageListService } from "../FetchArticlesPageListService/FetchArticlesPageListService";
 
 export const InitArticlesPageService = createAsyncThunk<void, URLSearchParams, ThunkConfig<string>>(
   "articlesPage/InitArticlesPageService",
@@ -27,7 +27,7 @@ export const InitArticlesPageService = createAsyncThunk<void, URLSearchParams, T
         }
       });
       dispatch(ArticlesPageActions.initState());
-      dispatch(FetchArticleListService());
+      dispatch(FetchArticlesPageListService());
     }
   }
 );

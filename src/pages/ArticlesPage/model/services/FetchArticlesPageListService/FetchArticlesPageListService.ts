@@ -7,8 +7,8 @@ import { addQueryParams } from "../../../../../shared/lib/url/addQueryParams/add
 import { getArticlesPageType } from "../../selectors/getArticlesPageType/getArticlesPageType";
 import { Article, ArticleType } from "../../../../../entities/Article/modal/types/ArticleSchema";
 
-export const FetchArticleListService = createAsyncThunk<Article[], void, ThunkConfig<string>>(
-  "articlesPage/FetchArticleListService",
+export const FetchArticlesPageListService = createAsyncThunk<Article[], void, ThunkConfig<string>>(
+  "FetchArticlesPageList/FetchArticlesPageListService",
   async (props, thunkApi) => {
     const { extra, dispatch, rejectWithValue, getState } = thunkApi;
 

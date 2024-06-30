@@ -4,7 +4,6 @@ import { ThunkExtraArguments } from "./types/ThunkConfigSchema/ThunkConfigSchema
 import { $api } from "../../../../shared/api/AxiosApi/AxiosApi";
 import { StateSchema } from "..";
 import { createReducerManager } from "./reducerManager";
-import { ArticleReducers } from "../../../../entities/Article";
 
 export function createReduxStore() {
   const rootReducers: ReducersMapObject<StateSchema> = {

@@ -3,7 +3,7 @@ import { createEntityAdapter, createSlice, PayloadAction } from "@reduxjs/toolki
 import { ArticlesPageSchema } from "../types/ArticlesPageSchema";
 import { Article, ArticleType, ArticleView } from "../../../../entities/Article/modal/types/ArticleSchema";
 import { ArticlesSortField, ArticlesSortOrder } from "../../../../entities/Article";
-import { FetchArticleListService } from "../services/FetchArticleListService/FetchArticleListService";
+import { FetchArticlesPageListService } from "../services/FetchArticlesPageListService/FetchArticlesPageListService";
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from "../../../../shared/const/localStorage/Article/ArticleViewKey/ArticleViewKey";
 
 const initialState: ArticlesPageSchema = {
@@ -48,15 +48,15 @@ const ArticlesPageSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(FetchArticleListService.pending, (state) => {
+      .addCase(FetchArticlesPageListService.pending, (state) => {
         state.isError = undefined;
         state.isLoading = true;
       })
-      .addCase(FetchArticleListService.fulfilled, (state, action: PayloadAction<Article[]>) => {
+      .addCase(FetchArticlesPageListService.fulfilled, (state, action: PayloadAction<Article[]>) => {
         state.isLoading = false;
         state.articles = action.payload;
       })
-      .addCase(FetchArticleListService.rejected, (state, action) => {
+      .addCase(FetchArticlesPageListService.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = action.payload;
       });

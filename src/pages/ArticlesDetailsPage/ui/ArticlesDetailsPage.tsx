@@ -4,12 +4,10 @@ import styles from "./ArticlesDetailsPage.module.scss";
 import { AppImage } from "../../../shared/ui/AppImage/AppImage";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleFetchByIdService } from "../../../entities/Article/modal/service/ArticleFetchByIdService/ArticleFetchByIdService";
-import { ArticleReducers } from "../../../entities/Article/modal/slices/ArticleSlice";
 import {
   Article,
   ArticleBlock,
   ArticleBlockType,
-  ArticleSchema,
   ArticleView,
 } from "../../../entities/Article/modal/types/ArticleSchema";
 import { useSelector } from "react-redux";
@@ -37,6 +35,9 @@ import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/Article
 import { StarRating } from "../../../shared/ui/StarRating/StarRating";
 import { RatingCard } from "../../../entities/Rating";
 import { ArticleRating } from "../../../features/ArticleRating/ui/ArticleRating/ArticleRating";
+import { ArticleListReducers } from "../../../entities/Article";
+import { getArticleListData } from "../../../entities/Article/modal/selectors/ArticleListSelectors/getArticleListData/getArticleListData";
+import { FetchArticleListService } from "../../../entities/Article/modal/service/FetchArticleListService/FetchArticleListService";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -44,6 +45,7 @@ interface ArticlesDetailsPageProps {
 
 const reducers: ReducersList = {
   articleDetails: ArticleDetailsReducers,
+  articleList: ArticleListReducers,
   articleDetailsPageComments: ArticleDetailsPageCommentsReducers,
 };
 
@@ -57,14 +59,15 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
+  const articleRecommendations = useSelector(getArticleListData);
   const article = useSelector(getArticleDetailsData);
   const comments = useSelector(getArticleDetailsPageCommentsData);
 
   React.useEffect(() => {
     dispatch(ArticleFetchByIdService(id || ""));
     dispatch(FetchCommentsByArticleIdService({ articleId: id || "" }));
+    dispatch(FetchArticleListService({}));
   }, [dispatch]);
-
 
   React.useEffect(() => {}, [dispatch]);
 
@@ -125,6 +128,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
             <DefaultCommentFormAsync onSendComment={onSendComment} />
           </CommentFormModal>
           <CommentList comments={comments} />
+          <ArticleList articles={articleRecommendations} articleView={ArticleView.SMALL_CARD} />
         </div>
       </div>
     </DynamicModuleLoader>

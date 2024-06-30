@@ -31,7 +31,6 @@ export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlo
 
 export enum ArticleType {
   ALL = "ALL",
-  IT = "IT",
   SCIENCE = "SCIENCE",
   TECHNOLOGY = "TECHNOLOGY",
   CULTURE = "CULTURE",
@@ -57,7 +56,7 @@ export enum ArticleView {
   DEFAULT_CARD = "DEFAULT_CARD",
 }
 
-export interface ArticleSchema {
+export interface ArticleListSchema {
   articles: Article[];
 
   isLoading: boolean;

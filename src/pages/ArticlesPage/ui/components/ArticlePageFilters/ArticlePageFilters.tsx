@@ -14,7 +14,7 @@ import { getArticlesPageSort } from "../../../model/selectors/getArticlesPageSor
 import { TabItem } from "../../../../../shared/ui/Tabs/Tabs";
 import { ArticleTypeTabsHandler } from "../../../../../entities/Article/ui/ArticleFilters/ui/components/ArticleTypeTabsHandler/ArticleTypeTabsHandler";
 import { getArticlesPageType } from "../../../model/selectors/getArticlesPageType/getArticlesPageType";
-import { FetchArticleListService } from "../../../model/services/FetchArticleListService/FetchArticleListService";
+import { FetchArticlesPageListService } from "../../../model/services/FetchArticlesPageListService/FetchArticlesPageListService";
 
 interface ArticlePageFiltersProps {
   className?: string;
@@ -34,7 +34,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
   const articleType = useSelector(getArticlesPageType);
 
   const fetchData = React.useCallback(() => {
-    dispatch(FetchArticleListService());
+    dispatch(FetchArticlesPageListService());
   }, []);
 
   const onViewClick = React.useCallback(
