@@ -6,19 +6,21 @@ import { CommentSchema } from "../../../../../../entities/Сomment";
 import { RatingState } from "../../../../../../features/ArticleRating/model/slices/ArticleRatingSlice";
 import { LoginFormSchema, RegistrationFormSchema } from "../../../../../../features/Authorization";
 import { CommentFormSchema } from "../../../../../../features/CommentForm/model/types/CommentFormSchema";
+import { ScrollRestorationSchema } from "../../../../../../features/ScrollRestoration/model/types/ScrollRestorationSchema";
 import { ArticleDetailsPageCommentsSchema } from "../../../../../../pages/ArticlesDetailsPage/model/types/ArticleDetailsPageCommentsSchema";
 import { ArticlesPageSchema } from "../../../../../../pages/ArticlesPage";
 
 export interface StateSchema {
   user: UserSchema;
 
-  //async pages
+  //features
+  scrollRestoration: ScrollRestorationSchema;
 
+  //async pages
   articlesPage?: ArticlesPageSchema;
   articleDetailsPageComments?: ArticleDetailsPageCommentsSchema;
 
   // async entity
-
   profile?: ProfileSchema;
   articleList?: ArticleListSchema;
   articleDetails?: ArticleDetailsSchema;

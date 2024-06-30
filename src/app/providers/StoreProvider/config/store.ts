@@ -4,10 +4,12 @@ import { ThunkExtraArguments } from "./types/ThunkConfigSchema/ThunkConfigSchema
 import { $api } from "../../../../shared/api/AxiosApi/AxiosApi";
 import { StateSchema } from "..";
 import { createReducerManager } from "./reducerManager";
+import { ScrollRestorationReducers } from "../../../../features/ScrollRestoration/model/slices/ScrollRestorationSlice";
 
 export function createReduxStore() {
   const rootReducers: ReducersMapObject<StateSchema> = {
     user: UserReducers,
+    scrollRestoration: ScrollRestorationReducers,
   };
 
   const reducerManager = createReducerManager(rootReducers);

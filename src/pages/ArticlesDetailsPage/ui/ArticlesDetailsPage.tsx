@@ -104,7 +104,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   );
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <div className={articlesdetailspageClasses}>
         <AppImage src={article?.image} minHeight="80vh" />
 
