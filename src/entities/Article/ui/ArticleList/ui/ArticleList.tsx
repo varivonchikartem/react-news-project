@@ -10,17 +10,21 @@ interface ArticleListProps {
   articles: Article[];
 
   articleView?: ArticleView;
+
+  target?: React.HTMLAttributeAnchorTarget;
 }
 
 export const ArticleList: React.FC<ArticleListProps> = (props) => {
-  const { className, articles, articleView = ArticleView.SMALL_CARD } = props;
+  const { className, articles, articleView = ArticleView.SMALL_CARD, target } = props;
 
   const articlelistClasses = clx(styles.ArticleList, {
     [className!]: className,
     [styles[articleView]]: articleView,
   });
 
-  const renderArticle = (article: Article) => <ArticleListItem article={article} key={article.id} />;
+  const renderArticle = (article: Article) => (
+    <ArticleListItem article={article} key={article.id} target={target} />
+  );
 
   return <div className={articlelistClasses}>{articles.length > 0 ? articles.map(renderArticle) : null}</div>;
 };

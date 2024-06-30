@@ -4,6 +4,11 @@
       "id": "1",
       "username": "admin",
       "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "123"
     }
   ],
   "profile": [
@@ -12,6 +17,16 @@
       "firstname": "Artem11111111",
       "secondname": "Varivonchik",
       "username": "admin",
+      "age": 22,
+      "country": "Canada",
+      "city": "Minsk",
+      "avatar": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png"
+    },
+    {
+      "id": "2",
+      "firstname": "Artem1",
+      "secondname": "Varivonchik",
+      "username": "user",
       "age": 22,
       "country": "Canada",
       "city": "Minsk",

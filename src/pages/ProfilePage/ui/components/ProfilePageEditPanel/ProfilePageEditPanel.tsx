@@ -7,6 +7,7 @@ import Button, { ButtonTheme } from "../../../../../shared/ui/Button/Button";
 import { useAppDispatch } from "../../../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ProfileActions } from "../../../../../entities/Profile";
 import { UpdateProfileService } from "../../../../../entities/Profile/model/services/UpdateProfileService/UpdateProfileService";
+import { getUserAuthenticationData } from "../../../../../entities/User/model/selectors/getUserAuthenticationData/getUserAuthenticationData";
 
 interface ProfilePageEditPanelProps {
   className?: string;
@@ -21,6 +22,7 @@ export const ProfilePageEditPanel: React.FC<ProfilePageEditPanelProps> = (props)
 
   const dispatch = useAppDispatch();
   const readOnly = useSelector(getProfileReadOnly);
+  const userAuthenticationData = useSelector(getUserAuthenticationData);
 
   const onEdit = React.useCallback(() => {
     dispatch(ProfileActions.setReadOnly(false));
@@ -31,7 +33,7 @@ export const ProfilePageEditPanel: React.FC<ProfilePageEditPanelProps> = (props)
   }, [dispatch]);
 
   const onSaveEdit = React.useCallback(() => {
-    dispatch(UpdateProfileService());
+    dispatch(UpdateProfileService(userAuthenticationData?.id ?? ""));
   }, [dispatch]);
 
   return (

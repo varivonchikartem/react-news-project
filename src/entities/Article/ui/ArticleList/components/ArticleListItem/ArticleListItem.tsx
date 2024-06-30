@@ -12,10 +12,12 @@ interface ArticleListItemProps {
   className?: string;
   article: Article;
   articleView?: ArticleView;
+
+  target?: React.HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
-  const { className, article } = props;
+  const { className, article, target } = props;
 
   const articlelistitemClasses = clx(styles.ArticleListItem, {
     [className!]: className,
@@ -26,7 +28,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
 
   return (
     <li className={articlelistitemClasses}>
-      <Link to={getRouteArticlesDetails(article?.id)}>
+      <Link to={getRouteArticlesDetails(article?.id)} target={target}>
         <figure>
           <AppImage src={article?.image} minHeight="50vh" />
           <figcaption>

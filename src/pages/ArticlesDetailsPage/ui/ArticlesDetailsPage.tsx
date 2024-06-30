@@ -128,7 +128,11 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
             <DefaultCommentFormAsync onSendComment={onSendComment} />
           </CommentFormModal>
           <CommentList comments={comments} />
-          <ArticleList articles={articleRecommendations} articleView={ArticleView.SMALL_CARD} />
+          <ArticleList
+            articles={articleRecommendations}
+            articleView={ArticleView.SMALL_CARD}
+            target="_blank"
+          />
         </div>
       </div>
     </DynamicModuleLoader>
