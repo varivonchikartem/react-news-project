@@ -6,6 +6,7 @@ import "./app/styles/styles.scss";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./app/providers/ThemeProvider";
 import { StoreProvider } from "./app/providers/StoreProvider";
+import { ErrorBoundary } from "./app/providers/ErrorBoundary";
 
 const container = document.getElementById("root");
 
@@ -16,11 +17,13 @@ if (!container) {
 const root = createRoot(container);
 
 root.render(
-  <StoreProvider>
-    <ThemeProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
-  </StoreProvider>
+  <BrowserRouter>
+    <ErrorBoundary>
+      <StoreProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </StoreProvider>
+    </ErrorBoundary>
+  </BrowserRouter>
 );

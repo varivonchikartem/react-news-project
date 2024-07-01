@@ -21,6 +21,7 @@ import TiltedIcon from "../../../shared/assets/icons/list.svg";
 import { FetchArticlesPageListService } from "../../../pages/ArticlesPage/model/services/FetchArticlesPageListService/FetchArticlesPageListService";
 import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
 import { getRouteArticles } from "../../../shared/const/PageRoutes/PageRoutes";
+import { ThrowErrorButton } from "../../../app/providers/ErrorBoundary/components/ThrowErrorButton";
 
 interface HeaderProps {
   className?: string;
@@ -106,6 +107,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
             />
           </Link>
           <div className={styles.header_panel}>
+            <ThrowErrorButton />
+
             <ThemeSwitcher />
             {userAuthenticationData && (
               <>

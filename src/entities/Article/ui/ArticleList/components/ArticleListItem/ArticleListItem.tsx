@@ -30,7 +30,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
     <li className={articlelistitemClasses}>
       <Link to={getRouteArticlesDetails(article?.id)} target={target}>
         <figure>
-          <AppImage src={article?.image} minHeight="50vh" />
+          <AppImage src={article?.image} minHeight="45vh" />
           <figcaption>
             {article.type &&
               article.type.map((type, index) => (
