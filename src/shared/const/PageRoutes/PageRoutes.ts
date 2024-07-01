@@ -8,5 +8,6 @@ export enum AppRoutes {
   ARTICLES_PAGE = "articles_page",
   ARTICLE_DETAILS_PAGE = "article_details_page",
   PROFILE_PAGE = "profile_page",
+
   NOT_FOUND_PAGE = "not_found_page",
 }

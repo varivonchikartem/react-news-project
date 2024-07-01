@@ -12,6 +12,7 @@ import {
   getRouteMain,
   getRouteProfile,
 } from "../../../../../shared/const/PageRoutes/PageRoutes";
+import ErrorPage from "../../../../../pages/ErrorPage/ui/ErrorPage";
 
 export const routerConfiguration: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN_PAGE]: {
