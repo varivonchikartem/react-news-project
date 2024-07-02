@@ -3,6 +3,8 @@ import clx from "classnames";
 import styles from "./ProfileCardHeader.module.scss";
 import { Profile } from "../../../../../model/types/ProfileSchema";
 import { Avatar, AvatarTheme } from "../../../../../../../shared/ui/Avatar/Avatar";
+import { useSelector } from "react-redux";
+import { getUserAuthenticationData } from "../../../../../../User/model/selectors/getUserAuthenticationData/getUserAuthenticationData";
 
 interface ProfileCardHeaderProps {
   className?: string;
@@ -16,6 +18,8 @@ export const ProfileCardHeader: React.FC<ProfileCardHeaderProps> = (props) => {
   const profilecardheaderClasses = clx(styles.ProfileCardHeader, {
     [className!]: className,
   });
+
+  
 
   return (
     <header className={profilecardheaderClasses}>

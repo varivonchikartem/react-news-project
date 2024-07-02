@@ -33,42 +33,22 @@ const LoginForm: React.FC<LoginFormProps> = (props) => {
   const username = useSelector(getLoginFormUserName);
   const password = useSelector(getLoginFormPassword);
 
-  const onChangeUserName = React.useCallback(
-    (value: string) => {
-      dispatch(LoginFormActions.setUsername(value));
-    },
-    [dispatch]
-  );
+  const onLoginAsAdmin = () => {
+    dispatch(LoginFormService({ username: "admin", password: "123" }));
+  };
 
-  const onChangePassword = React.useCallback(
-    (value: string) => {
-      dispatch(LoginFormActions.setPassword(value));
-    },
-    [dispatch]
-  );
-
-  const onLoginClick = React.useCallback(() => {
-    dispatch(LoginFormService({ username, password }));
-  }, [dispatch, username, password]);
+  const onLoginAsUser = () => {
+    dispatch(LoginFormService({ username: "user", password: "123" }));
+  };
 
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={loginformClasses}>
-        <Input
-          className={styles.input}
-          type="text"
-          theme={InputTheme.DEFAULT}
-          placeholderValue="Name"
-          onChange={onChangeUserName}
-        />
-        <Input
-          theme={InputTheme.DEFAULT}
-          type="password"
-          placeholderValue="Password"
-          onChange={onChangePassword}
-        />
-        <Button className={styles.button} theme={ButtonTheme.DEFAULT} type="button" onClick={onLoginClick}>
-          Log in
+        <Button className={styles.button} theme={ButtonTheme.DEFAULT} type="button" onClick={onLoginAsAdmin}>
+          Admin
+        </Button>
+        <Button className={styles.button} theme={ButtonTheme.DEFAULT} type="button" onClick={onLoginAsUser}>
+          User
         </Button>
       </div>
     </DynamicModuleLoader>

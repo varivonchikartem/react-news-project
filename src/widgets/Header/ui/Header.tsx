@@ -22,6 +22,7 @@ import { FetchArticlesPageListService } from "../../../pages/ArticlesPage/model/
 import { useDebounce } from "../../../shared/lib/hooks/useDebounce/useDebounce";
 import { getRouteArticles } from "../../../shared/const/PageRoutes/PageRoutes";
 import { ThrowErrorButton } from "../../../app/providers/ErrorBoundary/components/ThrowErrorButton";
+import { getProfileData } from "../../../entities/Profile/model/selectors/getProfileData/getProfileData";
 
 interface HeaderProps {
   className?: string;
@@ -39,6 +40,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
   const dispatch = useAppDispatch();
   const userAuthenticationData = useSelector(getUserAuthenticationData);
+  const profile = useSelector(getProfileData);
   const search = useSelector(getArticlesPageSearch);
 
   const [isAuthModal, setIsAuthModal] = React.useState(false);
@@ -116,7 +118,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                   trigger={
                     <Avatar
                       theme={AvatarTheme.DEFAULT}
-                      src="https://images.pexels.com/photos/19101653/pexels-photo-19101653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      src={userAuthenticationData?.avatar}
                       alt="image"
                       width="31px"
                       height="31px"

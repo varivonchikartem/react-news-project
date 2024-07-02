@@ -31,7 +31,6 @@ export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlo
 
 export enum ArticleType {
   ALL = "ALL",
-  SCIENCE = "SCIENCE",
   TECHNOLOGY = "TECHNOLOGY",
   CULTURE = "CULTURE",
   POLITICS = "POLITICS",
@@ -42,7 +41,9 @@ export interface Article {
   id: string;
   title: string;
   subtitle: string;
+  
   //   user: User;
+
   image: string;
   createdAt: string;
 

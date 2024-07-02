@@ -5,6 +5,7 @@ import { User } from "../../../../entities/User";
 const initialUser: User = {
   id: "",
   username: "",
+  avatar: ""
 };
 
 const initialState: CommentFormSchema = {

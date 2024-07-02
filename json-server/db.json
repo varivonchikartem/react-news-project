@@ -3,12 +3,14 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://habrastorage.org/getpro/moikrug/uploads/company/100/005/958/5/logo/medium_4a47a0db6e60853dedfcfdf08a5ca249.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "user",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png"
     }
   ],
   "profile": [
@@ -20,7 +22,7 @@
       "age": 22,
       "country": "Canada",
       "city": "Minsk",
-      "avatar": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png"
+      "avatar": "https://habrastorage.org/getpro/moikrug/uploads/company/100/005/958/5/logo/medium_4a47a0db6e60853dedfcfdf08a5ca249.png"
     },
     {
       "id": "2",
@@ -40,9 +42,7 @@
       "subtitle": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, distinctio...",
       "image": "https://www.doctorswithoutborders.ca/wp-content/uploads/2024/05/MSB194653_Medium.jpg",
       "createdAt": "2024-03-25T12:00:00Z",
-      "type": [
-        "CULTURE"
-      ],
+      "type": ["CULTURE"],
       "blocks": [
         {
           "id": "block1",
@@ -107,9 +107,7 @@
       "subtitle": "Millions of people face acute food shortages due to conflict and climate change.",
       "image": "https://images.pexels.com/photos/2852737/pexels-photo-2852737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "createdAt": "2024-06-01T10:00:00Z",
-      "type": [
-        "POLITICS"
-      ],
+      "type": ["POLITICS"],
       "blocks": [
         {
           "id": "block1",
@@ -166,9 +164,7 @@
       "subtitle": "Renewable energy sources are becoming more viable and essential in combating climate change.",
       "image": "https://images.pexels.com/photos/532192/pexels-photo-532192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "createdAt": "2024-06-15T09:00:00Z",
-      "type": [
-        "TECHNOLOGY"
-      ],
+      "type": ["TECHNOLOGY"],
       "blocks": [
         {
           "id": "block1",
@@ -232,9 +228,7 @@
       "subtitle": "Civilians continue to bear the brunt of the ongoing violence.",
       "image": "https://images.pexels.com/photos/4033852/pexels-photo-4033852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "createdAt": "2024-06-24T12:00:00Z",
-      "type": [
-        "SOCIAL_ISSUES"
-      ],
+      "type": ["SOCIAL_ISSUES"],
       "blocks": [
         {
           "id": "block1",
@@ -277,9 +271,7 @@
       "subtitle": "Exploring the causes and potential solutions to the homelessness epidemic.",
       "image": "https://images.pexels.com/photos/9532305/pexels-photo-9532305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "createdAt": "2024-06-24T12:00:00Z",
-      "type": [
-        "POLITICS"
-      ],
+      "type": ["POLITICS"],
       "blocks": [
         {
           "id": "block1",
@@ -322,9 +314,7 @@
       "subtitle": "Examining the environmental challenges faced by African nations and their repercussions.",
       "image": "https://images.pexels.com/photos/3100960/pexels-photo-3100960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "createdAt": "2024-06-24T12:00:00Z",
-      "type": [
-        "ENVIRONMENT"
-      ],
+      "type": ["ENVIRONMENT"],
       "blocks": [
         {
           "id": "block1",
