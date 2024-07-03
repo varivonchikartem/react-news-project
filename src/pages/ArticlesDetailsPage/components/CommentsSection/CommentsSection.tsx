@@ -7,6 +7,7 @@ import { Comment, CommentList } from "../../../../entities/Сomment";
 
 interface CommentsSectionProps {
   comments?: Comment[];
+  isActiveModal: boolean;
   onOpenModal: () => void;
   onCloseModal: () => void;
   onSendComment: (commentFormTitle: string, commentFormText: string) => void;
@@ -14,6 +15,7 @@ interface CommentsSectionProps {
 
 const CommentsSection: React.FC<CommentsSectionProps> = ({
   comments,
+  isActiveModal,
   onOpenModal,
   onCloseModal,
   onSendComment,
@@ -24,7 +26,7 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({
       <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
         Напишите отзыв
       </Button>
-      <CommentFormModal onOpenModal={false} onCloseModal={onCloseModal}>
+      <CommentFormModal onOpenModal={isActiveModal} onCloseModal={onCloseModal}>
         <DefaultCommentFormAsync onSendComment={onSendComment} />
       </CommentFormModal>
       <CommentList comments={comments} />

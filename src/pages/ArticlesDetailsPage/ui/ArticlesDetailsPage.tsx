@@ -73,7 +73,6 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
     dispatch(FetchArticleListService({}));
   }, [dispatch]);
 
-
   const [isAuthModal, setIsAuthModal] = React.useState(false);
 
   const onOpenModal = React.useCallback(() => {
@@ -100,6 +99,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
         <ArticleBlocksSection blocks={article?.blocks} />
         <CommentsSection
           comments={comments}
+          isActiveModal={isAuthModal}
           onOpenModal={onOpenModal}
           onCloseModal={onCloseModal}
           onSendComment={onSendComment}
