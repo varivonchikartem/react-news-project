@@ -30,8 +30,6 @@ const LoginForm: React.FC<LoginFormProps> = (props) => {
   });
 
   const dispatch = useAppDispatch();
-  const username = useSelector(getLoginFormUserName);
-  const password = useSelector(getLoginFormPassword);
 
   const onLoginAsAdmin = () => {
     dispatch(LoginFormService({ username: "admin", password: "123" }));

@@ -24,19 +24,19 @@ export const MainForm: React.FC<MainFormProps> = (props) => {
 
   return (
     <div className={mainformClasses}>
-      <header className={styles.header}>
-        <h2 className={styles.header_title}>
+      <header className={styles.Header}>
+        <h2 className={styles.title}>
           {formType === "login" ? "Log in to your account" : "Create your account"}
         </h2>
         <p>Welcome!</p>
       </header>
-      <main className={styles.main}>
+      <main className={styles.Main}>
         <React.Suspense fallback="Loading">
           {formType === "login" && <LoginFormAsync />}
           {formType === "registration" && <RegistrationFormAsync />}
         </React.Suspense>
       </main>
-      <footer className="footer">
+      <footer className={styles.Footer}>
         <p>
           {formType === "login" ? "Don't have an account?  " : " Already have an account?"}
           <Button theme={ButtonTheme.DEFAULT} onClick={onFormTypeChange}>

@@ -22,7 +22,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = (props) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <Button theme={ButtonTheme.DEFAULT} type="button" className={themeswitcherClasses} onClick={toggleTheme}>
+    <Button className={themeswitcherClasses} theme={ButtonTheme.DEFAULT} type="button" onClick={toggleTheme}>
       {theme === Theme.LIGHT ? (
         <Icon theme={IconTheme.TRANSPARENT} Svg={ThemeSwitcherLightIcon} width="30" height="25" />
       ) : (

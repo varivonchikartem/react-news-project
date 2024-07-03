@@ -33,50 +33,33 @@ const RegistrationForm: React.FC<RegistrationFormProps> = (props) => {
   });
 
   const dispatch = useAppDispatch();
-  const username = useSelector(getRegistrationFormUserName);
-  const password = useSelector(getRegistrationFormPassword);
 
-  const onChangeUserName = React.useCallback(
-    (value: string) => {
-      dispatch(RegistrationFormActions.setUsername(value));
-    },
-    [dispatch]
-  );
+  const onRegistrationAsAdmin = () => {
+    dispatch(RegistrationFormService({ username: "admin", password: "123" }));
+  };
 
-  const onChangePassword = React.useCallback(
-    (value: string) => {
-      dispatch(RegistrationFormActions.setPassword(value));
-    },
-    [dispatch]
-  );
-
-  const onRegistrationClick = React.useCallback(() => {
-    dispatch(RegistrationFormService({ username, password }));
-  }, [dispatch, username, password]);
+  const onRegistrationAsUser = () => {
+    dispatch(RegistrationFormService({ username: "user", password: "123" }));
+  };
 
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={registrationformClasses}>
-        <Input
-          className={styles.input}
-          type="text"
-          theme={InputTheme.DEFAULT}
-          placeholderValue="Name"
-          onChange={onChangeUserName}
-        />
-        <Input
-          theme={InputTheme.DEFAULT}
-          type="password"
-          placeholderValue="Password"
-          onChange={onChangePassword}
-        />
         <Button
           className={styles.button}
           theme={ButtonTheme.DEFAULT}
           type="button"
-          onClick={onRegistrationClick}
+          onClick={onRegistrationAsAdmin}
         >
-          Sign Up
+          Admin
+        </Button>
+        <Button
+          className={styles.button}
+          theme={ButtonTheme.DEFAULT}
+          type="button"
+          onClick={onRegistrationAsUser}
+        >
+          User
         </Button>
       </div>
     </DynamicModuleLoader>

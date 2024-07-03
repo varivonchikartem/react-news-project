@@ -1,4 +1,6 @@
-.button_group {
-  display: flex;
-  justify-content: start;
+.DefaultCommentForm {
+  > .ButtonGroup {
+    display: flex;
+    justify-content: start;
+  }
 }

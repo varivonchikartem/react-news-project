@@ -72,10 +72,8 @@ const DefaultCommentForm: React.FC<DefaultCommentFormProps> = (props) => {
           value={commentFormText}
           onChange={onCommentTextChange}
         />
-        <div className={styles.button_group}>
-          <Button theme={ButtonTheme.DISABLED} className={styles.transparent}>
-            Закрыть
-          </Button>
+        <div className={styles.ButtonGroup}>
+          <Button theme={ButtonTheme.DISABLED}>Закрыть</Button>
           <Button theme={ButtonTheme.DEFAULT} onClick={onSendHandler}>
             Отправить
           </Button>
