@@ -22,8 +22,8 @@ const ErrorPage: React.FC<ErrorPageProps> = (props) => {
 
   return (
     <div className={errorpageClasses}>
-      <div className={styles.main}>
-        <div className={styles.main1}>
+      <div className={styles.ErrorInner}>
+        <div className={styles.Description}>
           <h1>Oops, something went wrong.</h1>
           <p className={styles.subtitle}>
             Take a moment to breathe. In and out. Everything will be okay soon. When you're ready, ease back
@@ -33,12 +33,7 @@ const ErrorPage: React.FC<ErrorPageProps> = (props) => {
             Reload page
           </Button>
         </div>
-        <div className={styles.main2}>
-          <AppImage
-            minHeight="700px"
-            src="https://media.sproutsocial.com/uploads/404-Space-Illustration.svg"
-          />
-        </div>
+        <AppImage minHeight="700px" src="https://media.sproutsocial.com/uploads/404-Space-Illustration.svg" />
       </div>
     </div>
   );
