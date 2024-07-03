@@ -1,0 +1,33 @@
+@import "../../../app/styles/media/media";
+
+.ArticlesDetailsPage {
+  > .Content {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    margin-top: 46px;
+
+    column-gap: 10px;
+
+    > .DescriptionInner {
+      grid-column: span 4;
+
+      @include mobile {
+        display: none;
+      }
+
+      > .subtitle {
+        margin-top: 12px;
+      }
+    }
+
+    > .ContentInner {
+      grid-column-start: 6;
+      grid-column-end: 13;
+
+      @include mobile {
+        grid-column-start: 1;
+      }
+    }
+  }
+}

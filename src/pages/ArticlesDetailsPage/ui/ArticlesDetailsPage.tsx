@@ -108,13 +108,13 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
       <div className={articlesdetailspageClasses}>
         <AppImage src={article?.image} minHeight="80vh" />
 
-        <div className="mmm">
-          <div className="div1">
+        <div className={styles.Content}>
+          <div className={styles.DescriptionInner}>
             <h2>{article?.title}</h2>
-            <p className="sub">{article?.subtitle}</p>
+            <p className={styles.subtitle}>{article?.subtitle}</p>
             <ArticleRating articleId={id || ""} />
           </div>
-          <div className="div2">{article?.blocks.map(renderBlock)}</div>
+          <div className={styles.ContentInner}>{article?.blocks.map(renderBlock)}</div>
         </div>
 
         <div>

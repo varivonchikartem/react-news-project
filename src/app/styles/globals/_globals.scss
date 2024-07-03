@@ -182,31 +182,3 @@ li {
   height: 58px;
   border-radius: 4px;
 }
-
-.mmm {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: 10px;
-  margin-top: 46px;
-}
-
-.sub {
-  margin-top: 12px;
-}
-
-.div1 {
-  grid-column: span 4; /* Div 1 spans 4 columns */
-
-  @include mobile {
-    display: none;
-  }
-}
-
-.div2 {
-  grid-column-start: 6; /* Div 2 spans 8 columns */
-  grid-column-end: 13;
-
-  @include mobile {
-    grid-column-start: 1;
-  }
-}
