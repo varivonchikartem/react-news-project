@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:development": "webpack --env mode=development",
-    "build:production": "webpack --env mode=production",
+    "build:production": "webpack --env mode=production apiUrl=https://react-news-project-server.vercel.app/",
     "start:development:server": "node ./json-server/index.js"
   },
   "keywords": [],

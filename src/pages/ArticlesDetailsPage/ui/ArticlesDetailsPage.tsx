@@ -73,20 +73,6 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
     dispatch(FetchArticleListService({}));
   }, [dispatch]);
 
-  React.useEffect(() => {}, [dispatch]);
-
-  const renderBlock = React.useCallback((block: ArticleBlock) => {
-    switch (block.type) {
-      case ArticleBlockType.TEXT:
-        return <ArticleDetailsTextBlockComponent block={block} />;
-      case ArticleBlockType.IMAGE:
-        return <ArticleDetailsImageBlockComponent block={block} />;
-      case ArticleBlockType.CODE:
-        return null;
-      default:
-        return null;
-    }
-  }, []);
 
   const [isAuthModal, setIsAuthModal] = React.useState(false);
 
