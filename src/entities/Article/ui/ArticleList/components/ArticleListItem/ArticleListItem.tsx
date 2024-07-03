@@ -29,9 +29,9 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = (props) => {
   return (
     <li className={articlelistitemClasses}>
       <Link to={getRouteArticlesDetails(article?.id)} target={target}>
-        <figure>
+        <figure className={styles.Figure}>
           <AppImage src={article?.image} minHeight="45vh" />
-          <figcaption>
+          <figcaption className={styles.FigureCaption}>
             {article.type &&
               article.type.map((type, index) => (
                 <Button key={index} className={styles.button_type} theme={ButtonTheme.DEFAULT}>

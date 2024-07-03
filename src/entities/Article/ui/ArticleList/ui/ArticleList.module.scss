@@ -4,7 +4,9 @@
   display: flex;
 
   width: 100%;
+
   overflow-x: auto;
+  
   column-gap: 15px;
 
   white-space: nowrap;
@@ -33,6 +35,7 @@
 .SMALL_CARD {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   column-gap: 10px;
   row-gap: 25px;
 
@@ -49,6 +52,7 @@
 .LARGE_CARD {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   column-gap: 10px;
   row-gap: 25px;
 

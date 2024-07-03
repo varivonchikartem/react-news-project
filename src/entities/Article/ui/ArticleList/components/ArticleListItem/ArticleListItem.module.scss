@@ -1,13 +1,14 @@
-.button_type {
-  margin-top: 14px;
-  margin-right: 10px;
-}
-
-
-.title {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 .ArticleListItem {
+  .Figure {
+    > .FigureCaption {
+      > .title {
+        margin-block: 5px;
+      }
+
+      > .button_type {
+        margin-top: 14px;
+        margin-right: 10px;
+      }
+    }
+  }
 }

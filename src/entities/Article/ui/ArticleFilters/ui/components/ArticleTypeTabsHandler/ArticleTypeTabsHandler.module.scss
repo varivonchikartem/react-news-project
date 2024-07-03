@@ -1,6 +1,9 @@
 .ArticleTypeTabsHandler {
   display: flex;
-  overflow-x: auto;
-  column-gap: 7px;
+
   margin-top: 40px;
+
+  column-gap: 7px;
+
+  overflow-x: auto;
 }

@@ -1,11 +1,13 @@
 .ArticleDetailsImageBlockComponent {
-  margin-bottom: 12px;
   margin-top: 25px;
-}
+  margin-bottom: 12px;
 
-.caption {
-  margin-top: 12px;
-  opacity: var(--text-opacity);
-  text-transform: uppercase;
-  text-align: justify;
+  > .caption {
+    margin-top: 12px;
+
+    text-align: justify;
+    text-transform: uppercase;
+
+    opacity: var(--text-opacity);
+  }
 }

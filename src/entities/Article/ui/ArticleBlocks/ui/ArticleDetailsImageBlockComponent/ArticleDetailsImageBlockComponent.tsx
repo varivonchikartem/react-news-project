@@ -19,7 +19,6 @@ export const ArticleDetailsImageBlockComponent: React.FC<ArticleDetailsImageBloc
     [className!]: className,
   });
 
-  console.log("Rendering image block with data:", block);
   return (
     <div className={articledetailsimageblockcomponentClasses}>
       <AppImage minHeight="50vh" src={block?.imageUrl} />
