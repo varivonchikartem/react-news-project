@@ -24,7 +24,6 @@ const MainPage: React.FC<MainPageProps> = (props) => {
     [className!]: className,
   });
 
-  const dispatch = useAppDispatch();
 
   return (
     <div className={mainpageClasses}>

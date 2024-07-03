@@ -1,37 +1,56 @@
 .dark_theme {
-  --background-color: rgb(16, 14, 16);
-  --background-color-navbar: rgb(24, 24, 27);
-  --background-color-sidebar: rgba(24, 24, 27, 1);
+  --color-background: rgb(16, 14, 16);
+  --color-navbar: rgb(24, 24, 27);
+  --color-sidebar: rgba(24, 24, 27, 1);
+  --color-sidebar-tablet: rgba(24, 24, 27, 0.5);
+  --color-text: rgb(255, 255, 255);
+  --color-icon-default: #fff;
+  --color-icon-active: #9147ff;
+  --color-modal: rgb(24, 24, 27);
+  --color-input-default-shadow: #fff;
+  --color-input-hover-shadow: rgb(103, 103, 107);
+  --color-input-focus-shadow: #9147ff;
+  --color-sidebar-item-hover: rgba(45, 45, 45, 0.4);
+  --color-dropdown-menu: rgba(37, 37, 37, 0.95);
+  --color-avatar-border: rgb(255, 255, 255);
+  --color-dropdown-shadow: rgba(255, 255, 255, 0.3);
+  --color-border: rgba(255, 255, 255, 0.3);
+  --color-button-default: #9147ff;
+  --color-box-shadow: rgb(255, 255, 255);
+
+  --background-color: var(--color-background);
+  --background-color-navbar: var(--color-navbar);
+  --background-color-sidebar: var(--color-sidebar);
 
   @include tablet {
-    --background-color-sidebar: rgba(24, 24, 27, 0.5);
+    --background-color-sidebar: var(--color-sidebar-tablet);
   }
 
-  --text-color: rgb(255, 255, 255);
+  --text-color: var(--color-text);
 
-  --background-color-icon-default: #fff;
-  --background-color-icon-active: #9147ff;
+  --background-color-icon-default: var(--color-icon-default);
+  --background-color-icon-active: var(--color-icon-active);
 
-  --background-color-modal: rgb(24, 24, 27);
+  --background-color-modal: var(--color-modal);
 
-  --background-shadow-color-input-default: #fff;
-  --background-shadow-color-input-hover: rgb(103, 103, 107);
-  --background-shadow-color-input-focus: #9147ff;
+  --background-shadow-color-input-default: var(--color-input-default-shadow);
+  --background-shadow-color-input-hover: var(--color-input-hover-shadow);
+  --background-shadow-color-input-focus: var(--color-input-focus-shadow);
 
-  --background-color-sidebar-item-hover: rgb(45, 45, 45, 0.4);
+  --background-color-sidebar-item-hover: var(--color-sidebar-item-hover);
 
-  --background-color-dropdown-menu: rgba(37, 37, 37, 0.95);
-  --border-color-avatar: 0 0 0.133rem rgb(255, 255, 255);
+  --background-color-dropdown-menu: var(--color-dropdown-menu);
+  --border-color-avatar: 0 0 0.133rem var(--color-avatar-border);
 
-  --background-shadow-color-dropdown: rgba(255, 255, 255, 0.3);
+  --background-shadow-color-dropdown: var(--color-dropdown-shadow);
 
   --text-opacity: 0.4;
 
-  --border-color: rgba(255, 255, 255, 0.3);
+  --border-color: var(--color-border);
 
   --border: 1px solid var(--border-color);
 
-  --background-button-default: #9147ff;
+  --background-button-default: var(--color-button-default);
 
-  --box-shadow-image: 0 0 0.133rem rgb(255, 255, 255);
+  --box-shadow-image: 0 0 0.133rem var(--color-box-shadow);
 }

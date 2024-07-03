@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   DynamicModuleLoader,
   ReducersList,
@@ -13,27 +13,19 @@ import { InitArticlesPageService } from "../model/services/InitArticlesPageServi
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
 import { ArticlePageFilters } from "./components/ArticlePageFilters/ArticlePageFilters";
 
-interface ArticlesPageProps {
-  className?: string;
-}
-
-function ArticlesPage(props: ArticlesPageProps) {
-  const { className } = props;
-
+const ArticlesPage = () => {
   const reducers: ReducersList = {
     articlesPage: ArticlesPageReducers,
   };
 
-  let [searchParams] = useSearchParams();
-
+  const [searchParams] = useSearchParams();
   const dispatch = useAppDispatch();
-
   const articles = useSelector(getArticlesPageData);
   const articleView = useSelector(getArticlesPageView);
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(InitArticlesPageService(searchParams));
-  }, [dispatch]);
+  }, [dispatch, searchParams]);
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
@@ -41,6 +33,6 @@ function ArticlesPage(props: ArticlesPageProps) {
       <ArticleList articles={articles} articleView={articleView} />
     </DynamicModuleLoader>
   );
-}
+};
 
 export default ArticlesPage;

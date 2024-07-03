@@ -1,38 +1,51 @@
 .light_theme {
-  --background-color: rgb(228, 228, 228);
-  --background-color-navbar: #ececec;
-  --background-color-sidebar: #ececec;
+  --color-gray-light: #ececec;
+  --color-white: rgba(255, 255, 255, 1);
+  --color-white-transparent: rgba(255, 255, 255, 0.5);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-black-semi: rgba(0, 0, 0, 0.5);
+  --color-black-opacity-30: rgba(0, 0, 0, 0.3);
+  --color-gray-dark-1: rgb(103, 103, 107);
+  --color-gray-dark-2: rgb(91, 91, 94);
+  --color-sidebar-item-hover: rgba(45, 45, 45, 0.4);
+  --color-background: rgb(228, 228, 228);
+  --color-button-default: rgb(255, 214, 80);
+
+  
+  --background-color: var(--color-background);
+  --background-color-navbar: var(--color-gray-light);
+  --background-color-sidebar: var(--color-gray-light);
 
   @include tablet {
-    --background-color-sidebar: rgba(255, 255, 255, 0.5);
+    --background-color-sidebar: var(--color-white-transparent);
   }
 
-  --background-color-icon-default: rgba(0, 0, 0, 0.5);
-  --background-color-icon-active: rgba(0, 0, 0, 1);
+  --background-color-icon-default: var(--color-black-semi);
+  --background-color-icon-active: var(--color-black);
 
-  --background-color-modal: rgb(255, 255, 255);
+  --background-color-modal: var(--color-white);
 
-  --background-shadow-color-input-default: rgb(103, 103, 107);
-  --background-shadow-color-input-hover: rgb(91, 91, 94);
-  --background-shadow-color-input-focus: rgba(0, 0, 0, 1);
+  --background-shadow-color-input-default: var(--color-gray-dark-1);
+  --background-shadow-color-input-hover: var(--color-gray-dark-2);
+  --background-shadow-color-input-focus: var(--color-black);
 
-  --background-color-sidebar-item-hover: rgb(45, 45, 45, 0.4);
+  --background-color-sidebar-item-hover: var(--color-sidebar-item-hover);
 
-  --background-color-dropdown-menu: #ececec;
+  --background-color-dropdown-menu: var(--color-gray-light);
 
-  --background-shadow-color-dropdown: rgba(0, 0, 0, 0.3);
+  --background-shadow-color-dropdown: var(--color-black-opacity-30);
 
   --text-opacity: 0.7;
 
-  --border-color-avatar: 0 0 0.133rem rgb(0, 0, 0);
+  --border-color-avatar: 0 0 0.133rem var(--color-black);
 
-  --border-color: rgba(0, 0, 0, 0.3);
+  --border-color: var(--color-black-opacity-30);
 
   --border: 1px solid var(--border-color);
 
-  --text-color: rgb(0, 0, 0);
+  --text-color: var(--color-black);
 
-  --background-button-default: rgb(255, 214, 80);
+  --background-button-default: var(--color-button-default);
 
-  --box-shadow-image: 0 0 0.133rem rgb(0, 0, 0);
+  --box-shadow-image: 0 0 0.133rem var(--color-black);
 }
