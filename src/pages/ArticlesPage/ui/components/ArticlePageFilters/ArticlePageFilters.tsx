@@ -80,7 +80,7 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
 
   return (
     <div className={articlepagefiltersClasses}>
-      <div className={styles.panel}>
+      <div className={styles.FiltersPanel}>
         <ArticleSortHandler
           order={order}
           sort={sort}

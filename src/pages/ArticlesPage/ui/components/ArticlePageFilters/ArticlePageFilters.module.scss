@@ -1,11 +1,12 @@
 .ArticlePageFilters {
   margin-top: 30px;
   margin-bottom: 42px;
-  justify-content: space-between;
-}
 
-.panel {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+
+  > .FiltersPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
