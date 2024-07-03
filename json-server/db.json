@@ -513,6 +513,12 @@
       "articleId": "1",
       "rate": 4,
       "id": 8
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 5,
+      "id": 9
     }
   ]
 }

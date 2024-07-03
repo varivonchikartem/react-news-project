@@ -1,9 +1,13 @@
-.select {
-  height: 30px;
-  border-radius: 4px;
-  background-color: inherit;
-}
+.Select {
+  > .SelectInner {
+    height: 30px;
 
-.option {
-  background-color: var(--background-color-dropdown-menu);
+    border-radius: 4px;
+
+    background-color: inherit;
+
+    > .option {
+      background-color: var(--background-color-dropdown-menu);
+    }
+  }
 }

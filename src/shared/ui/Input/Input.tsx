@@ -45,10 +45,10 @@ export function Input(props: InputProps) {
   };
 
   return (
-    <div>
-      {placeholderValue && <div className={styles.placeholderValue}>{placeholderValue}</div>}
+    <div className={inputClasses}>
+      {placeholderValue && <div className={styles.placeholder}>{placeholderValue}</div>}
       <input
-        className={inputClasses}
+        className={styles.input}
         type={type}
         value={value}
         onChange={onChangeHandler}

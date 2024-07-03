@@ -1,29 +1,35 @@
 .Input {
-  display: block;
-
-  border-radius: 5px;
-  height: 30px;
-  min-width: 100%;
-  background-color: inherit;
-  box-shadow: inset 0 0 0 1.5px var(--background-shadow-color-input-default);
-  outline: none;
-  border: none;
-  padding-left: 10px;
-
-  &::placeholder {
-    color: var(--text-color);
+  > .placeholder {
+    margin-block: 6px;
   }
 
-  &:hover {
-    box-shadow: inset 0 0 0 2px var(--background-shadow-color-input-hover); /* Темно-серая внутренняя граница при наведении */
-  }
+  > .input {
+    display: block;
 
-  &:focus {
-    box-shadow: inset 0 0 0 2px var(--background-shadow-color-input-focus); /* Фиолетовая внутренняя граница при фокусе */
-  }
-}
+    height: 30px;
+    min-width: 100%;
 
-.placeholderValue {
-  margin-top: 5px;
-  margin-bottom: 5px;
+    padding-left: 10px;
+
+    outline: none;
+    border: none;
+
+    border-radius: 5px;
+
+    box-shadow: inset 0 0 0 1.5px var(--background-shadow-color-input-default);
+
+    background-color: inherit;
+
+    &::placeholder {
+      color: var(--text-color);
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px var(--background-shadow-color-input-hover); /* Темно-серая внутренняя граница при наведении */
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px var(--background-shadow-color-input-focus); /* Фиолетовая внутренняя граница при фокусе */
+    }
+  }
 }

@@ -24,5 +24,5 @@ export function Icon(props: IconProps) {
     [styles[theme]]: theme,
   });
 
-  return <Svg width={width} height={height} className={iconClasses} {...otherProps} />;
+  return <Svg className={iconClasses} width={width} height={height} {...otherProps} />;
 }

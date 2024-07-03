@@ -41,7 +41,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
 
   return (
     <div className={SelectStyles}>
-      <select disabled={readonly} className={styles.select} value={value} onChange={onChangeHandler}>
+      <select disabled={readonly} className={styles.SelectInner} value={value} onChange={onChangeHandler}>
         {optionsList}
       </select>
     </div>

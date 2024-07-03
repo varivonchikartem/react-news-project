@@ -1,3 +1,5 @@
-.bordered_theme {
-  box-shadow: var(--border-color-avatar);
+.Avatar {
+  &.bordered_theme {
+    box-shadow: var(--border-color-avatar);
+  }
 }
