@@ -38,6 +38,10 @@ import { ArticleRating } from "../../../features/ArticleRating/ui/ArticleRating/
 import { ArticleListReducers } from "../../../entities/Article";
 import { getArticleListData } from "../../../entities/Article/modal/selectors/ArticleListSelectors/getArticleListData/getArticleListData";
 import { FetchArticleListService } from "../../../entities/Article/modal/service/FetchArticleListService/FetchArticleListService";
+import ArticleDetailsSection from "../components/ArticleDetailsSection/ArticleDetailsSection";
+import ArticleBlocksSection from "../components/ArticleBlocksSection/ArticleBlocksSection";
+import CommentsSection from "../components/CommentsSection/CommentsSection";
+import RecommendationsSection from "../components/RecommendationsSection/RecommendationsSection";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -106,34 +110,15 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <div className={articlesdetailspageClasses}>
-        <AppImage src={article?.image} minHeight="80vh" />
-
-        <div className={styles.Content}>
-          <div className={styles.DescriptionInner}>
-            <h2>{article?.title}</h2>
-            <p className={styles.subtitle}>{article?.subtitle}</p>
-            <ArticleRating articleId={id || ""} />
-          </div>
-          <div className={styles.ContentInner}>{article?.blocks.map(renderBlock)}</div>
-        </div>
-
-        <div>
-          <h2>Отзывы</h2>
-          <p></p>
-          <Select />
-          <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
-            Напишите отзыв
-          </Button>
-          <CommentFormModal onOpenModal={isAuthModal} onCloseModal={onCloseModal}>
-            <DefaultCommentFormAsync onSendComment={onSendComment} />
-          </CommentFormModal>
-          <CommentList comments={comments} />
-          <ArticleList
-            articles={articleRecommendations}
-            articleView={ArticleView.SMALL_CARD}
-            target="_blank"
-          />
-        </div>
+        <ArticleDetailsSection article={article} id={id || ""} />
+        <ArticleBlocksSection blocks={article?.blocks} />
+        <CommentsSection
+          comments={comments}
+          onOpenModal={onOpenModal}
+          onCloseModal={onCloseModal}
+          onSendComment={onSendComment}
+        />
+        <RecommendationsSection articleRecommendations={articleRecommendations} />
       </div>
     </DynamicModuleLoader>
   );

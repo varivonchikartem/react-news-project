@@ -519,6 +519,48 @@
       "articleId": "6",
       "rate": 5,
       "id": 9
+    },
+    {
+      "userId": "2",
+      "articleId": "6",
+      "rate": 4,
+      "id": 10
+    },
+    {
+      "userId": "2",
+      "articleId": "6",
+      "rate": 5,
+      "id": 11
+    },
+    {
+      "userId": "2",
+      "articleId": "6",
+      "rate": 5,
+      "id": 12
+    },
+    {
+      "userId": "2",
+      "articleId": "6",
+      "rate": 4,
+      "id": 13
+    },
+    {
+      "userId": "2",
+      "articleId": "5",
+      "rate": 5,
+      "id": 14
+    },
+    {
+      "userId": "2",
+      "articleId": "2",
+      "rate": 4,
+      "id": 15
+    },
+    {
+      "userId": "2",
+      "articleId": "3",
+      "rate": 5,
+      "id": 16
     }
   ]
 }
