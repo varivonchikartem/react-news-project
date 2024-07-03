@@ -1,14 +1,15 @@
-.ProfilePageHeader {
+.ProfilePageEditPanel {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   margin-bottom: 36px;
+
+  > .ButtonGroup {
+    > .ActionButtonGroup {
+      .reject_button {
+        margin-right: 10px;
+      }
+    }
+  }
 }
-
-
-.reject_button {
-    margin-right: 10px;
-}
-
-

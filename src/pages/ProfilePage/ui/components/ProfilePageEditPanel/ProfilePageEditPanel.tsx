@@ -17,7 +17,7 @@ interface ProfilePageEditPanelProps {
 export const ProfilePageEditPanel: React.FC<ProfilePageEditPanelProps> = (props) => {
   const { className } = props;
 
-  const profilepageheaderClasses = clx(styles.ProfilePageHeader, {
+  const profilepageheaderClasses = clx(styles.ProfilePageEditPanel, {
     [className!]: className,
   });
 
@@ -44,13 +44,13 @@ export const ProfilePageEditPanel: React.FC<ProfilePageEditPanelProps> = (props)
     <div className={profilepageheaderClasses}>
       <h2 className={styles.title}>Profile</h2>
       {canEdit && (
-        <div>
+        <div className={styles.ButtonGroup}>
           {readOnly ? (
             <Button className={styles.edit_button} theme={ButtonTheme.DEFAULT} onClick={onEdit}>
               Редактировать
             </Button>
           ) : (
-            <div className={styles.button_group}>
+            <div className={styles.ActionButtonGroup}>
               <Button className={styles.reject_button} theme={ButtonTheme.REJECT} onClick={onCancelEdit}>
                 Отменить
               </Button>
