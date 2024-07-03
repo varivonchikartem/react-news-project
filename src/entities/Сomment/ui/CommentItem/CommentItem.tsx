@@ -24,7 +24,7 @@ export const CommentItem: React.FC<CommentItemProps> = (props) => {
         <h2 className={styles.title}>{comment?.commentTitle}</h2>
         <p className={styles.subtitle}>{comment?.commentText}</p>
         <div className={styles.UserDate}>
-          <Link to={getRouteProfile(comment?.user.id ?? "")} className={styles.username}>
+          <Link className={styles.username} to={getRouteProfile(comment?.user.id ?? "")}>
             {comment?.user.username}
           </Link>
           <data className={styles.date} value="2024-06-26">
