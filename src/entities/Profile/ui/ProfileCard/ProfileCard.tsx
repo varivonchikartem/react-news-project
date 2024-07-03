@@ -63,7 +63,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = (props) => {
 
   return (
     <div className={profilecardClasses}>
-      <div className={styles.profile_inner}>
+      <div className={styles.ProfileInner}>
         <ProfilePageEditPanel />
         <ProfileCardHeader profileData={profileData} />
         <ProfileCardMenu />

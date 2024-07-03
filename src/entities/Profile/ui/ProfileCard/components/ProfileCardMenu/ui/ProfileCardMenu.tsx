@@ -16,12 +16,12 @@ export const ProfileCardMenu: React.FC<ProfileCardMenuProps> = (props) => {
 
   return (
     <nav className={profilecardmenuClasses}>
-      <ul className={styles.profile_menu_list}>
-        <li className={styles.profile_menu_item}>
+      <ul className={styles.MenuList}>
+        <li className={styles.item}>
           <Button theme={ButtonTheme.DEFAULT}>Account</Button>
         </li>
         {["Overview", "Posts", "Comments", "Saved", "Hidden", "Upvoted", "Downvoted"].map((item) => (
-          <li className={styles.profile_menu_item} key={item}>
+          <li className={styles.item} key={item}>
             <Button theme={ButtonTheme.DISABLED}>{item}</Button>
           </li>
         ))}

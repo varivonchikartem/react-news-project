@@ -19,8 +19,6 @@ export const ProfileCardHeader: React.FC<ProfileCardHeaderProps> = (props) => {
     [className!]: className,
   });
 
-  
-
   return (
     <header className={profilecardheaderClasses}>
       <Avatar
@@ -31,7 +29,7 @@ export const ProfileCardHeader: React.FC<ProfileCardHeaderProps> = (props) => {
         height="70px"
         borderRadius="500rem"
       />
-      <div className={styles.header_bio}>
+      <div className={styles.Bio}>
         <h3>
           {profileData?.firstname} {profileData?.secondname}
         </h3>

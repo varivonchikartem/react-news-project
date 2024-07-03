@@ -40,11 +40,11 @@ const ProfileCardGeneral: React.FC<ProfileCardGeneralProps> = ({
   ];
 
   return (
-    <div className={styles.profile_general}>
-      <h2 className={styles.profile_general_title}>General</h2>
-      <ul className={styles.profile_general_menu_list}>
+    <div className={styles.ProfileGeneral}>
+      <h2 className={styles.title}>General</h2>
+      <ul className={styles.MenuList}>
         {inputFields.map((field) => (
-          <li className={styles.profile_general_menu_item} key={field.key}>
+          <li className={styles.item} key={field.key}>
             <Input
               theme={InputTheme.DEFAULT}
               value={profileData ? profileData[field.key] : ""}
@@ -55,7 +55,7 @@ const ProfileCardGeneral: React.FC<ProfileCardGeneralProps> = ({
             />
           </li>
         ))}
-        <li className={styles.profile_general_menu_item}>
+        <li className={styles.item}>
           <CountrySelect
             placeholderValue="Страна"
             value={profileData?.country}
