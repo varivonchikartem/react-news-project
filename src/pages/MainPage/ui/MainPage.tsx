@@ -28,26 +28,22 @@ const MainPage: React.FC<MainPageProps> = (props) => {
 
   return (
     <div className={mainpageClasses}>
-      <section className={styles.intro}>
-        <div className={styles.main_page_inner}>
-          <h1 className={styles.main_page_title}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?
-          </h1>
-          <p className={styles.main_page_subtitle}>
+      <section className={styles.Intro}>
+        <div className={styles.IntroInner}>
+          <h1 className={styles.title}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?</h1>
+          <p className={styles.subtitle}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium mollitia itaque laudantium
             deleniti porro!
           </p>
         </div>
       </section>
-      <section className={styles.new_releases}>
-        <div className="wrapper">
-          <header className={styles.new_releases_panel}>
-            <h2 className={styles.new_releases_panel_title}>New Releases</h2>
-            <Link className={styles.new_releases_panel_link} to={getRouteArticles()}>
-              View All Stories
-            </Link>
-          </header>
-        </div>
+      <section className={styles.Releases}>
+        <header className={styles.ReleasesPanel}>
+          <h2 className={styles.title}>New Releases</h2>
+          <Link className={styles.link} to={getRouteArticles()}>
+            View All Stories
+          </Link>
+        </header>
       </section>
     </div>
   );
