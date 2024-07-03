@@ -1,0 +1,22 @@
+@import "../../../../../app/styles/media/media";
+
+.HeaderSearch {
+  flex-shrink: 1;
+  height: 33px;
+
+  width: 100%;
+  max-width: 455px;
+  min-width: 400px;
+
+  border-radius: 3px;
+
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    max-width: 100%;
+    min-width: auto;
+    flex-basis: 100%;
+    order: 1;
+  }
+}
