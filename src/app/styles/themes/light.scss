@@ -11,7 +11,6 @@
   --color-background: rgb(228, 228, 228);
   --color-button-default: rgb(255, 214, 80);
 
-  
   --background-color: var(--color-background);
   --background-color-navbar: var(--color-gray-light);
   --background-color-sidebar: var(--color-gray-light);
@@ -48,4 +47,13 @@
   --background-button-default: var(--color-button-default);
 
   --box-shadow-image: 0 0 0.133rem var(--color-black);
+
+  --skeleton-gradient: linear-gradient(
+    90deg,
+    rgba(255, 214, 80, 0) 0%,
+    rgba(255, 214, 80, 0.2) 20%,
+    rgba(255, 214, 80, 0.8) 50%,
+    rgba(255, 214, 80, 0.2) 80%,
+    rgba(255, 214, 80, 0) 100%
+  );
 }

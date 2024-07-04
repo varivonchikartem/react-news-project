@@ -5,8 +5,8 @@ import styles from "./Skeleton.module.scss";
 interface SkeletonProps {
   className?: string;
 
-  height: string;
-  width: string;
+  height?: string;
+  width?: string;
   borderRadius?: string;
 }
 
