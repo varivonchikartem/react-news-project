@@ -15,6 +15,7 @@ import { getRouteArticles } from "../../../shared/const/PageRoutes/PageRoutes";
 import { ArticleListReducers } from "../../../entities/Article";
 import { FetchArticleListService } from "../../../entities/Article/modal/service/FetchArticleListService/FetchArticleListService";
 import { getArticleListData } from "../../../entities/Article/modal/selectors/ArticleListSelectors/getArticleListData/getArticleListData";
+import Skeleton from "../../../shared/ui/Skeleton/Skeleton";
 
 interface MainPageProps {
   className?: string;
@@ -42,6 +43,7 @@ const MainPage: React.FC<MainPageProps> = (props) => {
     <DynamicModuleLoader reducers={reducers}>
       <div className={mainpageClasses}>
         <section className={styles.Intro}>
+          <Skeleton height="200px" width="200px" />
           <div className={styles.IntroInner}>
             <h1 className={styles.title}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?
