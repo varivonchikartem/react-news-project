@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  
+
   width: 100%;
 
   height: var(--navbar-height);
@@ -36,5 +36,11 @@
         margin-left: 5px;
       }
     }
+  }
+}
+
+.sidebar_button {
+  @include tablet-above {
+    display: none;
   }
 }

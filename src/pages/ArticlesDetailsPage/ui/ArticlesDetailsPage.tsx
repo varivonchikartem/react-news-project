@@ -84,9 +84,13 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   }, []);
 
   const onSendComment = React.useCallback(
-    (commentFormTitle: string, commentFormText: string) => {
+    (commentFormTitle: string, commentFormText: string, commentFormCreatedAt: string) => {
       dispatch(
-        AddCommentForArticleService({ commentFormTitle: commentFormTitle, commentFormText: commentFormText })
+        AddCommentForArticleService({
+          commentFormTitle: commentFormTitle,
+          commentFormText: commentFormText,
+          commentFormCreatedAt: commentFormCreatedAt,
+        })
       );
     },
     [dispatch]
@@ -95,8 +99,11 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <div className={articlesdetailspageClasses}>
-        <ArticleDetailsSection article={article} id={id || ""} />
-        <ArticleBlocksSection blocks={article?.blocks} />
+        <AppImage className={styles.image} src={article?.image} minHeight="80vh" />
+        <div className={styles.Content}>
+          <ArticleDetailsSection article={article} id={id || ""} />
+          <ArticleBlocksSection blocks={article?.blocks} />
+        </div>
         <CommentsSection
           comments={comments}
           isActiveModal={isAuthModal}

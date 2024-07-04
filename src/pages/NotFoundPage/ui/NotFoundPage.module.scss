@@ -1,3 +1,5 @@
+@import "../../../app/styles/media/media";
+
 .NotFoundPage {
   > .NotFoundPageInner {
     display: grid;
@@ -7,12 +9,30 @@
     max-width: 1200px;
     margin-inline: auto;
 
+    > .image {
+      @include mobile {
+        min-height: 300px !important;
+      }
+    }
+
+    @include mobile {
+      grid-template-columns: auto;
+    }
+
     > .Description {
       margin-top: 150px;
-
+      @include mobile {
+        margin-top: 0;
+      }
       > .subtitle {
         width: 100%;
         max-width: 54%;
+
+        @include mobile {
+          max-width: 80%;
+        }
+
+        margin-bottom: 25px;
       }
 
       > .button {

@@ -28,7 +28,7 @@ export const CommentItem: React.FC<CommentItemProps> = (props) => {
             {comment?.user.username}
           </Link>
           <data className={styles.date} value="2024-06-26">
-            26.06.2024
+            {comment?.commentCreatedAt}
           </data>
         </div>
       </div>

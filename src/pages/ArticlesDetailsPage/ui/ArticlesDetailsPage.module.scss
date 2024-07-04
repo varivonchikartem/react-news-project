@@ -1,33 +1,22 @@
 @import "../../../app/styles/media/media";
 
-.ArticlesDetailsPage {
-  > .Content {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+.Content {
+  display: grid;
+  grid-template-columns: auto auto;
 
-    margin-top: 46px;
+  column-gap: 75px;
 
-    column-gap: 10px;
+  margin-top: 50px;
 
-    > .DescriptionInner {
-      grid-column: span 4;
+  @include mobile {
+    grid-template-columns: auto;
+  }
+}
 
-      @include mobile {
-        display: none;
-      }
+.image {
+  min-height: 80vh;
 
-      > .subtitle {
-        margin-top: 12px;
-      }
-    }
-
-    > .ContentInner {
-      grid-column-start: 6;
-      grid-column-end: 13;
-
-      @include mobile {
-        grid-column-start: 1;
-      }
-    }
+  @include mobile {
+    min-height: 40vh !important;
   }
 }

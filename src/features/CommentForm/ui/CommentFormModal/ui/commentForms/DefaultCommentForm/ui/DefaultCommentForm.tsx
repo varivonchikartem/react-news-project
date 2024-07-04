@@ -13,11 +13,12 @@ import { CommentReducers } from "../../../../../../../../entities/Сomment";
 import { getCommenFormtText } from "../../../../../../model/selectors/getCommenFormtText/getCommenFormtText";
 import { Input, InputTheme } from "../../../../../../../../shared/ui/Input/Input";
 import Button, { ButtonTheme } from "../../../../../../../../shared/ui/Button/Button";
+import { getCommentFormCreatedAt } from "../../../../../../model/selectors/getCommentFormCreatedAt/getCommentFormCreatedAt";
 
 interface DefaultCommentFormProps {
   className?: string;
 
-  onSendComment: (commentFormTitle: string, commentFormText: string) => void;
+  onSendComment: (commentFormTitle: string, commentFormText: string, commentFormCreatedAt: string) => void;
 }
 
 const reducers: ReducersList = {
@@ -34,6 +35,11 @@ const DefaultCommentForm: React.FC<DefaultCommentFormProps> = (props) => {
   const dispatch = useAppDispatch();
   const commentFormTitle = useSelector(getCommentFormTitle);
   const commentFormText = useSelector(getCommenFormtText);
+  const commentFormCreatedAt = useSelector(getCommentFormCreatedAt);
+
+  React.useEffect(() => {
+    dispatch(CommentFormActions.setCommentCreatedAt());
+  }, [dispatch]);
 
   const onCommentTitleChange = React.useCallback(
     (value: string) => {
@@ -50,10 +56,17 @@ const DefaultCommentForm: React.FC<DefaultCommentFormProps> = (props) => {
   );
 
   const onSendHandler = React.useCallback(() => {
-    onSendComment(commentFormTitle, commentFormText);
+    onSendComment(commentFormTitle, commentFormText, commentFormCreatedAt);
     onCommentTitleChange("");
     onCommentTextChange("");
-  }, [onSendComment, onCommentTitleChange, onCommentTextChange, commentFormText, commentFormTitle]);
+  }, [
+    onSendComment,
+    onCommentTitleChange,
+    onCommentTextChange,
+    commentFormText,
+    commentFormTitle,
+    commentFormCreatedAt,
+  ]);
 
   return (
     <DynamicModuleLoader reducers={reducers}>

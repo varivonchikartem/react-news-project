@@ -24,7 +24,11 @@ const NotFoundPage: React.FC<NotFoundPageProps> = (props) => {
             work below.
           </p>
         </div>
-        <AppImage minHeight="700px" src="https://media.sproutsocial.com/uploads/404-Space-Illustration.svg" />
+        <AppImage
+          minHeight="700px"
+          className={styles.image}
+          src="https://media.sproutsocial.com/uploads/404-Space-Illustration.svg"
+        />
       </div>
     </div>
   );

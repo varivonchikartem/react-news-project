@@ -1,14 +1,5 @@
 @import "../../../../../app/styles/media/media";
 
 .HeaderAuthPanel {
-  .ButtonGroup {
-    display: flex;
-    align-items: center;
 
-    > .sidebar_button {
-      @include tablet-above {
-        display: none;
-      }
-    }
-  }
 }

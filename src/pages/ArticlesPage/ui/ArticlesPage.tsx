@@ -23,6 +23,8 @@ const ArticlesPage = () => {
   const articles = useSelector(getArticlesPageData);
   const articleView = useSelector(getArticlesPageView);
 
+  
+
   useEffect(() => {
     dispatch(InitArticlesPageService(searchParams));
   }, [dispatch, searchParams]);

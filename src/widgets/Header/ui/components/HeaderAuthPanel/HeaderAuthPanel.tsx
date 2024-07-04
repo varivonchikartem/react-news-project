@@ -10,8 +10,6 @@ import Button, { ButtonTheme } from "../../../../../shared/ui/Button/Button";
 import { Icon, IconTheme } from "../../../../../shared/ui/Icon/Icon";
 import { SidebarModal } from "../../../../Sidebar/ui/SidebarModal/SidebarModal";
 import { AuthorizationModal } from "../../../../../features/Authorization";
-import TiltedIcon from "../../../../../shared/assets/icons/list.svg";
-import { useActiveModal } from "../../../../../shared/lib/hooks/useActiveModal/useActiveModal";
 
 interface HeaderAuthPanelProps {
   className?: string;
@@ -20,17 +18,18 @@ interface HeaderAuthPanelProps {
 export const HeaderAuthPanel: React.FC<HeaderAuthPanelProps> = ({ className }) => {
   const headerAuthPanelClasses = clx(styles.HeaderAuthPanel, className);
 
-  const userAuthenticationData = useSelector(getUserAuthenticationData);
   const dispatch = useDispatch();
+  const userAuthenticationData = useSelector(getUserAuthenticationData);
 
-  const {
-    isActiveModal,
-    isActiveSidebarModal,
-    onOpenModal,
-    onCloseModal,
-    onOpenSidebarModal,
-    onCloseSidebarModal,
-  } = useActiveModal();
+  const [isActiveModal, setIsActiveModal] = React.useState(false);
+
+  const onOpenModal = React.useCallback(() => {
+    setIsActiveModal(true);
+  }, []);
+
+  const onCloseModal = React.useCallback(() => {
+    setIsActiveModal(false);
+  }, []);
 
   const onLogout = () => {
     dispatch(UserActions.logout());
@@ -59,10 +58,7 @@ export const HeaderAuthPanel: React.FC<HeaderAuthPanelProps> = ({ className }) =
       <Button theme={ButtonTheme.DEFAULT} onClick={onOpenModal}>
         Log in
       </Button>
-      <Button className={styles.sidebar_button} theme={ButtonTheme.DEFAULT} onClick={onOpenSidebarModal}>
-        <Icon theme={IconTheme.DEFAULT} Svg={TiltedIcon} />
-      </Button>
-      <SidebarModal onOpenModal={isActiveSidebarModal} onCloseModal={onCloseSidebarModal} />
+
       {isActiveModal && <AuthorizationModal onOpenModal={isActiveModal} onCloseModal={onCloseModal} />}
     </div>
   );

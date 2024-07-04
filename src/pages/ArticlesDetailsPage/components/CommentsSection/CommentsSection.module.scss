@@ -1,0 +1,9 @@
+@import "../../../../app/styles/media/media";
+
+.commentary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-block: 25px;
+}

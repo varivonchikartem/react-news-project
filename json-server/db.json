@@ -16,21 +16,21 @@
   "profile": [
     {
       "id": "1",
-      "firstname": "Artem11111111",
+      "firstname": "Artem",
       "secondname": "Varivonchik",
       "username": "admin",
       "age": 22,
-      "country": "Canada",
+      "country": "United States",
       "city": "Minsk",
       "avatar": "https://habrastorage.org/getpro/moikrug/uploads/company/100/005/958/5/logo/medium_4a47a0db6e60853dedfcfdf08a5ca249.png"
     },
     {
       "id": "2",
-      "firstname": "Artem1",
+      "firstname": "Artem1123123",
       "secondname": "Varivonchik",
       "username": "user",
       "age": 22,
-      "country": "Belarus",
+      "country": "France",
       "city": "Minsk",
       "avatar": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_3.png"
     }
@@ -372,109 +372,20 @@
   ],
   "comments": [
     {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "123",
-      "commentFormText": "123",
-      "id": 1
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "123",
-      "commentText": "123",
-      "id": 2
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "123",
-      "commentText": "123222222222",
-      "id": 3
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "123",
-      "commentText": "132",
-      "id": 4
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "1111",
-      "commentText": "11111",
-      "id": 5
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "123",
-      "commentText": "123",
-      "id": 6
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "яяяя",
-      "commentText": "яяяя",
-      "id": 7
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "ссс",
-      "commentText": "ссс",
-      "id": 8
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "commentTitle": "пппп",
-      "commentText": "пппп",
-      "id": 9
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "commentTitle": "123",
-      "commentText": "123",
-      "id": 10
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "commentTitle": "КЕДЫ ADIDAS BRAVADA 2.0 PLATFORM 235610",
-      "commentText": "Толстая подошва на платформе придаст вашему образу выразительности и остроты, но не в ущерб комфорту. Cloudfoam обеспечивает амортизацию в течение всего дня для удобства ношения, а резиновая подошва обеспечивает надежное сцепление и дополняет непринужденный стильный профиль",
-      "id": 11
-    },
-    {
       "articleId": "6",
       "userId": "1",
       "commentTitle": "123",
       "commentText": "123",
-      "id": 12
-    },
-    {
-      "articleId": "1",
-      "userId": 2,
-      "commentTitle": "afjjafj",
-      "commentText": "asdad",
-      "id": 13
+      "commentCreatedAt": "04.07.2024 04:42",
+      "id": 1
     }
   ],
   "article-ratings": [
     {
-      "userId": "2",
-      "articleId": "2",
-      "rate": 5,
-      "id": 1
-    },
-    {
-      "userId": "2",
+      "userId": "1",
       "articleId": "6",
       "rate": 5,
-      "id": 2
+      "id": 1
     }
   ]
 }

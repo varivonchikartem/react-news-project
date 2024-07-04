@@ -6,6 +6,7 @@ import { getArticleDetailsData } from "../../../../../entities/Article/modal/sel
 interface AddCommentForArticleServiceProps {
   commentFormTitle: string;
   commentFormText: string;
+  commentFormCreatedAt: string;
 }
 
 export const AddCommentForArticleService = createAsyncThunk<
@@ -15,7 +16,7 @@ export const AddCommentForArticleService = createAsyncThunk<
 >("AddCommentForArticle/AddCommentForArticleService", async (props, thunkApi) => {
   const { extra, dispatch, rejectWithValue, getState } = thunkApi;
 
-  const { commentFormTitle, commentFormText } = props;
+  const { commentFormTitle, commentFormText, commentFormCreatedAt } = props;
 
   const userData = getUserAuthenticationData(getState());
   const article = getArticleDetailsData(getState());
@@ -30,6 +31,7 @@ export const AddCommentForArticleService = createAsyncThunk<
       userId: userData.id,
       commentTitle: commentFormTitle,
       commentText: commentFormText,
+      commentCreatedAt: commentFormCreatedAt,
     });
 
     if (!response.data) {

@@ -12,10 +12,17 @@ import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../../shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ArticleView } from "../../../entities/Article/modal/types/ArticleSchema";
 import { getRouteArticles } from "../../../shared/const/PageRoutes/PageRoutes";
+import { ArticleListReducers } from "../../../entities/Article";
+import { FetchArticleListService } from "../../../entities/Article/modal/service/FetchArticleListService/FetchArticleListService";
+import { getArticleListData } from "../../../entities/Article/modal/selectors/ArticleListSelectors/getArticleListData/getArticleListData";
 
 interface MainPageProps {
   className?: string;
 }
+
+const reducers: ReducersList = {
+  articleList: ArticleListReducers,
+};
 
 const MainPage: React.FC<MainPageProps> = (props) => {
   const { className } = props;
@@ -24,27 +31,38 @@ const MainPage: React.FC<MainPageProps> = (props) => {
     [className!]: className,
   });
 
+  const dispatch = useAppDispatch();
+  const articleRecommendations = useSelector(getArticleListData);
+
+  React.useEffect(() => {
+    dispatch(FetchArticleListService({}));
+  }, [dispatch]);
 
   return (
-    <div className={mainpageClasses}>
-      <section className={styles.Intro}>
-        <div className={styles.IntroInner}>
-          <h1 className={styles.title}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?</h1>
-          <p className={styles.subtitle}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium mollitia itaque laudantium
-            deleniti porro!
-          </p>
-        </div>
-      </section>
-      <section className={styles.Releases}>
-        <header className={styles.ReleasesPanel}>
-          <h2 className={styles.title}>New Releases</h2>
-          <Link className={styles.link} to={getRouteArticles()}>
-            View All Stories
-          </Link>
-        </header>
-      </section>
-    </div>
+    <DynamicModuleLoader reducers={reducers}>
+      <div className={mainpageClasses}>
+        <section className={styles.Intro}>
+          <div className={styles.IntroInner}>
+            <h1 className={styles.title}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?
+            </h1>
+            <p className={styles.subtitle}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium mollitia itaque laudantium
+              deleniti porro!
+            </p>
+          </div>
+        </section>
+        <section className={styles.Releases}>
+          <header className={styles.ReleasesPanel}>
+            <h2 className={styles.title}>New Releases</h2>
+            <Link className={styles.link} to={getRouteArticles()}>
+              View All Stories
+            </Link>
+          </header>
+          <ArticleList articles={articleRecommendations} articleView={ArticleView.SMALL_CARD} />
+        </section>
+      </div>
+    </DynamicModuleLoader>
   );
 };
 

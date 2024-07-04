@@ -11,13 +11,12 @@ interface ArticleDetailsSectionProps {
 
 const ArticleDetailsSection: React.FC<ArticleDetailsSectionProps> = ({ article, id }) => {
   return (
-    <div>
-      <AppImage src={article?.image} minHeight="80vh" />
+    <div className={styles.ArticleDetailsSection}>
       <div className={styles.Content}>
         <div className={styles.DescriptionInner}>
           <h2>{article?.title}</h2>
           <p className={styles.subtitle}>{article?.subtitle}</p>
-          <ArticleRating articleId={id} />
+          <ArticleRating className={styles.rating} articleId={id} />
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ const ProfileSlice = createSlice({
     },
     updateProfile: (state, action: PayloadAction<Profile>) => {
       state.profileEditedData = {
-        ...state.profileData,
+        ...state.profileEditedData,
         ...action.payload,
       };
     },

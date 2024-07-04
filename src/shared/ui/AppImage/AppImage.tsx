@@ -6,7 +6,7 @@ type MinHeightValue = `${number}px` | `${number}vh` | `${number}%`;
 
 interface AppImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   className?: string;
-  minHeight: MinHeightValue;
+  minHeight?: MinHeightValue;
 }
 
 export const AppImage: React.FC<AppImageProps> = (props) => {
