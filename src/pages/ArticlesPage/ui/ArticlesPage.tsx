@@ -11,6 +11,7 @@ import { getArticlesPageView } from "../model/selectors/getArticlesPageView/getA
 import { getArticlesPageData } from "../model/selectors/getArticlesPageData/getArticlesPageData";
 import { InitArticlesPageService } from "../model/services/InitArticlesPageService/InitArticlesPageService";
 import { ArticleList } from "../../../entities/Article/ui/ArticleList/ui/ArticleList";
+import { getArticlesPageIsLoading } from "../model/selectors/getArticlesPageIsLoading/getArticlesPageIsLoading";
 import { ArticlePageFilters } from "./components/ArticlePageFilters/ArticlePageFilters";
 
 const ArticlesPage = () => {
@@ -22,8 +23,7 @@ const ArticlesPage = () => {
   const dispatch = useAppDispatch();
   const articles = useSelector(getArticlesPageData);
   const articleView = useSelector(getArticlesPageView);
-
-  
+  const articlesPageIsLoading = useSelector(getArticlesPageIsLoading);
 
   useEffect(() => {
     dispatch(InitArticlesPageService(searchParams));

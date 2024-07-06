@@ -5,10 +5,10 @@ import { Profile } from "../../../../../model/types/ProfileSchema";
 import { Avatar, AvatarTheme } from "../../../../../../../shared/ui/Avatar/Avatar";
 import { useSelector } from "react-redux";
 import { getUserAuthenticationData } from "../../../../../../User/model/selectors/getUserAuthenticationData/getUserAuthenticationData";
+import Skeleton from "../../../../../../../shared/ui/Skeleton/Skeleton";
 
 interface ProfileCardHeaderProps {
   className?: string;
-
   profileData?: Profile;
 }
 
@@ -18,6 +18,18 @@ export const ProfileCardHeader: React.FC<ProfileCardHeaderProps> = (props) => {
   const profilecardheaderClasses = clx(styles.ProfileCardHeader, {
     [className!]: className,
   });
+
+  if (!profileData) {
+    return (
+      <header className={profilecardheaderClasses}>
+        <Skeleton width="70px" height="70px" borderRadius="500rem" />
+        <div className={styles.Bio}>
+          <Skeleton width="150px" height="30px" />
+          <Skeleton width="150px" height="30px" />
+        </div>
+      </header>
+    );
+  }
 
   return (
     <header className={profilecardheaderClasses}>

@@ -2,14 +2,14 @@
 
 .Content {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 30% auto;
 
-  column-gap: 75px;
+  column-gap: 100px;
 
   margin-top: 50px;
 
   @include mobile {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 }
 

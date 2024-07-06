@@ -66,11 +66,12 @@ export const ProfileCard: React.FC<ProfileCardProps> = (props) => {
       <div className={styles.ProfileInner}>
         <ProfilePageEditPanel />
         <ProfileCardHeader profileData={profileData} />
-        <ProfileCardMenu />
+        <ProfileCardMenu isLoading={isLoading} />
         <ProfileCardGeneral
           profileData={profileData}
           onChangeHandlers={onChangeHandlers}
           readOnly={readOnly}
+          isLoading={isLoading}
         />
       </div>
     </div>

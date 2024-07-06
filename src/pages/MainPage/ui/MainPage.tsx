@@ -43,7 +43,6 @@ const MainPage: React.FC<MainPageProps> = (props) => {
     <DynamicModuleLoader reducers={reducers}>
       <div className={mainpageClasses}>
         <section className={styles.Intro}>
-          <Skeleton height="200px" width="200px" />
           <div className={styles.IntroInner}>
             <h1 className={styles.title}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita?

@@ -43,7 +43,7 @@ export function Avatar(props: AvatarProps) {
   }
 
   if (isError) {
-    return errorFallback ? errorFallback : <div>Error loading avatar image.</div>;
+    return <Skeleton width={width || "20px"} height={height || "20px"} />;
   }
 
   return (

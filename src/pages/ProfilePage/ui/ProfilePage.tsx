@@ -14,6 +14,7 @@ import {
   ReducersList,
 } from "../../../shared/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useParams } from "react-router-dom";
+import { getProfileIsLoading } from "../../../entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading";
 
 interface ProfilePageProps {
   className?: string;
@@ -31,6 +32,7 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
   const dispatch = useAppDispatch();
   const profileEditedData = useSelector(getProfileEditedData);
   const profileReadOnly = useSelector(getProfileReadOnly);
+  const profileIsLoading = useSelector(getProfileIsLoading);
 
   const { id } = useParams<{ id: string }>();
 
@@ -100,6 +102,7 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
           onChangeCity={onChangeCity}
           onChangeAvatar={onChangeAvatar}
           readOnly={profileReadOnly}
+          isLoading={profileIsLoading}
         />
       </div>
     </DynamicModuleLoader>

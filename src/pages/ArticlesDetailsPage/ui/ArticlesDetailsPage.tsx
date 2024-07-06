@@ -42,6 +42,7 @@ import ArticleDetailsSection from "../components/ArticleDetailsSection/ArticleDe
 import ArticleBlocksSection from "../components/ArticleBlocksSection/ArticleBlocksSection";
 import CommentsSection from "../components/CommentsSection/CommentsSection";
 import RecommendationsSection from "../components/RecommendationsSection/RecommendationsSection";
+import { getArticleDetailsIsLoading } from "../../../entities/Article/modal/selectors/ArticleDetailsSelectors/getArticleDetailsIsLoading/getArticleDetailsIsLoading";
 
 interface ArticlesDetailsPageProps {
   className?: string;
@@ -66,6 +67,7 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
   const articleRecommendations = useSelector(getArticleListData);
   const article = useSelector(getArticleDetailsData);
   const comments = useSelector(getArticleDetailsPageCommentsData);
+  const articleDetailsIsLoading = useSelector(getArticleDetailsIsLoading);
 
   React.useEffect(() => {
     dispatch(ArticleFetchByIdService(id || ""));
@@ -101,8 +103,8 @@ const ArticlesDetailsPage: React.FC<ArticlesDetailsPageProps> = (props) => {
       <div className={articlesdetailspageClasses}>
         <AppImage className={styles.image} src={article?.image} minHeight="80vh" />
         <div className={styles.Content}>
-          <ArticleDetailsSection article={article} id={id || ""} />
-          <ArticleBlocksSection blocks={article?.blocks} />
+          <ArticleDetailsSection article={article} id={id || ""} isLoading={articleDetailsIsLoading} />
+          <ArticleBlocksSection blocks={article?.blocks} isLoading={articleDetailsIsLoading} />
         </div>
         <CommentsSection
           comments={comments}

@@ -11,32 +11,31 @@ interface AppImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   minHeight?: MinHeightValue;
 }
 
-export const AppImage: React.FC<AppImageProps> = (props) => {
-  const { className, src, minHeight, ...rest } = props;
-
-  const appimageClasses = clx(styles.AppImage, {
-    [className!]: className,
-  });
-
+export const AppImage: React.FC<AppImageProps> = ({
+  className,
+  src,
+  minHeight = "50vh",
+  alt = "",
+  ...rest
+}) => {
   const { isLoading, isError } = useImageLoader(src ?? "");
 
-  const appImageBlockStyles = React.useMemo<React.CSSProperties>(() => {
-    return {
-      minHeight: minHeight || "50vh",
-    };
-  }, [minHeight]);
+  const appimageClasses = clx(styles.AppImage, className);
 
-  if (isLoading) {
-    return <Skeleton width="100%" height={minHeight || "50vh"} />;
-  }
+  const appImageBlockStyles = React.useMemo<React.CSSProperties>(
+    () => ({
+      minHeight: minHeight,
+    }),
+    [minHeight]
+  );
 
-  if (isError) {
-    return <Skeleton width="100%" height={minHeight || "50vh"} />;
+  if (isLoading || isError) {
+    return <Skeleton width="100%" height={minHeight} />;
   }
 
   return (
     <figure className={appimageClasses} style={appImageBlockStyles}>
-      <img src={src} alt="" width="100%" height="100%" loading="lazy" {...rest} />
+      <img src={src} alt={alt} loading="lazy" {...rest} />
     </figure>
   );
 };

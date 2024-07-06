@@ -15,6 +15,7 @@ import { TabItem } from "../../../../../shared/ui/Tabs/Tabs";
 import { ArticleTypeTabsHandler } from "../../../../../entities/Article/ui/ArticleFilters/ui/components/ArticleTypeTabsHandler/ArticleTypeTabsHandler";
 import { getArticlesPageType } from "../../../model/selectors/getArticlesPageType/getArticlesPageType";
 import { FetchArticlesPageListService } from "../../../model/services/FetchArticlesPageListService/FetchArticlesPageListService";
+import Skeleton from "../../../../../shared/ui/Skeleton/Skeleton";
 
 interface ArticlePageFiltersProps {
   className?: string;
@@ -77,6 +78,18 @@ export const ArticlePageFilters: React.FC<ArticlePageFiltersProps> = (props) => 
     },
     [dispatch]
   );
+
+  if (!articleView || !order || !sort || !articleType) {
+    return (
+      <div className={articlepagefiltersClasses}>
+        <div className={styles.FiltersPanel}>
+          <Skeleton className={styles.sceleton} height="30px" width="30%" />
+          <Skeleton className={styles.sceleton} height="30px" width="10%" />
+        </div>
+        <Skeleton className={styles.sceleton} height="40px" />
+      </div>
+    );
+  }
 
   return (
     <div className={articlepagefiltersClasses}>

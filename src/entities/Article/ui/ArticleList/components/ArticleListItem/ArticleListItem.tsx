@@ -13,7 +13,7 @@ interface ArticleListItemProps {
   className?: string;
   article: Article;
   articleView?: ArticleView;
-  isLoading: boolean;
+  isLoading?: boolean;
   target?: React.HTMLAttributeAnchorTarget;
 }
 

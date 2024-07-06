@@ -4,6 +4,7 @@ import { Country } from "../../../../../../Country/model/types/CountrySchema";
 import { Profile, ProfileKey } from "../../../../../model/types/ProfileSchema";
 import { Input, InputTheme } from "../../../../../../../shared/ui/Input/Input";
 import { CountrySelect } from "../../../../../../Country/ui/CountrySelect/CountrySelect";
+import Skeleton from "../../../../../../../shared/ui/Skeleton/Skeleton";
 
 interface ProfileCardGeneralProps {
   profileData?: Profile;
@@ -17,6 +18,7 @@ interface ProfileCardGeneralProps {
     onChangeCity: (value?: string) => void;
     onChangeAvatar: (value?: string) => void;
   };
+  isLoading?: boolean;
 }
 
 interface InputField {
@@ -29,6 +31,7 @@ const ProfileCardGeneral: React.FC<ProfileCardGeneralProps> = ({
   profileData,
   readOnly,
   onChangeHandlers,
+  isLoading,
 }) => {
   const inputFields: InputField[] = [
     { key: "firstname", label: "FirstName", onChange: onChangeHandlers.onChangeFirstName },
@@ -38,6 +41,24 @@ const ProfileCardGeneral: React.FC<ProfileCardGeneralProps> = ({
     { key: "age", label: "Age", onChange: onChangeHandlers.onChangeAge },
     { key: "avatar", label: "Avatar link", onChange: onChangeHandlers.onChangeAvatar },
   ];
+
+  if (isLoading) {
+    return (
+      <div className={styles.ProfileGeneral}>
+        <Skeleton width="200px" height="40px" />
+        <ul className={styles.MenuList}>
+          {[...Array(inputFields.length)].map((_, index) => (
+            <li className={styles.item} key={index}>
+              <Skeleton className={styles.sceleton} width="100%" height="40px" />
+            </li>
+          ))}
+          <li className={styles.item}>
+            <Skeleton width="100%" height="40px" />
+          </li>
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.ProfileGeneral}>

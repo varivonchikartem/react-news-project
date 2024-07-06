@@ -12,13 +12,25 @@ function useImageLoader(src: string) {
     }
 
     const img = new Image();
-    img.src = src;
-    img.onload = () => {
+
+    const handleLoad = () => {
       setIsLoading(false);
+      setIsError(false);
     };
-    img.onerror = () => {
+
+    const handleError = () => {
       setIsLoading(false);
       setIsError(true);
+    };
+
+    img.addEventListener("load", handleLoad);
+    img.addEventListener("error", handleError);
+
+    img.src = src;
+
+    return () => {
+      img.removeEventListener("load", handleLoad);
+      img.removeEventListener("error", handleError);
     };
   }, [src]);
 

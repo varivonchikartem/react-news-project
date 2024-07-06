@@ -9,6 +9,7 @@ import { UpdateProfileService } from "../../../../../entities/Profile/model/serv
 import { getUserAuthenticationData } from "../../../../../entities/User/model/selectors/getUserAuthenticationData/getUserAuthenticationData";
 import { getProfileData } from "../../../../../entities/Profile/model/selectors/getProfileData/getProfileData";
 import { getProfileReadOnly } from "../../../../../entities/Profile/model/selectors/getProfileReadOnly/getProfileReadOnly";
+import Skeleton from "../../../../../shared/ui/Skeleton/Skeleton";
 
 interface ProfilePageEditPanelProps {
   className?: string;
@@ -39,6 +40,17 @@ export const ProfilePageEditPanel: React.FC<ProfilePageEditPanelProps> = (props)
   const onSaveEdit = React.useCallback(() => {
     dispatch(UpdateProfileService(userAuthenticationData?.id ?? ""));
   }, [dispatch, userAuthenticationData]);
+
+  if (!userAuthenticationData || !profileData ) {
+    return (
+      <div className={profilepageheaderClasses}>
+        <Skeleton className={styles.title} width="200px" />
+        <div className={styles.ButtonGroup}>
+          <Skeleton height="40px" width="120px" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={profilepageheaderClasses}>
